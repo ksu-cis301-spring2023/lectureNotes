@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam1material/tuesJan17_week1/tuesJan17_notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam1material/thursJan19_week1/thursJan19_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +65,19 @@
       <option name="project" value="LOCAL" />
       <updated>1672937686425</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Package test">
+      <created>1672937993914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672937993914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added initial notes project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added initial notes project" />
+    <MESSAGE value="Package test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Package test" />
   </component>
 </project>
