@@ -4,6 +4,7 @@
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="Commit test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exam1material/week1_17Jan_tues/tuesJan17_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam1material/week1_17Jan_tues/tuesJan17_notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam1material/week1_19Jan_thurs/thursJan19_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam1material/week1_19Jan_thurs/thursJan19_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +36,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/julie/Documents/cis301/spring2023/lectureNotes/lectureNotes/src/exam1material/tuesJan17"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/spring2023/lectureNotes/lectureNotes/src/exam1material/tuesJan17&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
