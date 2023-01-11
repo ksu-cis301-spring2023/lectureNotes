@@ -1,9 +1,255 @@
-Tuesday, January 17
+CIS 301. Logical Foundations of Programming.
 
-Canvas
+Julie Thornton.
 
-Added some stuff
+What is this class?
+- logical reasoning (basics, then puzzles)
+- proofs (why?)
+- basics of proving correctness of programs (why?)
 
-This could be a worked problem
 
-Changes on an older day
+Syllabus.
+
+Canvas setup.
+
+Discord
+
+HW 1
+
+/////////////////////////
+
+Where are we going?
+
+public int min(int[] nums)
+{
+    //How would we write this
+    //to return the min element in nums?
+}
+
+//elsewhere
+int[] test = {7,10,0,-5,3,2};
+int result = min(test);
+
+
+--> what value should result have?
+
+
+--> what could min *promise* to return that would guarantee our
+    answer?
+
+
+
+
+--> what do we call this "promise?"
+
+
+
+
+
+--> what should be true at the end of each iteration in our loop
+    to be sure we'll return the right thing?
+
+
+
+--> what is this description called?
+
+
+
+
+--> in what situations would min not work?
+
+
+
+--> what do we need to require about min? What is this called?
+
+
+/////////////////////////
+
+Taking a step back...what is logic?
+
+- analysis of an argument according to a set of rules
+- given a set of premises (and sometimes a conclusion)
+
+
+- we determine if the conclusion is valid when we assume
+the premises are all true
+
+OR...
+
+- we determine what a valid conclusion is given that the
+premises are true
+
+
+Note that the premises might make no sense!
+
+//////////////////////////////////////////////////////////
+
+Premise 1: If a person wears a red shirt, then they don’t
+    like pizza.
+Premise 2: Fred is wearing a red shirt.
+
+Conclusion: Fred doesn’t like pizza.
+
+Is this a valid argument?
+
+
+
+
+//////////////////////////////////////////////////////////
+
+Logical Arguments with ”OR”
+
+- can be ambiguous! Why?
+
+
+- in English, how do we interpret "or"?
+
+
+- in programming?
+
+
+
+"Or" in THIS class:
+
+
+
+Premise 1: I'll fold the laundry or I'll do the dishes.
+Premise 2: I don't fold the laundry.
+
+What can I conclude?
+
+
+/////////////////////////////////////////////////////////
+
+num = 5;
+
+if (num < 4 || x >= 10) {
+
+    statement;
+}
+
+
+
+Suppose we know "statement" was executed.
+What can we conclude?
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+What rule are we seeing with an ”or” statement,
+where we know that one of the statements is NOT true?
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////
+
+num = 3;
+
+if (num < 4 || x >= 10) {
+
+    statement;
+}
+
+
+
+Suppose we know "statement" was executed.
+What can we conclude?
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+Logical Arguments with ”IF/THEN” (aka "implies" -> )
+
+If it is raining, then I will get wet.
+It is raining.
+
+What can I conclude?
+
+
+
+
+
+/////////////////////////////////////////////////////////
+
+When we have an ”if/then” statement,
+and we know that the ”if” part IS true?
+    ...what can we always conclude?
+
+
+
+
+
+
+////////////////////////////////////////////////////////
+
+If I don’t hear my alarm, then I will be late for class.
+I am late for class.
+
+What can I conclude?
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+
+If I don’t hear my alarm, then I will be late for class.
+I hear my alarm.
+
+What can I conclude?
+
+
+
+
+
+
+///////////////////////////////////////////////////////
+
+If I don’t hear my alarm, then I will be late for class.
+
+Can you think of another way to phrase this promise?
+What do we know if we AREN'T late?
+
+
+
+
+/////////////////////////////////////////////////////
+
+if (num < 4 || x >= 10) {
+
+    y = 17;
+}
+
+--> suppose y is 17 here. What do we know?
+
+
+/////////////////////////////////////////////////////
+
+if (num < 4 || x >= 10) {
+
+    y = 17;
+}
+
+--> suppose y is NOT 17 here. What do we know?
+
+
+
+/////////////////////////////////////////////////////
+
+Homework 1: due Tuesday, January 24
+    - need to have Sireum/IntelliJ + GitHub setup (do this now!)
+    - demo HW process
+
+Next: logic puzzles!

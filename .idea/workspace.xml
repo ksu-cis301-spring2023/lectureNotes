@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="Commit test">
+    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exam1material/week1_17Jan_tues/tuesJan17_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam1material/week1_17Jan_tues/tuesJan17_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673276964844</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changes to older day">
+      <created>1673277035053</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673277035053</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -102,6 +110,7 @@
     <MESSAGE value="Another package test" />
     <MESSAGE value="Renamed packages to order chronologically" />
     <MESSAGE value="CHanges to Thurs" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHanges to Thurs" />
+    <MESSAGE value="Changes to older day" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes to older day" />
   </component>
 </project>
