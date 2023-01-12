@@ -251,5 +251,7 @@ if (num < 4 || x >= 10) {
 Homework 1: due Tuesday, January 24
     - need to have Sireum/IntelliJ + GitHub setup (do this now!)
     - demo HW process
+    - first page of homework is logical reasoning (what we did today)
+    - second page is logic puzzles (what we'll do on Thursday)
 
 Next: logic puzzles!
