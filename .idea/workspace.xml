@@ -35,13 +35,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/spring2023/lectureNotes/lectureNotes/src/exam1material/tuesJan17&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/julie/Documents/cis301/spring2023/lectureNotes/lectureNotes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
@@ -108,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673450660168</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added HW 1 info">
+      <created>1673544536033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673544536033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -119,6 +126,7 @@
     <MESSAGE value="CHanges to Thurs" />
     <MESSAGE value="Changes to older day" />
     <MESSAGE value="Test changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test changes" />
+    <MESSAGE value="Added HW 1 info" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added HW 1 info" />
   </component>
 </project>
