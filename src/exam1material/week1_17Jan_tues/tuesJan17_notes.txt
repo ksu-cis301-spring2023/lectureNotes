@@ -5,16 +5,23 @@ Julie Thornton.
 What is this class?
 - logical reasoning (basics, then puzzles)
 - proofs (why?)
+- reasoning about code
+    - analyzing what we know
+    - identifying equivalent programs
+    - simplifying programs
 - basics of proving correctness of programs (why?)
 
 
-Syllabus.
+Syllabus
 
-Canvas setup.
+Canvas setup
 
 Discord
 
+How to succeed
+
 HW 0 - due Thurs Jan 19
+    --> see how to do it
 
 HW 1 - due Tues Jan 24
 
@@ -92,7 +99,7 @@ Premise 2: Fred is wearing a red shirt.
 
 Conclusion: Fred doesn’t like pizza.
 
-Is this a valid argument?
+--> Is this a valid argument?
 
 
 
@@ -118,7 +125,7 @@ Logical Arguments with ”OR”
 Premise 1: I'll fold the laundry or I'll do the dishes.
 Premise 2: I don't fold the laundry.
 
-What can I conclude?
+--> What can I conclude?
 
 
 /////////////////////////////////////////////////////////
@@ -131,7 +138,7 @@ if (num < 4 || x >= 10) {
 
 
 Suppose we know "statement" is executed
-What can we conclude?
+--> What can we conclude?
 
 
 
@@ -158,7 +165,7 @@ if (num < 4 || x >= 10) {
 
 
 Suppose we know "statement" is executed
-What can we conclude?
+--> What can we conclude?
 
 
 /////////////////////////////////////////////////////////
@@ -168,7 +175,7 @@ Logical Arguments with ”IF/THEN” (aka "implies" -> )
 If it is raining, then I will get wet.
 It is raining.
 
-What can I conclude?
+--> What can I conclude?
 
 
 
@@ -177,7 +184,8 @@ What can I conclude?
 /////////////////////////////////////////////////////////
 
 When we have an ”if/then” statement,
-and we know that the ”if” part IS true?
+and we know that the ”if” part is true?
+
     ...what can we always conclude?
 
 
@@ -190,7 +198,7 @@ and we know that the ”if” part IS true?
 If I don’t hear my alarm, then I will be late for class.
 I am late for class.
 
-What can I conclude?
+--> What can I conclude?
 
 
 
@@ -202,7 +210,7 @@ What can I conclude?
 If I don’t hear my alarm, then I will be late for class.
 I hear my alarm.
 
-What can I conclude?
+--> What can I conclude?
 
 
 
@@ -213,8 +221,9 @@ What can I conclude?
 
 If I don’t hear my alarm, then I will be late for class.
 
-Can you think of another way to phrase this promise?
-What do we know if we AREN'T late?
+--> Can you think of another way to phrase this promise?
+
+--> What do we know if we AREN'T late?
 
 
 
@@ -254,11 +263,15 @@ if (num < 4 || x >= 10) {
 
 /////////////////////////////////////////////////////
 
+Homework 0: due Thursday, January 19
+    - get Sireum/IntelliJ + GitHub ready (do this now!)
+    - post something in Discord
+    - come to office hours or post in Discord if
+        you need software setup help!
 
 Homework 1: due Tuesday, January 24
-    - need to have Sireum/IntelliJ + GitHub setup (do this now!)
-    - demo HW process
-    - first page of homework is logical reasoning (what we did today)
+    - first page of homework is logical reasoning
+        (what we did today)
     - second page is logic puzzles (what we'll do on Thursday)
 
 Next: logic puzzles!
