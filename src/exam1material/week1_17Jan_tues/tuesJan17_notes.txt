@@ -14,9 +14,9 @@ Canvas setup.
 
 Discord
 
-HW 0?
+HW 0 - due Thurs Jan 19
 
-HW 1
+HW 1 - due Tues Jan 24
 
 /////////////////////////
 
@@ -124,15 +124,13 @@ What can I conclude?
 /////////////////////////////////////////////////////////
 
 num = 5;
-
 if (num < 4 || x >= 10) {
-
     statement;
 }
 
 
 
-Suppose we know "statement" was executed.
+Suppose we know "statement" is executed
 What can we conclude?
 
 
@@ -148,25 +146,19 @@ where we know that one of the statements is NOT true?
 
 
 
+////////////////////////////////////////////////////////
 
-
-
-//////////////////////////////////////////////////////////
-
-num = 3;
-
+x = 9;
 if (num < 4 || x >= 10) {
-
-    statement;
+    if (num > 2) {
+        statement;
+    }
 }
 
 
 
-Suppose we know "statement" was executed.
+Suppose we know "statement" is executed
 What can we conclude?
-
-
-
 
 
 /////////////////////////////////////////////////////////
@@ -229,12 +221,26 @@ What do we know if we AREN'T late?
 
 /////////////////////////////////////////////////////
 
+
 if (num < 4 || x >= 10) {
 
     y = 17;
 }
 
 --> suppose y is 17 here. What do we know?
+
+
+
+////////////////////////////////////////////////////
+
+y = 10;
+
+if (num < 4 || x >= 10) {
+
+    y = 17;
+}
+
+--> suppose y is 17 here. Can we conclude anything now?
 
 
 /////////////////////////////////////////////////////
@@ -246,9 +252,8 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is NOT 17 here. What do we know?
 
-
-
 /////////////////////////////////////////////////////
+
 
 Homework 1: due Tuesday, January 24
     - need to have Sireum/IntelliJ + GitHub setup (do this now!)
