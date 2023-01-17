@@ -18,12 +18,17 @@ Canvas setup
 
 Discord
 
-How to succeed
+
+/////////////////////////
 
 HW 0 - due Thurs Jan 19
     --> see how to do it
 
 HW 1 - due Tues Jan 24
+
+/////////////////////////
+
+How to succeed
 
 /////////////////////////
 
@@ -33,23 +38,46 @@ public int min(int[] nums)
 {
     //How would we write this
     //to return the min element in nums?
+
+    int small = nums[0];
+
+    for (int i = 1; i < nums.length; i++) {
+        //loop invariant
+        //after i iterations, small is
+        //the smallest of the first i elements in nums
+
+        if (small < nums[i]) {
+            small = nums[i];
+        }
+    }
+
+    return small;
 }
 
 //elsewhere
-int[] test = {7,10,0,-5,3,2};
+int[] test = {7,-5,0,-5,3,2};
 int result = min(test);
 
 
 --> what value should result have?
 
+result = -5;
+
 
 --> what could min *promise* to return that would guarantee our
     answer?
 
+parameter: int array
+
+min promises to return a number that is less than or
+equal to every element in the parameter array
+
+the number returned is an element in the array
+
+in the case of duplicates, returns the first such instance
 
 
-
---> what do we call this "promise?"
+--> what do we call this "promise?" postcondition
 
 
 
@@ -60,17 +88,22 @@ int result = min(test);
 
 
 
+
 --> what is this description called?
 
-
+loop invariant
 
 
 --> in what situations would min not work?
 
+it would crash if the array was empty
 
 
 --> what do we need to require about min? What is this called?
 
+we want to require that the array has at least one element
+
+precondition
 
 /////////////////////////
 
@@ -80,13 +113,8 @@ Taking a step back...what is logic?
 - given a set of premises (and sometimes a conclusion)
 
 
-- we determine if the conclusion is valid when we assume
-the premises are all true
-
-OR...
-
-- we determine what a valid conclusion is given that the
-premises are true
+- we determine a valid conclusion when we assume
+all the premises are true
 
 
 Note that the premises might make no sense!
@@ -101,7 +129,7 @@ Conclusion: Fred doesn’t like pizza.
 
 --> Is this a valid argument?
 
-
+yes!
 
 
 //////////////////////////////////////////////////////////
@@ -110,15 +138,21 @@ Logical Arguments with ”OR”
 
 - can be ambiguous! Why?
 
+I order fries or I order chips.
+
+"or" can be inclusive or exclusive
+
 
 - in English, how do we interpret "or"?
 
+usually exclusive, but not always.
 
 - in programming?
 
+always inclusive
 
 
-"Or" in THIS class:
+"Or" in THIS class: inclusive
 
 
 
@@ -126,6 +160,8 @@ Premise 1: I'll fold the laundry or I'll do the dishes.
 Premise 2: I don't fold the laundry.
 
 --> What can I conclude?
+
+I'll do the dishes
 
 
 /////////////////////////////////////////////////////////
@@ -140,6 +176,10 @@ if (num < 4 || x >= 10) {
 Suppose we know "statement" is executed
 --> What can we conclude?
 
+x >= 10
+
+(the only way to make the OR statement true)
+
 
 
 
@@ -149,7 +189,7 @@ Suppose we know "statement" is executed
 What rule are we seeing with an ”or” statement,
 where we know that one of the statements is NOT true?
 
-
+the other part of the or must be true
 
 
 
@@ -167,6 +207,8 @@ if (num < 4 || x >= 10) {
 Suppose we know "statement" is executed
 --> What can we conclude?
 
+num = 3
+
 
 /////////////////////////////////////////////////////////
 
@@ -178,7 +220,7 @@ It is raining.
 --> What can I conclude?
 
 
-
+I will get wet.
 
 
 /////////////////////////////////////////////////////////
@@ -190,7 +232,7 @@ and we know that the ”if” part is true?
 
 
 
-
+the then part is true
 
 
 ////////////////////////////////////////////////////////
@@ -201,7 +243,7 @@ I am late for class.
 --> What can I conclude?
 
 
-
+nothing
 
 
 
@@ -212,7 +254,7 @@ I hear my alarm.
 
 --> What can I conclude?
 
-
+nothing.
 
 
 
@@ -226,10 +268,9 @@ If I don’t hear my alarm, then I will be late for class.
 --> What do we know if we AREN'T late?
 
 
-
+If I'm not late for class, then I must have heard my alarm.
 
 /////////////////////////////////////////////////////
-
 
 if (num < 4 || x >= 10) {
 
@@ -238,7 +279,9 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is 17 here. What do we know?
 
+if condition is true, I promise y is 17
 
+I don't know anything - y might have already been 17
 
 ////////////////////////////////////////////////////
 
@@ -251,6 +294,7 @@ if (num < 4 || x >= 10) {
 
 --> suppose y is 17 here. Can we conclude anything now?
 
+num < 4 or x >= 10
 
 /////////////////////////////////////////////////////
 
@@ -260,6 +304,8 @@ if (num < 4 || x >= 10) {
 }
 
 --> suppose y is NOT 17 here. What do we know?
+
+num >= 4 and x < 10 (since I know the condition is false)
 
 /////////////////////////////////////////////////////
 
