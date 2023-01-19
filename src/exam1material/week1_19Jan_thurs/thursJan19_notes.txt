@@ -37,7 +37,8 @@ Knights ALWAYS tell the truth, and knaves ALWAYS lie.
 
 Who can say, "I'm a knave"?
 
-
+knight: nope!
+knave: nope!
 
 
 
@@ -53,9 +54,16 @@ Bob says, ”Neither Ava nor I are knaves.”
 
 What are Ava and Bob?
 
+Suppose Ava is a knight. Then from her statement,
+    Bob must be a knave. His statement is a lie
+    because HE is a knave (which is good).
 
+Suppose Ava is a knave. Then from her statement,
+    Bob is a knight. His statement is a lie
+    because Ava is a knave (which isn't allowed
+    for a knight).
 
-
+Ava: knight, Bob: knave
 
 
 
@@ -68,9 +76,15 @@ Eve says, ”I am a knave or Fred is a knight.”
 
 What are Eve and Fred?
 
-(what does the "or" mean?)
+(what does the "or" mean?) - inclusive.
 
+Suppose Eve is a knight. Then Fred must be a knight
+    to make her statement true.
 
+Suppose Eve is a knave. Her statement would be true,
+    which is not allowed for a knave.
+
+Solution: Eve is a knight, Fred is a knight
 
 
 ////////////////////////////////////
@@ -85,6 +99,23 @@ What types are Sarah, Bill, and Mae?
 
 How could we rewrite/simplify each statement?
 
+Sarah: Bill is a knight
+Bill: Mae is a knight
+Mae: Bill would tell you that I am a knave
+
+Suppose Sarah is a knight. Then from her statement, Bill
+    must be a knight. Then from his statement, Mae is
+    a knight. Bill would tell us that Mae is a knight,
+    and Mae would tell the truth about that. This doesn't
+    work with her statement.
+
+Suppose Sarah is a knave. Then from her statement, Bill
+    must be a knave. Then from his statement, Mae is a knave.
+    Bill would lie and say Mae is a knight, and Mae would
+    lie about that and say Bill would say she is a knave.
+    This works.
+
+Solution: all knaves
 
 ////////////////////////////////////
 
@@ -100,8 +131,24 @@ Unicorn says: ”Yesterday was one of my lying days, too.”
 
 What day is it?
 
+Monday: Lion is lying (Sunday was not a lying day), as
+    he should be. Unicorn is also lying (nobody lies on Sunday),
+    but Unicorn should be telling the truth.
 
+Tuesday: Lion is NOT lying (yesterday WAS a lying day).
+    Doesn't work.
 
+Wednesday: Lion is NOT lying (yesterday WAS a lying day).
+
+Thursday: Lion is telling the truth as he should be.
+    Unicorn is lying (as he should be).
+
+Friday/Saturday: same idea as Tues/Wed. Yesterday
+    WAS one of Unicorn's lying days, but Unicorn should be lying.
+
+Sunday: Lion is lying (should be telling the truth)
+
+Answer: Thursday
 
 
 
@@ -123,6 +170,11 @@ The second one says: ”I’m Tweedledee.”
 
 Which is which? What day is it?
 
+On every day except Sunday, one is lying and one is telling
+the truth. On those days they would give the SAME name
+(one would be lying, one would be telling the truth).
+
+It must be Sunday. They are who they say they are.
 
 
 
@@ -136,11 +188,20 @@ Second twin: Today is Monday or Sunday
 
 What day of the week is it?
 
+inclusive or. Statement is true if one or both parts is true.
 
+can't both be telling the truth, because would both
+have to say "or Sunday".
 
+so one is lying, one is telling the truth.
 
+can't be Monday - would BOTH be telling the truth.
 
+can't be an unmentioned day - then no one would be
+    telling the truth.
 
+only other possibility is Wednesday. Then first twin tells
+    truth, second lies.
 
 //////////////////////////////////
 You know that either Tweedledum or Tweedledee has
@@ -157,11 +218,23 @@ The second one says: ”I'm Tweedledee!”
 
 Who gets the rattle?
 
+There are only two cases: Twin 1 truth / twin 2 lies;
+    Twin 1 lies / twin 2 truth.
 
 
+Suppose twin 1 is telling the truth. Then Tweedledee
+    owns the rattle. Twin 2 must be lying, so twin 2
+    is Tweedledum. Then twin 1 is Tweedledee, and
+    they own the rattle.
 
+Suppose twin 1 is lying. Then Tweedledum owns
+    the rattle. Twin 2 must be telling the truth,
+    so twin 2 is Tweedledee. Then twin 1 must be
+    Tweedledum, who owns the rattle.
 
-Who is who?
+In both cases, Twin 1 owns the rattle.
+
+Who is who? we don't know.
 
 
 ///////////////////////////////////////////
@@ -179,6 +252,17 @@ Lead casket: ”The portrait is not in the gold casket.”
 
 Where is the portrait?
 
+Consider the three cases.
+
+In gold casket? Gold msg: true, silver msg: true. Too many trues!
+
+In silver casket? Gold msg: false, silver msg: false,
+    lead: true. This works - only one true.
+
+In lead casket? Gold msg: false, silver: true, lead: true.
+    Too many trues!
+
+In silver casket.
 
 
 ///////////////////////////////////
@@ -196,32 +280,52 @@ July 14, July 16
 August 14, August 15, August 17
 
 Cheryl privately tells Albert her birthday month.
-Cheryl privately tells Bernard her birthday day (number).
+    (May, June, July, or August)
 
+Cheryl privately tells Bernard her birthday day (number).
+    (14-19)
 
 Albert says: "I don't know when Cheryl's birthday is,
     but I know Bernard doesn't know too."
 
+    Could it be May? NO! Albert wouldn't be sure
+    Bernard doesn't know (because 19 in May is the only 19,
+    and then Bernard WOULD know). Similarly, can't be
+    June (there is only one 18, then one in June), and
+    then Bernard WOULD know.
+
+    Month is either July or August.
+
+
+
 Bernard says: "At first I didn't know when Cheryl's
     birthday is, but now I do."
 
+    Now Bernard knows the day, and knows it is July
+    or August.
+
+        July 14, July 16
+        August 14, August 15, August 17
+
+        B: 14 - no! otherwise he wouldn't know between
+        July 14 and August 14.
+
+        July 16, August 15, August 17
+
 Albert says: "Then I also know when Cheryl's birthday is."
 
-When is Cheryl's birthday?
-
-
---> What dates are possible after Albert's first statement?
-
-
-
---> Of those remaining, which dates are possible for
-    Bernard to know for SURE when the birthday is?
+    It must be July - otherwise ALbert wouldn't know
+    between August 15 and 17.
 
 
 
---> What is the only possibility where Albert would
-    ALSO know the birthday now?
+When is Cheryl's birthday? July 16.
 
+
+
+///////////////////////////////////
+
+<-- stopped here. Will do rest on Tuesday, January 24
 
 ///////////////////////////////////
 
@@ -231,17 +335,13 @@ Start truth tables and logic gates.
     want to express statements like: p AND (q OR r)
 
 Variables can be true or false
-∧ is an AND (can use a caret ^ )
-∨ is an OR (inclusive or) (can use a capital V)
-¬ is a NOT (can use ! or ~ instead)
-
 
 Basic operations:
 
-^ - and
-∨ - or
-¬ - not
-→ - implies
+^ - and (can use a caret ^ )
+∨ - or (inclusive or) (can use a capital V)
+¬ - not (can use ! or ~ instead)
+→ - implies (can use ->)
 
 
 Basic logic gates (draw on board)
@@ -251,6 +351,7 @@ gates still used to design circuits
 why do we care about equivalent circuits
     (especially if one uses fewer gates)?
 
+what about programming?
 
 ///////////////////////////////////////////////////
 
@@ -319,7 +420,7 @@ p XOR q (with just the gates we've seen, not a specific XOR gate)
 
 /////////////////////////////////////
 
-How would we evalute the output of these circuits with
+How would we evaluate the output of these circuits with
 different inputs?
 
 /////////////////////////////////////
