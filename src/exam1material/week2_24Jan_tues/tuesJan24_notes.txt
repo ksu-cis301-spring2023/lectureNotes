@@ -9,7 +9,7 @@ Today:
 - truth tables
 - logic gates
 - parse trees
-- equivalent statements
+- begin propositional logic
 
 ///////////////////////////
 
@@ -20,24 +20,17 @@ Start truth tables and logic gates.
 
 ////////////////////////////
 
-Variables can be true or false
+Truth tables.
+
+- boolean variables (each can be true or false)
+- connect with logical operators
 
 Basic operations:
 
-∧ - and (can use a caret ^ )
-∨ - or (inclusive or) (can use a capital V)
-¬ - not (can use ! or ~ instead)
-→ - implies (can use ->)
-
-
-Basic logic gates (draw on board)
-
-gates still used to design circuits
-
-why do we care about equivalent circuits
-    (especially if one uses fewer gates)?
-
-what about programming?
+∧ - AND (can use a caret ^ )
+∨ - OR (inclusive or) (can use a capital V)
+¬ - NOT (can use ! or ~ instead)
+→ - IMPLIES (can use ->)
 
 ///////////////////////////////////////////////////
 
@@ -96,6 +89,17 @@ How does the implies operator relate to programming?
 
 //////////////////////////////////////////
 
+Basic logic gates (draw on board)
+
+gates still used to design circuits
+
+why do we care about equivalent circuits
+    (especially if one uses fewer gates)?
+
+what about programming?
+
+//////////////////////////////////////////
+
 Design circuits for:
 
 ¬(p ∨ q)       (p NOR q)
@@ -145,7 +149,8 @@ Given this statement:
     ¬p ∧ q ∨ r
 
 
-Evaluate the following truth assignment for the following variable assignments:
+Evaluate the following statement using the following
+variable assignments:
 
 p is T
 q is F
@@ -225,6 +230,8 @@ parse trees
 --> draw one for (p ∧ q) → ¬r
 
 
+--> how do they relate to programming?
+
 ////////////////////////////////////////
 
 Propositional logic
@@ -243,35 +250,19 @@ Which ones are propositions?
 Today is Tuesday.
 
 
-
-
-
 What time is it?
-
-
-
 
 
 x == 2
 
 
-
-
-
 Pigs can fly.
-
-
-
 
 
 Drive carefully.
 
 
-
-
 y <= 4
-
-
 
 
 
