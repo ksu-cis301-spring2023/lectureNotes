@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674480237110</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Notes shell before Tuesday, January 24 (plus a few edits)">
+      <created>1674496219836</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1674496219836</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -181,6 +188,7 @@
     <MESSAGE value="Notes shell before Thursday, January 19" />
     <MESSAGE value="After class Thursday, January 24" />
     <MESSAGE value="Notes shell before Tuesday, January 24" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tuesday, January 24" />
+    <MESSAGE value="Notes shell before Tuesday, January 24 (plus a few edits)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tuesday, January 24 (plus a few edits)" />
   </component>
 </project>

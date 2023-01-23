@@ -13,13 +13,6 @@ Today:
 
 ///////////////////////////
 
-Start truth tables and logic gates.
-
-    have boolean variables
-    want to express statements like: p AND (q OR r)
-
-////////////////////////////
-
 Truth tables.
 
 - boolean variables (each can be true or false)
@@ -76,7 +69,7 @@ q: I will study
 p → q
 
 It is false if we have BROKEN A PROMISE.
-Otherwise we have not.
+It is true when there is no broken promise.
 
 p q | p → q
 ------------
@@ -96,7 +89,12 @@ gates still used to design circuits
 why do we care about equivalent circuits
     (especially if one uses fewer gates)?
 
+
+
 what about programming?
+
+
+
 
 //////////////////////////////////////////
 
@@ -104,27 +102,41 @@ Design circuits for:
 
 ¬(p ∨ q)       (p NOR q)
 
+
+
 ¬(p ∧ (q ∨ r))
 
+
+
 p XOR q (with just the gates we've seen, not a specific XOR gate)
+
+
+--> how to add an image to GitHub repo?
 
 /////////////////////////////////////
 
 How would we evaluate the output of these circuits with
 different inputs?
 
+
+
+
 Graphically build circuits:
 
 https://logic.ly/demo/
+
+
+
+
 
 //////////////////////////////////////
 
 Compound truth tables.
 
 
-Consider ¬p ∧ q ∨ r in a truth table.
+Consider ¬p ∧ q ∨ r.
 
---> what do we evaluate first?
+--> what operation do we do first?
 
 
 
@@ -149,7 +161,10 @@ Given this statement:
     ¬p ∧ q ∨ r
 
 
-Evaluate the following statement using the following
+Add () to show the order of operations.
+
+
+Evaluate the above statement using these
 variable assignments:
 
 p is T
@@ -185,7 +200,7 @@ Top-level operator (what happens LAST?)
 
 p ∧ q ∨ r ∧ p
 
-rewrite:
+rewrite with ():
 
 top-level operator:
 
@@ -194,13 +209,13 @@ top-level operator:
 
 p ∧ q ∧ r ∧ s
 
-rewrite:
+rewrite with ():
 
 top-level operator:
 
 ////////////////////////////////////////////////////
 
-Truth tables in Logika
+Classifying truth tables.
 
 Contingent, contradictory, tautology
 
@@ -218,6 +233,17 @@ Tautology:
 
 ////////////////////////////////////////
 
+Write a truth table for:
+
+(p ∧ q) → p
+
+
+--> need to evaluate statement on ALL possible truth assignments
+
+--> how many truth assignments are there?
+
+
+/////////////////////////////////////////
 
 complete truth table in truth.logika
 
@@ -234,14 +260,22 @@ parse trees
 
 ////////////////////////////////////////
 
-Propositional logic
+Propositional logic.
+
+
 - a set of propositional atoms (statements that can be T/F)
     --> these will be our boolean variables in logic statements
 
+
+
 - connected by logical operators
+
+
 
 - join together to make new propositions (logical sentences)
     that can be true or false
+
+
 
 ////////////////////////////////////////
 
