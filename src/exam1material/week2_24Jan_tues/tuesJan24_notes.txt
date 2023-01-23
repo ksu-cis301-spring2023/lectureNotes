@@ -6,12 +6,58 @@ HW 2 will be posted later today
 
 Today:
 
-- truth tables
 - logic gates
+- truth tables
 - parse trees
 - begin propositional logic
 
 ///////////////////////////
+
+Basic logic gates (draw on board)
+
+gates still used to design circuits
+
+why do we care about equivalent circuits
+    (especially if one uses fewer gates)?
+
+
+
+what about programming?
+
+
+
+
+//////////////////////////////////////////
+
+Design circuits for:
+
+¬(p ∨ q)       (p NOR q)
+
+
+
+¬(p ∧ (q ∨ r))
+
+
+
+p XOR q (with just the gates we've seen, not a specific XOR gate)
+
+
+--> how to add an image to GitHub repo?
+
+/////////////////////////////////////
+
+How would we evaluate the output of these circuits with
+different inputs?
+
+
+
+
+Graphically build circuits:
+
+https://logic.ly/demo/
+
+
+//////////////////////////////////////
 
 Truth tables.
 
@@ -79,54 +125,6 @@ F T |
 F F |
 
 How does the implies operator relate to programming?
-
-//////////////////////////////////////////
-
-Basic logic gates (draw on board)
-
-gates still used to design circuits
-
-why do we care about equivalent circuits
-    (especially if one uses fewer gates)?
-
-
-
-what about programming?
-
-
-
-
-//////////////////////////////////////////
-
-Design circuits for:
-
-¬(p ∨ q)       (p NOR q)
-
-
-
-¬(p ∧ (q ∨ r))
-
-
-
-p XOR q (with just the gates we've seen, not a specific XOR gate)
-
-
---> how to add an image to GitHub repo?
-
-/////////////////////////////////////
-
-How would we evaluate the output of these circuits with
-different inputs?
-
-
-
-
-Graphically build circuits:
-
-https://logic.ly/demo/
-
-
-
 
 
 //////////////////////////////////////
@@ -331,6 +329,21 @@ How would we express these as English sentences?
 
     ¬r
 
+////////////////////////
+
+Look back at truth.logika. Suppose we have:
+
+p: It is summer
+q: It is hot
+r: I wear a coat
+
+What does this proposition mean?
+
+(p ∧ q) → ¬r
+
+
+What truth assignments make the overall proposition true?
+    (translate the truth assignments to English)
 
 ////////////////////////
 
@@ -338,5 +351,8 @@ Next time:
 
 - A bit more with translations
 - Equivalent propositions
+- DeMorgan's laws
+- Equivalent if-statements
+- Negating if-statements
 - Proving equivalence with truth tables
 - Satisfiability
