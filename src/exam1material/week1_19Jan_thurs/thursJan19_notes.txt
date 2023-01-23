@@ -338,7 +338,7 @@ Variables can be true or false
 
 Basic operations:
 
-^ - and (can use a caret ^ )
+∧ - and (can use a caret ^ )
 ∨ - or (inclusive or) (can use a capital V)
 ¬ - not (can use ! or ~ instead)
 → - implies (can use ->)
@@ -360,7 +360,7 @@ Fill in basic operations:
 
 AND:
 
-p q | p ^ q
+p q | p ∧ q
 ------------
 T T |
 T F |
@@ -414,7 +414,7 @@ Design circuits for:
 
 ¬(p ∨ q)       (p NOR q)
 
-¬(p ^ (q ∨ r))
+¬(p ∧ (q ∨ r))
 
 p XOR q (with just the gates we've seen, not a specific XOR gate)
 
