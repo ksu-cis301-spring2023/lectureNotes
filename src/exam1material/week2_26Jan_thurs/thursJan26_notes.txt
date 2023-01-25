@@ -1,0 +1,317 @@
+HW 2 due Tuesday, January 31
+
+--> will be creating 2 image files
+
+--> make sure those are added to your git repository!
+
+/////////////////////////////////
+
+Today:
+
+- Another parse tree
+- A bit more with translations
+- Equivalent propositions
+- Proving equivalence with truth tables
+- DeMorgan's laws
+- Equivalent if-statements
+- Negating if-statements
+- Satisfiability
+
+/////////////////////////////////
+
+How do we draw parse trees again?
+
+Example: draw the parse tree for:
+
+(p ∨ ¬q) ∧ (r → q)
+
+
+
+
+
+
+/////////////////////////////////
+
+Identifying propositional atoms:
+
+- true/false statements
+- as minimal as possible (don't contain any logical connectives)
+
+
+Example:
+
+You cannot enroll for the course if you have not taken the prerequisite unless you are a graduate student.
+
+(what are we promising?)
+
+
+
+(what must be true if you CAN enroll for the course?)
+
+
+
+
+
+/////////////
+
+Example:
+
+if (x <= 2 || y >= 0) {
+    if (z != 17) {
+        answer = 25;
+    }
+}
+
+(what are we promising about answer?)
+
+
+
+
+
+(what must be true if answer is NOT 25?)
+
+
+
+
+Translate what we are promising about answer to propositional logic:
+
+
+
+
+
+//////////////////////////////////
+
+Consider these two statements:
+
+
+
+1) If I am at least 18 years old, then I can vote.
+
+2) I'm not at least 18 years old or I can vote.
+
+
+--> are they saying the same thing?
+
+
+
+
+
+--> how could we translate them to propositional logic statements?
+
+
+
+
+
+
+--> how could we prove they have the same logical meaning?
+
+
+
+
+
+
+
+
+//////////////////////////////////
+
+DeMorgan's Laws.
+
+...DeMorgan has so many laws...these are a couple of them.
+
+
+
+
+if (a == 4 || a == 5) {
+    statements
+}
+
+How could we express the NEGATION (i.e., what condition would be true for an "else" of this statement to execute)?
+
+
+
+
+
+
+///
+
+if (a == 4 && b == 5) {
+    statements
+}
+
+How could we express the NEGATION (i.e., what condition would be true for an "else" of this statement to execute)?
+
+
+
+
+
+--> how can we express this in propositional logic?
+
+
+
+
+
+--> how can we prove DeMorgan's laws?
+
+
+
+
+
+////////////////////////
+
+Another if-statement example.
+
+if (Character.isDigit(letter) == true || num < 10) {
+    statements
+}
+
+--> how would we negate it?
+
+
+
+
+
+
+
+
+
+///////////////////////
+
+Other equivalences (≡ means "is equivalent to").
+
+
+¬(p ∧ q) ≡ ¬p ∨ ¬q      (DeMorgan's laws)
+¬(p ∨ q) ≡ ¬p ∧ ¬q
+
+
+p ∧ T ≡ ?               (identity laws)
+p ∨ F ≡ ?
+
+
+p ∨ p ≡ ?               (idempotent laws)
+
+
+¬(¬p) ≡ ?               (double negation law)
+
+
+p ∨ q ≡ ?               (commutative laws)
+p ∧ q ≡ ?
+
+
+(p ∨ q) ∨ r ≡ ?         (associative laws)
+(p ∧ q) ∧ r ≡ ?
+
+
+p ∨ (q ∧ r) ≡ ?         (distributive laws)
+p ∧ (q ∨ r) ≡ ?
+
+
+p ∨ (p ∧ q) ≡ ?         (absorption laws)
+p ∧ (p ∨ q) ≡ ?
+
+
+
+//////////////////////////
+
+Equivalences with implies.
+
+p → q ≡ ?
+p → q ≡ ?
+
+
+/////////////////////////
+
+Examples.
+
+1) Find two statements equivalent to p ∨ q
+
+
+
+
+
+2) Find two statements equivalent to ¬(p ∧ q)
+
+
+
+
+
+////////////////////////
+
+Satisfiability.
+
+- definition
+
+- what kind of statement is satisfiable? what kind is not?
+
+
+
+
+
+- is this satisfiable?
+
+        (p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)
+
+
+
+
+
+
+
+- Aside: NP complete problems
+    SAT problem
+    3-SAT problem
+    Sudoku problem
+
+
+
+
+
+
+
+////////////////////////
+
+Proving an argument.
+
+*Premises* - pieces of information we are given, that we can assume are true.
+*Conclusion* - something we are trying to show logical follows from our premises.
+
+
+///
+
+Proofs with truth tables.
+
+Suppose we know:
+
+    I am in the CS department.
+    If I am in the CS department or the ECE department, then I have a CS account.
+    If I have a CS account, then I can log in to the CS lab computers.
+
+
+I want to prove:
+
+    I can log in to the CS lab computers.
+
+
+
+--> How would we translate to propositional logic?
+
+
+
+
+
+--> How might we demonstrate this with truth tables?
+
+
+
+
+
+
+
+
+/////////////////////////
+
+Next time:
+
+- counterexamples to arguments
+- why proofs with truth tables can be unwieldy
+- introduce minimal set of deduction rules
+- apply these rules to prove conclusions in propositional logic
