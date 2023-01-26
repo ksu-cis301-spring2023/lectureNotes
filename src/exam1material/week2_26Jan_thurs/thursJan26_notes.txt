@@ -25,7 +25,7 @@ Example: draw the parse tree for:
 (p ∨ ¬q) ∧ (r → q ∨ p)
 
 
-
+(see parseTree_part2.png)
 
 
 
@@ -54,6 +54,7 @@ no
 
 
 --> or are we promising something else?
+--> translate to propositional logic:
 
 if you can enroll, you have taken the prereq
     p -> q
@@ -61,15 +62,6 @@ if you can enroll, you have taken the prereq
 if you haven't taken the prereq, then you can't enroll
     !q -> !p
 
-
-
-
---> translate to propositional logic:
-
-
-
-
-(what must be true if you CAN enroll for the course?)
 
 
 
@@ -133,25 +125,18 @@ Consider these two statements:
 p: I am at least 16 years old
 q: I can drive a car
 
-1) p -> q
-2) !p V q
-
-truth tables.
-
-
-
-
-
 --> how could we translate them to propositional logic statements?
 
-
+1) p -> q
+2) !p V q
 
 
 
 
 --> how could we prove they have the same logical meaning?
 
-
+use truth tables to show the same set of truth assignments
+make both statements true (see equiv.logika)
 
 
 
@@ -197,7 +182,7 @@ if (a != 4 || b != 5) {
 
 
 --> how can we express this in propositional logic?
-
+--> (These are DeMorgan's laws?)
 
 !(p V q) is equivalent to !p ^ !q
 
@@ -206,7 +191,8 @@ if (a != 4 || b != 5) {
 
 --> how can we prove DeMorgan's laws?
 
-
+use truth tables to show the same set of truth assignments
+make both statements true (see demorgan.logika)
 
 
 
@@ -306,28 +292,21 @@ are these equivalent?
 
   no!
 
+    p = F
+    q = T
+    r = F
+
+    (p → q) → r is false:
+        (F -> T) -> F, which is T -> F, which is F
+    p → (q → r) is true:
+        F -> (T -> F), which is F -> F, which is T
+
   why?
 
   counterexample: find ONE truth assignment
   where the two statements have different values
 
 /////////////////////////
-
-Examples.
-
-1) Find two statements equivalent to p ∨ q
-
-
-
-
-
-2) Find two statements equivalent to ¬(p ∧ q)
-
-
-
-
-
-////////////////////////
 
 Satisfiability.
 
@@ -339,7 +318,7 @@ tautology, contingent
 
 not satisfiable: contradictory
 
-- is this satisfiable?
+- is this satisfiable? yes!
 
         (p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)
 
@@ -349,7 +328,7 @@ not satisfiable: contradictory
 
 
 
-- Aside: NP complete problems
+- Aside: P and NP problems
 
 running time programs
 
@@ -360,9 +339,8 @@ can we check a solution to a problem in polynomial time? class NP
 
 does P = NP?
 
-    SAT problem
-    3-SAT problem
-    Sudoku problem
+    SAT problem - satisfiability of logic statements
+    unknown if we can solve it in polynomial time
 
 
 
