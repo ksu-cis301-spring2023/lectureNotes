@@ -13,7 +13,6 @@ Today:
 - Equivalent propositions
 - Proving equivalence with truth tables
 - DeMorgan's laws
-- Equivalent if-statements
 - Negating if-statements
 - Satisfiability
 
@@ -23,7 +22,7 @@ How do we draw parse trees again?
 
 Example: draw the parse tree for:
 
-(p ∨ ¬q) ∧ (r → q)
+(p ∨ ¬q) ∧ (r → q ∨ p)
 
 
 
@@ -40,9 +39,33 @@ Identifying propositional atoms:
 
 Example:
 
-You cannot enroll for the course if you have not taken the prerequisite unless you are a graduate student.
+You can't enroll for the course if you haven't taken the prerequisite.
 
-(what are we promising?)
+
+--> what are the propositional atoms?
+
+p: you can enroll for the course
+q: you have taken the prerequisite
+
+
+--> are we promising they CAN enroll if they have the prereq?
+
+no
+
+
+--> or are we promising something else?
+
+if you can enroll, you have taken the prereq
+    p -> q
+
+if you haven't taken the prereq, then you can't enroll
+    !q -> !p
+
+
+
+
+--> translate to propositional logic:
+
 
 
 
@@ -64,6 +87,16 @@ if (x <= 2 || y >= 0) {
 
 (what are we promising about answer?)
 
+if all those conditions are true, then answer will be 25
+
+p: x <= 2
+q: y >= 0
+r: z == 17
+s: answer == 25
+
+(p V q) ^ !r -> s
+
+
 
 
 
@@ -72,11 +105,16 @@ if (x <= 2 || y >= 0) {
 
 
 
+if (x <= 2 || y >= 0) {
+    if (z != 17) {
+        answer = 25;
+    }
+}
+<--
 
-Translate what we are promising about answer to propositional logic:
+if answer isn't 25, what do I know?
 
-
-
+(x > 2 && y < 0) || z == 17
 
 
 //////////////////////////////////
@@ -85,12 +123,20 @@ Consider these two statements:
 
 
 
-1) If I am at least 18 years old, then I can vote.
+1) If I am at least 16 years old, then I can drive a car.
 
-2) I'm not at least 18 years old or I can vote.
+2) I'm not at least 16 years old or I can drive a car.
 
 
 --> are they saying the same thing?
+
+p: I am at least 16 years old
+q: I can drive a car
+
+1) p -> q
+2) !p V q
+
+truth tables.
 
 
 
@@ -125,9 +171,12 @@ if (a == 4 || a == 5) {
     statements
 }
 
-How could we express the NEGATION (i.e., what condition would be true for an "else" of this statement to execute)?
+How could we express the NEGATION
+(i.e., what condition would be true for the "else")?
 
+if (a != 4 && a != 5) {
 
+}
 
 
 
@@ -138,16 +187,21 @@ if (a == 4 && b == 5) {
     statements
 }
 
-How could we express the NEGATION (i.e., what condition would be true for an "else" of this statement to execute)?
+How could we express the NEGATION
+(i.e., what condition would be true for the "else")?
 
-
+if (a != 4 || b != 5) {
+    statements
+}
 
 
 
 --> how can we express this in propositional logic?
 
 
+!(p V q) is equivalent to !p ^ !q
 
+!(p ^ q) is equivalent to !p V !q
 
 
 --> how can we prove DeMorgan's laws?
@@ -166,11 +220,40 @@ if (Character.isDigit(letter) == true || num < 10) {
 
 --> how would we negate it?
 
+!(p V q) equivalent !p ^ !q
+
+
+if (Character.isDigit(letter) == false && num >= 10) {
+    statements
+}
 
 
 
+///////////////////////
 
+And one more. Negate this one:
 
+if ((y >= 4 && num != 14) || x > 0) {
+    statements
+}
+
+negation:
+
+p: y >= 4
+q: num == 14
+r: x > 0
+
+(p ^ !q) V r
+
+want to negate it:
+!((p ^ !q) V r)
+
+!(p ^ !q) ^ !r
+(!p V q) ^ !r
+
+if ((y < 4 || num == 14) && x <= 0) {
+    statements
+}
 
 
 
@@ -183,40 +266,50 @@ Other equivalences (≡ means "is equivalent to").
 ¬(p ∨ q) ≡ ¬p ∧ ¬q
 
 
-p ∧ T ≡ ?               (identity laws)
-p ∨ F ≡ ?
+p ∧ T ≡ p               (identity laws)
+p ∨ F ≡ p
 
 
-p ∨ p ≡ ?               (idempotent laws)
+p ∨ p ≡ p               (idempotent laws)
 
 
-¬(¬p) ≡ ?               (double negation law)
+¬(¬p) ≡ p               (double negation law)
 
 
-p ∨ q ≡ ?               (commutative laws)
-p ∧ q ≡ ?
+p ∨ q ≡ q V p               (commutative laws)
+p ∧ q ≡ q ^ p
 
 
-(p ∨ q) ∨ r ≡ ?         (associative laws)
-(p ∧ q) ∧ r ≡ ?
+(p ∨ q) ∨ r ≡ p ∨ (q ∨ r)         (associative laws)
+(p ∧ q) ∧ r ≡ p ∧ (q ∧ r)
 
 
-p ∨ (q ∧ r) ≡ ?         (distributive laws)
-p ∧ (q ∨ r) ≡ ?
+p ∨ (q ∧ r) ≡ (p V q) ^ (p V r)         (distributive laws)
+p ∧ (q ∨ r) ≡ (p ^ q) V (p ^ r)
 
-
-p ∨ (p ∧ q) ≡ ?         (absorption laws)
-p ∧ (p ∨ q) ≡ ?
-
+5*(2 + 3) = 5*2 + 5*3
 
 
 //////////////////////////
 
 Equivalences with implies.
 
-p → q ≡ ?
-p → q ≡ ?
+p → q ≡ !q -> !p (contrapositive)
+p → q ≡ !p V q (can turn implies into an or)
 
+
+
+are these equivalent?
+
+    (p → q) → r
+    p → (q → r)
+
+  no!
+
+  why?
+
+  counterexample: find ONE truth assignment
+  where the two statements have different values
 
 /////////////////////////
 
@@ -238,25 +331,35 @@ Examples.
 
 Satisfiability.
 
-- definition
+- definition: at least one truth assignment makes it true
 
 - what kind of statement is satisfiable? what kind is not?
 
+tautology, contingent
 
-
-
+not satisfiable: contradictory
 
 - is this satisfiable?
 
         (p ∨ ¬q) ∧ (q ∨ ¬r) ∧ (r ∨ ¬p)
 
-
-
-
+        p = F
+        q = F
+        r = F
 
 
 
 - Aside: NP complete problems
+
+running time programs
+
+can we solve a problem in polynomial time? class P
+
+can we check a solution to a problem in polynomial time? class NP
+
+
+does P = NP?
+
     SAT problem
     3-SAT problem
     Sudoku problem
@@ -269,10 +372,13 @@ Satisfiability.
 
 ////////////////////////
 
+<-- stop here, will finish on Tuesday
+
 Proving an argument.
 
-*Premises* - pieces of information we are given, that we can assume are true.
-*Conclusion* - something we are trying to show logical follows from our premises.
+*Premises* - pieces of information we are given (assume true)
+*Conclusion* - something we are trying to show logically follows
+    from our premises.
 
 
 ///
@@ -282,7 +388,10 @@ Proofs with truth tables.
 Suppose we know:
 
     I am in the CS department.
-    If I am in the CS department or the ECE department, then I have a CS account.
+
+    If I am in the CS department or the ECE department,
+        then I have a CS account.
+
     If I have a CS account, then I can log in to the CS lab computers.
 
 

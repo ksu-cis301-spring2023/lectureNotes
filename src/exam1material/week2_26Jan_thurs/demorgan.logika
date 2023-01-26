@@ -1,0 +1,37 @@
+
+//prove one of DeMorgan's laws
+//!(p V q) is equivalent to !p ^ !q
+
+/*
+      *
+----------------
+p q | !(p V q)
+----------------
+T T | F   T
+T F | F   T
+F T | F   T
+F F | T   F
+-----------------
+
+Contingent
+
+- T: [F F]
+- F: [T T] [T F] [F T]
+
+*/
+
+         *
+----------------
+p q | !p ^ !q
+----------------
+T T | F  F F
+T F | F  F T
+F T | T  F F
+F F | T  T T
+-----------------
+
+Contingent
+
+- T: [F F]
+- F: [T T] [T F] [F T]
+
