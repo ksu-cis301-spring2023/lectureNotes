@@ -1,0 +1,14 @@
+/*
+Suppose we know:
+
+    I am in the CS department or I am in the ECE department
+
+    I am not in the ECE department.
+
+    If I am in the CS department, then I can log in to the CS lab computers.
+
+
+I want to prove:
+
+    I can log in to the CS lab computers and I am in the CS department.
+*/

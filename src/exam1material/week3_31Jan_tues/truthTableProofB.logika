@@ -1,0 +1,10 @@
+/*
+Premises:
+    p → ¬q
+    p → q
+    p ∨ q
+
+We wish to prove:
+
+    q
+*/
