@@ -27,21 +27,33 @@ and
 
 How would we show they are NOT equivalent?
 
+
+
+
+
+
 ////////////////////////////////////////
 
 Reminder: satisfiability
 
 Definition?
 
+
+
+
 Example: (p → ¬q) → r
 
 Is it satisfiable?
+
+
+
 
 ////////////////////////////////////////
 
 Proving an argument.
 
 *Premises* - pieces of information we are given (assume true)
+
 *Conclusion* - something we are trying to show logically follows
     from our premises.
 
@@ -56,7 +68,8 @@ Suppose we know:
 
     I am not in the ECE department.
 
-    If I am in the CS department, then I can log in to the CS lab computers.
+    If I am in the CS department,
+        then I can log in to the CS lab computers.
 
 
 I want to prove:
@@ -71,7 +84,7 @@ I want to prove:
 
 
 
---> How might we demonstrate this with truth tables?
+--> How might we prove this with truth tables?
 
 
 
@@ -89,6 +102,10 @@ Premises:
 We wish to prove:
 
     q
+
+
+
+
 
 
 /////////////////////////////
@@ -113,6 +130,9 @@ We wish to find a COUNTEREXAMPLE to the argument.
 --> need a case where the premises are true but the conclusions are not.
 
 
+
+
+
 --> if we can find a counterexample, then the argument is NOT VALID
 
 --> otherwise, the argument IS VALID
@@ -121,22 +141,45 @@ We wish to find a COUNTEREXAMPLE to the argument.
 
 Downside of proofs with truth tables?
 
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////////////
 
-New idea: demonstrate conclusion follows from premises using *natural deduction*
+New idea: demonstrate conclusion follows from premises using
+*natural deduction*
+
     --> use a minimal set of deduction rules
+
     --> for each logical operator
-        - *introduction* rule: lets us introduce a claim with that operator
-        - *elimination* rule: lets us extract pieces from a claim with that operator
+        - *introduction* rule:
+            lets us introduce a claim with that operator
+
+        - *elimination* rule:
+            lets us extract pieces from a claim with that operator
 
     --> apply these rules to create new claims that logically follow
 
+
+
+/////////////////////////////////
 
 Want to prove a *sequent* of the form:
 
     premises ⊢ conclusion
 
 where *premises* is a comma-separated list.
+
+
 
 
 
@@ -156,7 +199,9 @@ AND rules idea.
 
 
    --> in what situations do you think we could do that?
+
    --> what information would we already need to have?
+
 
 
 
@@ -196,6 +241,24 @@ AND elimination:
 
 
 --> How could we demonstrate these rules in a truth table?
+
+
+
+//////////////////////////////////
+
+What if we knew:
+
+    a ∨ ¬b
+
+and also:
+
+    c → d
+
+What could we claim with  ∧i?
+
+
+
+
 
 //////////////////////////////////
 
@@ -262,21 +325,35 @@ p ∧ q ∧ r ⊢ q
 
 Example:
 
-if (num > 0) {
-    if (num < 10) {
+if (level >= 9 && age >= 14) {
+    if (age <= 18 && level <= 12) {
         //WE ARE HERE
     }
 }
 
---> What premises do we know at that point? Translate to propositional logic.
+--> What premises do we know at that point?
+Translate to propositional logic:
+
+
+
+
 
 
 --> How could we write an equivalent conditional statement?
 
 
---> Use natural deduction to prove that the two conditional statements are equivalent
 
-    --> How many proofs do we need?
+
+
+--> Use natural deduction to prove that our new conditional
+    statement is true whenever the old one is
+
+
+
+
+
+
+    --> Have we proved the two conditional statements are equivalent?
 
 
 
