@@ -103,11 +103,11 @@ Contingent
 
 
 Premises are true when:
-1) - T:
-2) - T:  [F F T] [F F F]
-3) - T:  [F F T] [F F F]
+1) [T T T] [T T F] [T F T] [T F F] [F T T] [F T F]
+2) [T F T] [T F F] [F F T] [F F F]
+3) [T T T] [T F T] [F T T] [F T F] [F F T] [F F F]
 
-All true when [T F T]
+The list of truth assignments where ALL premises are true is: [T F T]
 
 The conclusions is also true on that truth assignment,
 so the argument holds.
