@@ -27,7 +27,16 @@ and
 
 How would we show they are NOT equivalent?
 
+p is T
+q is F
 
+¬(p ∨ q) would be false
+
+¬p ∨ ¬q would be true
+
+if (!(a == 10 || b == 0))
+
+if (a != 10 || b != 0)
 
 
 
@@ -36,7 +45,8 @@ How would we show they are NOT equivalent?
 
 Reminder: satisfiability
 
-Definition?
+Definition? I can find a truth assignment that
+makes the statement true
 
 
 
@@ -45,6 +55,9 @@ Example: (p → ¬q) → r
 
 Is it satisfiable?
 
+p = T
+q = F
+r = T
 
 
 
@@ -80,8 +93,16 @@ I want to prove:
 
 --> How would we translate to propositional logic?
 
+p: I am in the CS department
+q: I am in the ECE department
+r: I can log in to the CS lab computers
 
+Premises:
+p V q
+!q
+p -> r
 
+Conclusion: r ^ p
 
 
 --> How might we prove this with truth tables?
@@ -104,7 +125,7 @@ We wish to prove:
     q
 
 
-
+You can do this on your own if you want.
 
 
 
@@ -125,6 +146,19 @@ Consider the following argument:
         It is sunny.
 
 
+p: it is sunny
+q: I wear sunscreen
+
+premises:
+p -> q
+q
+
+Conclusion: p
+
+
+p = F
+q = T
+
 We wish to find a COUNTEREXAMPLE to the argument.
 
 --> need a case where the premises are true but the conclusions are not.
@@ -144,7 +178,9 @@ Downside of proofs with truth tables?
 
 
 
-
+it is super annoying
+and tedious
+and long
 
 
 
@@ -199,8 +235,8 @@ AND rules idea.
 
 
    --> in what situations do you think we could do that?
+   if I already had claims for P and claims for Q (separately)
 
-   --> what information would we already need to have?
 
 
 
@@ -208,6 +244,9 @@ AND rules idea.
 2) What if we already had an AND statement like  P ∧ Q.
 
     --> what separate claims would make sense using that statement?
+
+    P (all by itself)
+    Q (all by itself)
 
     --> what happened to the AND operator in both cases?
 
@@ -228,6 +267,7 @@ AND introduction:
 
 --> How could we demonstrate this rule in a truth table?
 
+anytime P and Q are both true, then P ∧ Q is also true in a truth table
 
 
 ///
@@ -256,7 +296,7 @@ and also:
 
 What could we claim with  ∧i?
 
-
+(a ∨ ¬b) ∧ (c → d)
 
 
 
@@ -301,6 +341,15 @@ Example:
 Given premises:  a ∧ b, c
 Use natural deduction to prove: b ∧ c
 
+a ^ b, c |- b ^ c
+{
+    1. a ^ b                premise
+    2. c                    premise
+    3. a                    ^e1 1
+    4. b                    ^e2 1
+    5. b ^ c                ^i 4 2
+}
+
 
 /////////////////////////////////
 
@@ -334,6 +383,15 @@ if (level >= 9 && age >= 14) {
 --> What premises do we know at that point?
 Translate to propositional logic:
 
+all conditions are true
+
+p: level >= 9
+q: age >= 14
+r: age <= 18
+s: level <= 12
+
+p ^ q (outer if)
+r ^ s (inner if)
 
 
 
@@ -341,9 +399,20 @@ Translate to propositional logic:
 
 --> How could we write an equivalent conditional statement?
 
+if (level >= 9 && level <= 12 && age >= 14 && age <= 18) {
+    //WE ARE HERE
+}
 
+p ^ s ^ q ^ r
 
+p ^ q, r ^ s |- p ^ s ^ q ^ r
+{
+    //could prove this
+}
 
+if (true) {
+
+}
 
 --> Use natural deduction to prove that our new conditional
     statement is true whenever the old one is
@@ -355,7 +424,20 @@ Translate to propositional logic:
 
     --> Have we proved the two conditional statements are equivalent?
 
+no, would need to do the other way also
 
+
+p ^ s ^ q ^ r |- p ^ q
+{
+    //could prove this
+    //anytime conclusion is true, premise 1 is true
+}
+
+p ^ s ^ q ^ r |- r ^ s
+{
+    //could prove this
+    //anytime conclusion is true, premise 2 is true
+}
 
 ///////////////////////////////
 

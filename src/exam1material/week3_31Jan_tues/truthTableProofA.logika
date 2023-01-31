@@ -12,3 +12,104 @@ I want to prove:
 
     I can log in to the CS lab computers and I am in the CS department.
 */
+
+/*
+Premises:
+p V q
+!q
+p -> r
+
+Conclusion: r ^ p
+*/
+          *
+---------------
+p q r | p V q
+---------------
+T T T |   T
+T T F |   T
+T F T |   T
+T F F |   T
+F T T |   T
+F T F |   T
+F F T |   F
+F F F |   F
+----------------
+
+Contingent
+
+- T: [T T T] [T T F] [T F T] [T F F] [F T T] [F T F]
+- F: [F F T] [F F F]
+
+
+/*
+
+        *
+---------------
+p q r | !q
+---------------
+T T T | F
+T T F | F
+T F T | T
+T F F | T
+F T T | F
+F T F | F
+F F T | T
+F F F | T
+----------------
+
+Contingent
+
+- T: [T F T] [T F F] [F F T] [F F F]
+- F: [T T T] [T T F] [F T T] [F T F]
+
+          *
+---------------
+p q r | p -> r
+---------------
+T T T |   T
+T T F |   F
+T F T |   T
+T F F |   F
+F T T |   T
+F T F |   T
+F F T |   T
+F F F |   T
+----------------
+
+Contingent
+
+- T: [T T T] [T F T] [F T T] [F T F] [F F T] [F F F]
+- F: [T T F] [T F F]
+
+          *
+---------------
+p q r | r ^ p
+---------------
+T T T |   T
+T T F |   F
+T F T |   T
+T F F |   F
+F T T |   F
+F T F |   F
+F F T |   F
+F F F |   F
+----------------
+
+Contingent
+
+- T: [T T T] [T F T]
+- F: [T T F] [T F F] [F T T] [F T F] [F F T] [F F F]
+
+
+
+Premises are true when:
+1) - T:
+2) - T:  [F F T] [F F F]
+3) - T:  [F F T] [F F F]
+
+All true when [T F T]
+
+The conclusions is also true on that truth assignment,
+so the argument holds.
+
+*/
