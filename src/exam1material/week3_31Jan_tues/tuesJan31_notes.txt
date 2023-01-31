@@ -451,3 +451,7 @@ Next time:
 - Using natural deduction to prove two statements are equivalent
 - Equivalent if-statements
 - If time, implies rules in natural deduction
+
+these are my notes
+
+test test test
