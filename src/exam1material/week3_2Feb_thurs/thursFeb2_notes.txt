@@ -1,0 +1,12 @@
+HW 3 due Tuesday, February 7
+
+Exam 1 is Thursday, February 9
+
+//////////////////////////////////////////
+
+Today:
+
+- OR rules in natural deduction
+- Using natural deduction to prove two statements are equivalent
+- Equivalent if-statements
+- If time, implies rules in natural deduction
