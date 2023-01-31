@@ -107,7 +107,11 @@ Conclusion: r ^ p
 
 --> How might we prove this with truth tables?
 
+make a separate truth table for each premise and the conclusion
 
+find the list of each truth assignment that makes ALL premises true
+
+make sure that every truth assignment in your list ALSO makes the conclusion true
 
 
 
