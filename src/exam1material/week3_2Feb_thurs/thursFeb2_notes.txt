@@ -29,10 +29,10 @@ Part 1: Just after the code fragment finishes, suppose we know that y is 17 but 
 What can we conclude about a? Explain.
 
 
-from 1st if? a <= 10 || a >= 20
-from second if? a > 10
+from 1st if?
+from second if?
 
-putting them together: a >= 20
+putting them together:
 
 
 ///
@@ -41,10 +41,10 @@ Part 2: What if the statement "y = 0;" was removed from the beginning of the cod
 that affect what we could conclude in Part 1 (if we still knew that y was 17 and that x was not 20
 just after the code fragment finishes)? Explain.
 
-from first if? a <= 10 || a >= 20
-from second if? nothing...y might have already been 17
+from first if?
+from second if?
 
-putting them together: a <= 10 || a >= 10
+putting them together:
 
 
 //////////////////////////////////////////
@@ -292,8 +292,43 @@ p → r,  q → r,  p ∨ q  ⊢  r
 
 //////////////////////////////////////
 
+Implies-introduction, →i
+
+      {P assume
+      ... Q}
+→i: -----------
+      P → Q
+
+
+Idea: if Q is true whenever P is, then we can promise that if P is true, then Q is too.
+This is the relationship P → Q.
+
+
+--> how does this relate to proofs with truth tables?
+
+////////////////////////////////////////
+
+Syntax for using ->i:
+
+a. {
+    b. P            assume
+    ...
+    c. Q            (some justification
+}
+d. P → Q            →i a
+
+///////////////////////////////////////
+
+Example:
+
+p → r,  q → r  ⊢  (p ∧ q) → r
+
+
+
+
+////////////////////////////////////////
 
 Next time:
 
-- Implies introduction rule
+- More with implies rules
 - Review for Exam 1
