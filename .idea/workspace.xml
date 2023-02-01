@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="" />
+    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam1material/week3_2Feb_thurs/thursFeb2_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam1material/week3_2Feb_thurs/thursFeb2_notes.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,12 +261,24 @@
       <option name="project" value="LOCAL" />
       <updated>1675197301965</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Another test">
+      <created>1675197933653</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1675197933653</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added logika file">
+      <created>1675198003348</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1675198003348</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Another package test" />
-    <MESSAGE value="Renamed packages to order chronologically" />
     <MESSAGE value="CHanges to Thurs" />
     <MESSAGE value="Changes to older day" />
     <MESSAGE value="Test changes" />
@@ -287,6 +302,8 @@
     <MESSAGE value="First page for Thurs Feb 2" />
     <MESSAGE value="Added detail on proofs with truth tables" />
     <MESSAGE value="Test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test commit" />
+    <MESSAGE value="Another test" />
+    <MESSAGE value="Added logika file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logika file" />
   </component>
 </project>

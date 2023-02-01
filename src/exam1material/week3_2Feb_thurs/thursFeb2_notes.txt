@@ -1,6 +1,51 @@
 HW 3 due Tuesday, February 7
 
+    Reminder: correct submission format
+
 Exam 1 is Thursday, February 9
+
+//////////////////////////////////////////
+
+HW 1 grading discussion
+
+- be sure to provide an explanation if the problem asks for one
+
+
+Most commonly missed problems was #4 on the first page:
+
+Suppose we have the following code fragment:
+
+    y = 0;
+    if (a > 10 && a < 20) {
+        x = 20;
+    }
+    else {
+        if (a > 10) {
+            y = 17;
+        }
+    }
+
+Part 1: Just after the code fragment finishes, suppose we know that y is 17 but that x is NOT 20.
+What can we conclude about a? Explain.
+
+
+from 1st if? a <= 10 || a >= 20
+from second if? a > 10
+
+putting them together: a >= 20
+
+
+///
+
+Part 2: What if the statement "y = 0;" was removed from the beginning of the code fragment. Would
+that affect what we could conclude in Part 1 (if we still knew that y was 17 and that x was not 20
+just after the code fragment finishes)? Explain.
+
+from first if? a <= 10 || a >= 20
+from second if? nothing...y might have already been 17
+
+putting them together: a <= 10 || a >= 10
+
 
 //////////////////////////////////////////
 
@@ -14,9 +59,241 @@ Today:
 
 ///////////////////////////////////////////
 
+Review:
+
+- we want to prove that a conclusion logically follows from a set of premises
+- could do this with truth tables
+    ...but it is very tedious
+    (Reminder: how did it work?)
+
+
+We use *natural deduction* with a minimal set of rules to prove the same things
+
+
+
+Natural deduction proof syntax.
+
+
+    premises ⊢ conclusion
+    {
+        1. claim                justification
+        2. claim                justification
+        ...
+        n. conclusion           justification
+    }
+
+
+
+claim: a propositional logic statement
+justificaton: the rule justifying the corresponding claim
+    (along with line numbers as needed to reference previous claims)
+
+
+///////////////////////////////////////////
+
+Rules from Tuesday:
+
+∧i lhsLine rhsLine
+∧e1 lineWithLeft
+∧e2 lineWithRight
+
+/////////////////////////////////////////////
+
+Prove that ∧ is commutative:
+
+p ∧ q ⊢ q ∧ p
+
+
+
+////////////////////////////////////////////
+
 OR introduction
+
+          P                      Q
+ ∨i1 : ---------        ∨i2 : ---------
+        P ∨ Q                   P ∨ Q
+
+
+Why does this make sense from truth tables?
+
+
+
+Syntax:
+
+ ∨i1 lineWithLeft
+ ∨i2 lineWithRight
+
+///////////////////////////////////////////
+
+Example:
+
+p ∧ q ⊢ p ∨ q
+
 
 
 ///////////////////////////////////////////
 
 OR elimination
+
+
+Idea:
+- If an OR statement is true (i.e., you know its left or right side is true)
+- And you reach the same conclusion no matter which side of the OR is true
+- Then that conclusion holds overall
+
+
+Rule summary:
+
+
+      P ∨ Q   {P assume    {Q assume
+                ... R}       ... R}
+∨e : ---------------------------------
+                    R
+
+
+
+
+--> how would this look in a truth table proof?
+
+
+How does this relate to programming?
+
+if (condition) {
+    some result
+}
+else {
+    some result
+}
+
+--> what do we know is true here?
+
+
+///////////////////////////////
+
+Syntax for using ∨e:
+
+a. P ∨ Q            (some justification)
+b. {
+    P               assume
+    ...
+    R               (some justification)
+}
+c. {
+    Q               assume
+    ...
+    R               (some justification)
+}
+d. R                ∨e a b c
+
+
+////////////////////////////////
+
+Example: prove that ∨ is commutative
+
+p ∨ q ⊢ q ∨ p
+
+
+
+////////////////////////////////
+
+Do you think we could prove:
+
+p ∨ q ⊢ p ∧ q
+
+
+--> what happens?
+
+////////////////////////////////
+
+Proving equivalence.
+
+--> how do we prove two statements are equal in truth tables?
+
+--> how do we do it with proofs?
+
+
+////////////////////////////////
+
+Example: prove one of the distributive laws
+
+p ∨ (q ∧ r)     is equivalent to       (p ∨ q) ∧ (p ∨ r)
+
+
+
+///////////////////////////////
+
+Equivalence in if-statements.
+
+
+
+Consider this if-statement:
+
+if (grade >= 80 || extraCredit == true) {
+    if (grade <= 90 || extraCredit == true) {
+        //do stuff
+    }
+}
+
+
+--> what is an equivalent, simpler if-statement?
+
+
+--> how could we prove it?
+
+
+///////////////////////////////////
+
+Next set of deduction rules: implies operator
+
+/////////////////////////////////////
+
+Implies-elimination, →e
+
+      P, P → Q
+→e: -----------
+        Q
+
+
+
+English example:
+
+If it is hot, then I will go swimming.
+It is hot.
+
+Conclusion?
+
+
+--> how would this look in a truth table?
+    (what times would P and P → Q both be true?)
+
+
+///////////////////////////////////////
+
+Syntax for using ->e:
+
+a. P                (some justification)
+b. P → Q            (some justification)
+c. Q                →e b a
+
+
+
+////////////////////////////////////////
+
+Example:
+
+(p ∧ q) → r,  p → q,  p  ⊢  r
+
+
+
+Example:
+
+p → r,  q → r,  p ∨ q  ⊢  r
+
+
+//////////////////////////////////////
+
+
+Next time:
+
+- Implies introduction rule
+- Review for Exam 1
