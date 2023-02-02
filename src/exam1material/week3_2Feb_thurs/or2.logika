@@ -1,0 +1,24 @@
+(p ∨ q) ∧ (p ∨ r) |- p ∨ (q ∧ r)
+{
+    1. (p ∨ q) ∧ (p ∨ r)            premise
+    2. p ∨ q                        ∧e1 1
+    3. p ∨ r                        ∧e2 1
+    4. {    //processing p in p ∨ q
+        5. p                        assume
+        6. p ∨ (q ∧ r)              ∨i1 5
+    }
+    7. { //processing q in p ∨ q
+        8. q                        assume
+        9. { //processing p in p ∨ r
+            10. p                   assume
+            11. p ∨ (q ∧ r)         ∨i1 10
+        }
+        12. { //processing r in p ∨ r
+            13. r                   assume
+            14. q ∧ r               ∧i 8 13
+            15. p ∨ (q ∧ r)         ∨i2 14
+        }
+        16. p ∨ (q ∧ r)             ∨e 3 9 12
+    }
+    17. p ∨ (q ∧ r)                 ∨e 2 4 7
+}

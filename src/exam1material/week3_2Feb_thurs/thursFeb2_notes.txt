@@ -2,7 +2,12 @@ HW 3 due Tuesday, February 7
 
     Reminder: correct submission format
 
+    repo/tree/digital fingerprint
+
 Exam 1 is Thursday, February 9
+    take full time
+    closed notes
+    similar to HW problems
 
 //////////////////////////////////////////
 
@@ -11,9 +16,37 @@ HW 1 grading discussion
 - be sure to provide an explanation if the problem asks for one
 
 
-Most commonly missed problems was #4 on the first page:
+Most commonly missed problems were #3 and #4 on the first page:
 
-Suppose we have the following code fragment:
+////
+
+#3: Suppose we have the following code fragment:
+
+    x = 5;
+    if (a > 0) {
+        x = 7;
+        if (a % 2 == 1) {
+            y = 14;
+        }
+    }
+
+Just after the code fragment finishes, suppose we know that
+x is 7 but that y is NOT 14. What can we conclude about a? Explain.
+
+from 1st if: a > 0 (must have been to change x to 7)
+from 2nd if: a must be even (because y WOULD be 14 if
+    we went into the inner if, which would have
+    been when a was odd. It didn't, so a is even.)
+
+a must be a positive even number
+
+
+
+
+
+////
+
+#4: Suppose we have the following code fragment:
 
     y = 0;
     if (a > 10 && a < 20) {
@@ -25,26 +58,40 @@ Suppose we have the following code fragment:
         }
     }
 
-Part 1: Just after the code fragment finishes, suppose we know that y is 17 but that x is NOT 20.
+Part 1: Just after the code fragment finishes, suppose we know
+that y is 17 but that x is NOT 20.
 What can we conclude about a? Explain.
 
 
-from 1st if?
-from second if?
+from 1st if? !(a > 10 && a < 20)
+    a <= 10 || a >= 20
+
+didn't go in first if because otherwise x WOULD be 20
+
+from second if? y got changed from 0 to 17, so must
+    have gone in nested else/if. So a > 10
 
 putting them together:
+     a <= 10 || a >= 20
+     a > 10
 
+     a must be >= 20, since a <= 10 is false and the || is true.
 
 ///
 
-Part 2: What if the statement "y = 0;" was removed from the beginning of the code fragment. Would
-that affect what we could conclude in Part 1 (if we still knew that y was 17 and that x was not 20
-just after the code fragment finishes)? Explain.
+Part 2: What if the statement "y = 0;" was removed from the
+beginning of the code fragment. Would that affect what we could
+conclude in Part 1 (if we still knew that y was 17 and that
+x was not 20 just after the code fragment finishes)? Explain.
 
-from first if?
-from second if?
+from first if? still know its condition is false, or
+    x would be 20.
+    a <= 10 || a >= 20
 
-putting them together:
+from second if? nothing. y might have been set to 17
+    somewhere else
+
+putting them together: a <= 10 || a >= 20
 
 
 //////////////////////////////////////////
@@ -61,18 +108,22 @@ Today:
 
 Review:
 
-- we want to prove that a conclusion logically follows from a set of premises
+- we want to prove that a conclusion logically follows from
+    a set of premises
+
 - could do this with truth tables
     ...but it is very tedious
     (Reminder: how did it work?)
 
 
-We use *natural deduction* with a minimal set of rules to prove the same things
+We use *natural deduction* with a minimal set of rules
+    to prove the same things
 
 
 
 Natural deduction proof syntax.
 
+|-
 
     premises ⊢ conclusion
     {
@@ -82,7 +133,7 @@ Natural deduction proof syntax.
         n. conclusion           justification
     }
 
-
+premises ⊢ conclusion --> this is a SEQUENT
 
 claim: a propositional logic statement
 justificaton: the rule justifying the corresponding claim
@@ -93,15 +144,22 @@ justificaton: the rule justifying the corresponding claim
 
 Rules from Tuesday:
 
+premise
 ∧i lhsLine rhsLine
-∧e1 lineWithLeft
-∧e2 lineWithRight
+∧e1 lineWithAnd
+∧e2 lineWithAnd
 
 /////////////////////////////////////////////
 
 Prove that ∧ is commutative:
 
 p ∧ q ⊢ q ∧ p
+{
+    1. p ∧ q                premise
+    2. p                    ∧e1 1
+    3. q                    ∧e2 1
+    4. q ∧ p                ∧i 3 2
+}
 
 
 
@@ -128,6 +186,11 @@ Syntax:
 Example:
 
 p ∧ q ⊢ p ∨ q
+{
+    1. p ∧ q                    premise
+    2. q                        ∧e2 1
+    3. p ∨ q                    ∨i2 2
+}
 
 
 
@@ -137,8 +200,10 @@ OR elimination
 
 
 Idea:
-- If an OR statement is true (i.e., you know its left or right side is true)
-- And you reach the same conclusion no matter which side of the OR is true
+- If an OR statement is true, what do we know?
+    --> at least one side is true
+
+- Reach same conclusion no matter which side of the OR is true
 - Then that conclusion holds overall
 
 
@@ -152,10 +217,6 @@ Rule summary:
 
 
 
-
---> how would this look in a truth table proof?
-
-
 How does this relate to programming?
 
 if (condition) {
@@ -166,7 +227,7 @@ else {
 }
 
 --> what do we know is true here?
-
+"some result"
 
 ///////////////////////////////
 
@@ -191,6 +252,18 @@ d. R                ∨e a b c
 Example: prove that ∨ is commutative
 
 p ∨ q ⊢ q ∨ p
+{
+    1. p ∨ q                    premise
+    2. {
+        3. p                    assume
+        4. q ∨ p                ∨i1 3
+    }
+    5. {
+        6. q                    assume
+        7. q ∨ p                ∨i1 6
+    }
+    8. q ∨ p                    ∨e 1 2 5
+}
 
 
 
@@ -199,6 +272,14 @@ p ∨ q ⊢ q ∨ p
 Do you think we could prove:
 
 p ∨ q ⊢ p ∧ q
+{
+    1. p ∨ q                premise
+    2. {
+        3. p                assume
+        //we would be stuck
+        //can't build to p ∧ q
+    }
+}
 
 
 --> what happens?
@@ -209,7 +290,21 @@ Proving equivalence.
 
 --> how do we prove two statements are equal in truth tables?
 
+    DeMorgan's laws:
+    !(p V q) is equivalent to !p ^ !q
+
+    make two truth tables
+    exactly same list of truth assignments make each one true
+
 --> how do we do it with proofs?
+
+!(p V q) |- !p ^ !q
+
+AND
+
+!p ^ !q |- !(p V q)
+
+
 
 
 ////////////////////////////////
@@ -217,6 +312,11 @@ Proving equivalence.
 Example: prove one of the distributive laws
 
 p ∨ (q ∧ r)     is equivalent to       (p ∨ q) ∧ (p ∨ r)
+
+p ∨ (q ∧ r)  |- (p ∨ q) ∧ (p ∨ r)
+
+
+<--- STOP HERE. Will continue on Tuesday.
 
 
 
@@ -300,7 +400,9 @@ Implies-introduction, →i
       P → Q
 
 
-Idea: if Q is true whenever P is, then we can promise that if P is true, then Q is too.
+Idea: if Q is true whenever P is, then we can promise that
+    if P is true, then Q is too.
+
 This is the relationship P → Q.
 
 

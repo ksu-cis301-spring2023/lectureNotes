@@ -1,1 +1,20 @@
-a V b |- b V a
+p ∨ (q ∧ r)  |- (p ∨ q) ∧ (p ∨ r)
+{
+    1. p ∨ (q ∧ r)                  premise
+    2. {
+        3. p                        assume
+        4. p ∨ q                    ∨i1 3
+        5. p ∨ r                    ∨i1 3
+        6. (p ∨ q) ∧ (p ∨ r)        ∧i 4 5
+        //want: (p ∨ q) ∧ (p ∨ r)
+    }
+    7. {
+        8. q ∧ r                    assume
+        9. q                        ∧e1 8
+        10. r                       ∧e2 8
+        11. p V q                   ∨i2 9
+        12. p ∨ r                   ∨i2 10
+        13. (p ∨ q) ∧ (p ∨ r)       ∧i 11 12
+    }
+    14. (p ∨ q) ∧ (p ∨ r)           ∨e 1 2 7
+}
