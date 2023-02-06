@@ -34,6 +34,11 @@ p, q, r ⊢ p ∧ q ∨ r
     //finish
 }
 
+
+
+
+
+
 /////////////////////////////////////
 
 Implies-elimination, →e
@@ -111,6 +116,10 @@ This is the relationship P → Q.
 
 --> how does this relate to proofs with truth tables?
 
+
+
+
+
 ////////////////////////////////////////
 
 Syntax for using ->i:
@@ -122,6 +131,9 @@ a. {
 }
 d. P → Q            →i a
 
+
+
+
 ///////////////////////////////////////
 
 Example:
@@ -132,6 +144,10 @@ p → r,  q → r  ⊢  (p ∧ q) → r
 
 
 --> What if we wanted to conclude (p ∨ q) → r
+
+
+
+
 
 ////////////////////////////////////////
 
@@ -146,19 +162,24 @@ Covers everything we've done up to this point:
 - Parse trees
 - Proving two propositional logic statements are equivalent
     (using truth tables and using natural deduction proofs)
-- Counterexamples to show propositional logic statements are NOT equivalent
+- Counterexamples to show propositional logic statements
+    are NOT equivalent
 - DeMorgan's laws on propositional logic (and their application)
 - Satisfiability
 - Translating between English and propositional logic
 - Arguments (premises and a proposed conclusion)
 - Determining whether an argument is valid or invalid
 - Proving an argument with truth tables
-- Natural deduction proofs in propositional logic using the AND, OR, and IMPLIES rules
+- Natural deduction proofs in propositional logic using the
+    AND, OR, and IMPLIES rules
 
 
 Closed notes/computers.
 
-All problems will be "open-ended" - similar in content/format to HW problems.
+All problems will be "open-ended" - similar in content/format
+to HW problems.
+
+Some problems will ask for an explanation -- read carefully!
 
 ////////////////////////////////////////
 
@@ -180,17 +201,19 @@ Additional review problems.
 
 
 
+///
+
 - draw a parse tree: p ∧ q ∨ r → p ∨ ¬q
 
 
-
+///
 
 - are these equivalent?
     p → q
     p ∨ ¬q
 
 
-
+///
 
 - what about these?
     p → q
@@ -199,33 +222,30 @@ Additional review problems.
 
 
 
-- is this a valid argument?
-    premises:
-        It is cold or it is hot.
-        If it snows, then it is cold.
-        It is not hot.
+///
 
-    Conclusion: it snows.
-
-
-
-
-
-- what about this?
+- is this a valid sequent (a valid argument)?
 
     p → q, ¬q ⊢ (¬p → q)
 
 
 
 
+--> make up some propositional atoms
+--> what do the premises say? what does the conclusion say?
+
+
+
+
+///
 
 - is this statement satisfiable?
-    p ∨ ¬q ∧ r ∨ q
+    (p ∨ ¬q) → (q ∨ ¬p)
 
 
 
 
-
+///
 
 if (num1 >= 10 || num2 < 5) {
     answer = 14;
@@ -237,6 +257,19 @@ if (num1 >= 10 || num2 < 5) {
 
 
 --> how could we negate the above if-statement?
+
+
+
+///
+
+Remember this sequent:
+
+p → r,  q → r  ⊢  (p ∧ q) → r
+
+
+How could we prove this argument using truth tables instead
+of natural deduction?
+
 
 
 
