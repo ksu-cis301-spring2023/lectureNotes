@@ -1,0 +1,247 @@
+HW 3 due Tuesday, February 7
+
+    Reminder: correct submission format
+
+    --> will get a penalty on this assignment if not correct format
+
+    Next HW will be posted next week (not due until Feb 21)
+
+Exam 1 is Thursday, February 9
+    take full time
+    closed notes
+    similar to HW problems
+
+/////////////////////////////////////
+
+Today:
+
+- Order of operations reminder
+- Deduction rules with implies operator
+- Exam 1 review
+
+/////////////////////////////////////
+
+Reminder: order of operations
+
+
+p, q, r ⊢ p ∧ q ∨ r
+{
+    1. p            premise
+    2. q            premise
+    3. r            premise
+    4. q ∨ r        ???
+
+    //finish
+}
+
+/////////////////////////////////////
+
+Implies-elimination, →e
+
+      P, P → Q
+→e: -----------
+        Q
+
+
+
+Example:
+
+If it is hot, then I will go swimming.
+It is hot.
+
+Conclusion?
+
+
+
+Example:
+
+//Suppose we know x > 5. What can we conclude?
+
+if (x > 5) {
+    y = 17;
+}
+
+
+
+
+
+
+--> how would this look in a truth table?
+    (what times would P and P → Q both be true?)
+
+
+///////////////////////////////////////
+
+Syntax for using →e:
+
+a. P                (some justification)
+b. P → Q            (some justification)
+c. Q                →e b a
+
+
+
+////////////////////////////////////////
+
+Example:
+
+(p ∧ q) → r,  p → q,  p  ⊢  r
+
+
+
+Example:
+
+p → r,  q → r,  p ∨ q  ⊢  r
+
+
+//////////////////////////////////////
+
+Implies-introduction, →i
+
+      {P assume
+      ... Q}
+→i: -----------
+      P → Q
+
+
+Idea: if Q is true whenever P is, then we can promise that
+    if P is true, then Q is too.
+
+This is the relationship P → Q.
+
+
+--> how does this relate to proofs with truth tables?
+
+////////////////////////////////////////
+
+Syntax for using ->i:
+
+a. {
+    b. P            assume
+    ...
+    c. Q            (some justification)
+}
+d. P → Q            →i a
+
+///////////////////////////////////////
+
+Example:
+
+p → r,  q → r  ⊢  (p ∧ q) → r
+
+
+
+
+--> What if we wanted to conclude (p ∨ q) → r
+
+////////////////////////////////////////
+
+Exam 1 review.
+
+Covers everything we've done up to this point:
+
+- Basic logical reasoning (over English statements and if-statements)
+- Logic puzzles
+- Circuits
+- Truth tables
+- Parse trees
+- Proving two propositional logic statements are equivalent
+    (using truth tables and using natural deduction proofs)
+- Counterexamples to show propositional logic statements are NOT equivalent
+- DeMorgan's laws on propositional logic (and their application)
+- Satisfiability
+- Translating between English and propositional logic
+- Arguments (premises and a proposed conclusion)
+- Determining whether an argument is valid or invalid
+- Proving an argument with truth tables
+- Natural deduction proofs in propositional logic using the AND, OR, and IMPLIES rules
+
+
+Closed notes/computers.
+
+All problems will be "open-ended" - similar in content/format to HW problems.
+
+////////////////////////////////////////
+
+See previous exam.
+
+--> yours will have a different format
+--> this exam also covered negation deduction rules, and yours won't
+--> your exam may include topics from above that aren't on this exam
+
+--> I'll post full solution after class
+...but will only work relevant open-ended problems now
+
+/////////////////////////////////////////
+
+Additional review problems.
+
+- draw a circuit: p ∨ ¬q ∧ r ∨ q
+
+
+
+
+- draw a parse tree: p ∧ q ∨ r → p ∨ ¬q
+
+
+
+
+- are these equivalent?
+    p → q
+    p ∨ ¬q
+
+
+
+
+- what about these?
+    p → q
+    ¬p ∨ q
+
+
+
+
+- is this a valid argument?
+    premises:
+        It is cold or it is hot.
+        If it snows, then it is cold.
+        It is not hot.
+
+    Conclusion: it snows.
+
+
+
+
+
+- what about this?
+
+    p → q, ¬q ⊢ (¬p → q)
+
+
+
+
+
+- is this statement satisfiable?
+    p ∨ ¬q ∧ r ∨ q
+
+
+
+
+
+
+if (num1 >= 10 || num2 < 5) {
+    answer = 14;
+}
+
+--> what do we know here if answer is NOT 14?
+
+
+
+
+--> how could we negate the above if-statement?
+
+
+
+
+
+////////////////////////////////////////
+
+How to prepare.
