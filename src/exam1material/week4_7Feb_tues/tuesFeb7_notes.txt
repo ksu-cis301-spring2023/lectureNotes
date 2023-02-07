@@ -2,6 +2,8 @@ HW 3 due Tuesday, February 7
 
     Reminder: correct submission format
 
+    .../tree/digital fingerprint
+
     --> will get a penalty on this assignment if not correct format
 
     Next HW will be posted next week (not due until Feb 21)
@@ -15,21 +17,49 @@ Exam 1 is Thursday, February 9
 
 Today:
 
+- Translations reminder
 - Order of operations reminder
 - Deduction rules with implies operator
 - Exam 1 review
 
 /////////////////////////////////////
 
+Reminder: translations
+
+p: I go swimming
+q: I wear sunscreen
+
+
+Meaning of:
+
+p → q
+
+Correct: If I go swimming, then I wear sunscreen
+
+Not correct: I go swimming, therefore I wear sunscreen
+
+
+¬p → ¬q
+
+
+If I don't go swimming, then I won't wear sunscreen
+
+
+////////////////////////////////////
+
+
 Reminder: order of operations
 
+p ∧ q ∨ r is equivalent to (p ∧ q) ∨ r
 
 p, q, r ⊢ p ∧ q ∨ r
 {
     1. p            premise
     2. q            premise
     3. r            premise
-    4. q ∨ r        ???
+    4. q ∨ r        Vi1 2
+    5. p ^ (q V r) <-- this is all I could claim,
+                    which isn't what I want
 
     //finish
 }
@@ -54,7 +84,7 @@ Example:
 If it is hot, then I will go swimming.
 It is hot.
 
-Conclusion?
+Conclusion? I will go swimming.
 
 
 
@@ -66,6 +96,7 @@ if (x > 5) {
     y = 17;
 }
 
+y will get set to 17
 
 
 
@@ -73,6 +104,8 @@ if (x > 5) {
 
 --> how would this look in a truth table?
     (what times would P and P → Q both be true?)
+
+
 
 
 ///////////////////////////////////////
@@ -90,12 +123,34 @@ c. Q                →e b a
 Example:
 
 (p ∧ q) → r,  p → q,  p  ⊢  r
+{
+    1. (p ∧ q) → r              premise
+    2. p → q                    premise
+    3. p                        premise
+    4. q                        →e 2 3
+    5. p ∧ q                    ∧i 3 4
+    6. r                        →e 1 5
+}
 
 
 
 Example:
 
 p → r,  q → r,  p ∨ q  ⊢  r
+{
+    1. p → r                premise
+    2. q → r                premise
+    3. p ∨ q                premise
+    4. {
+        5. p                assume
+        6. r                →e 1 5
+    }
+    7. {
+        8. q                assume
+        9. r                →e 2 8
+    }
+    10. r                   ∨e 3 4 7
+}
 
 
 //////////////////////////////////////
@@ -139,6 +194,17 @@ d. P → Q            →i a
 Example:
 
 p → r,  q → r  ⊢  (p ∧ q) → r
+{
+    1. p → r                premise
+    2. q → r                premise
+    3. {
+        4. p ∧ q            assume //assume the LHS of the goal ->
+        5. p                ∧e1 4
+        6. r                →e 1 5
+        //goal: get to r, which the RHS of the goal ->
+    }
+    7. (p ∧ q) → r          →i 3
+}
 
 
 
@@ -169,6 +235,11 @@ Covers everything we've done up to this point:
 - Translating between English and propositional logic
 - Arguments (premises and a proposed conclusion)
 - Determining whether an argument is valid or invalid
+    invalid when there is a truth assignment that makes ALL premises
+        true but makes the conclusion false
+    valid: have to either do a proof with truth tables
+        to show any time all premises are true then conclusion is true
+        OR have to prove the argument with natural deduction
 - Proving an argument with truth tables
 - Natural deduction proofs in propositional logic using the
     AND, OR, and IMPLIES rules
@@ -196,7 +267,7 @@ See previous exam.
 
 Additional review problems.
 
-- draw a circuit: p ∨ ¬q ∧ r ∨ q
+- draw a circuit: (p OR (NOT q AND r)) OR q
 
 
 
@@ -212,6 +283,11 @@ Additional review problems.
     p → q
     p ∨ ¬q
 
+NO
+
+p = T  q = F
+
+1st statement would be false, second would be true
 
 ///
 
@@ -219,7 +295,24 @@ Additional review problems.
     p → q
     ¬p ∨ q
 
+YES
 
+p q | p → q
+-------------
+T T |   T
+T F |   F
+F T |   T
+F F |   T
+
+
+p q | ¬p ∨ q
+-------------
+T T | F  T
+T F | F  F
+F T | T  T
+F F | T  T
+
+The same set of truth assignment make each statement true
 
 
 ///
@@ -228,13 +321,31 @@ Additional review problems.
 
     p → q, ¬q ⊢ (¬p → q)
 
+Invalid
+
+one truth assignment where all premises are true but conclusion is false
+
+
+p = F
+q = F
 
 
 
 --> make up some propositional atoms
+
+p: It is Tuesday
+q: I eat tacos
+
 --> what do the premises say? what does the conclusion say?
 
+p → q, ¬q ⊢ (¬p → q)
 
+premises:
+If it Tuesday, then I eat tacos
+I do not eat tacos
+
+conclusion (which is invalid):
+If it is not Tuesday, then I eat tacos
 
 
 ///
@@ -242,8 +353,10 @@ Additional review problems.
 - is this statement satisfiable?
     (p ∨ ¬q) → (q ∨ ¬p)
 
+make LHS false
 
-
+p = F
+q= T
 
 ///
 
@@ -253,12 +366,18 @@ if (num1 >= 10 || num2 < 5) {
 
 --> what do we know here if answer is NOT 14?
 
-
+num1 < 10 and num2 >= 5
 
 
 --> how could we negate the above if-statement?
 
+use DeMorgan's law
 
+if (num1 < 10 && num2 >= 5)
+
+use DeMorgan's law twice:
+
+if (x > 0 || (num1 < 5 && num2 > 10))
 
 ///
 
@@ -271,6 +390,18 @@ How could we prove this argument using truth tables instead
 of natural deduction?
 
 
+
+
+///
+
+I cook dinner or I eat out.
+
+If I am busy, I don't cook dinner.
+
+I am busy.
+
+
+Translate to propositional logic.
 
 
 
