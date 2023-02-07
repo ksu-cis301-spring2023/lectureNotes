@@ -389,7 +389,13 @@ p → r,  q → r  ⊢  (p ∧ q) → r
 How could we prove this argument using truth tables instead
 of natural deduction?
 
+truth table for each premise
+truth table for the conclusion
 
+find set of truth assignments that makes all premises true
+
+ensure the conclusion is also true for each truth
+    assignment in that set
 
 
 ///
@@ -403,9 +409,23 @@ I am busy.
 
 Translate to propositional logic.
 
+p: I cook dinner
+q: I eat out
+r: I am busy
+
+I cook dinner or I eat out.
+    p V q
+
+If I am busy, I don't cook dinner.
+    r -> !p
+
+I am busy.
+    r
 
 
 
 ////////////////////////////////////////
 
 How to prepare.
+
+Review HW!
