@@ -1,0 +1,143 @@
+HW 4 due Tuesday, February 21
+
+Exam 1 discussion
+
+HW 3 discussion
+
+//////////////////////////
+
+Today:
+- review implies rules for natural deduction
+- begin negation rules for natural deduction
+
+//////////////////////////
+
+Implies rules, review:
+
+
+Implies-elimination, →e
+
+      P, P → Q
+→e: -----------
+        Q
+
+
+
+Syntax for using →e:
+
+a. P                (some justification)
+b. P → Q            (some justification)
+c. Q                →e b a
+
+////
+
+Implies-introduction, →i
+
+      {P assume
+      ... Q}
+→i: -----------
+      P → Q
+
+
+
+Syntax for using ->i:
+
+a. {
+    b. P            assume
+    ...
+    c. Q            (some justification)
+}
+d. P → Q            →i a
+
+
+//////////////////////////
+
+If you are trying to prove an implies statement, what should you always do?
+
+
+Review examples:
+
+p → r, q → r ⊢ p → (q → r)
+
+
+p → r, r → a ∨ b, a → q, b → t ⊢ p → q ∨ t
+
+
+p → (q → r) ⊢ (p → q) → (p → r)
+
+//////////////////////////
+
+Strategy for proving →
+
+
+/////////////////////////
+
+Negation rules in propositional logic (we'll start with two of them).
+
+Not-elimination:
+
+        P    ¬P
+¬e:    ----------
+          ⊥
+
+
+⊥ (or _|_, underscore bar underscore) - bottom operator
+means contradiction
+
+
+Syntax:
+
+a. p            (some justification)
+b. ¬p           (some justification)
+c. ⊥            ¬e a b
+
+
+///
+
+
+Not-introduction:
+
+        {P assume
+          ... ⊥ }
+¬i:    -------------
+           ¬P
+
+
+Syntax:
+
+a. {
+    b. p            assume
+    ...
+    c. ⊥            (some justification, probably ¬e)
+}
+d. ¬p               ¬i a
+
+///////////////////////////
+
+Pattern: if you are trying to prove a NOT statement
+
+
+Example:
+
+p → q, ¬q ⊢ ¬p
+
+
+p ⊢ ¬ ¬ p
+
+
+p → ¬q ⊢ ¬(p ∧ q)
+
+
+¬p ∧ ¬q ⊢ ¬(p ∨ q)
+
+
+p → q ⊢ ¬q → ¬p (what is this?)
+
+//////////////////////////
+
+Next time:
+
+- remaining negation rules
+- applications to conditional statements
+- natural deduction proof strategies
+- soundness and completeness
