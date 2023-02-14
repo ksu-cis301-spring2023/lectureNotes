@@ -1,0 +1,12 @@
+p → q, ¬q ⊢ ¬p
+{
+    1. p -> q           premise
+    2. ¬q               premise
+    3. {
+        4. p            assume
+        5. q            ->e 1 4
+        6. _|_          ¬e 5 2
+        //need: _|_
+    }
+    7. ¬p               ¬i 3
+}

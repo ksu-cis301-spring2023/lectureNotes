@@ -1,0 +1,16 @@
+p → r, q → r ⊢ p → (q → r)
+{
+    1. p -> r               premise
+    2. q -> r               premise
+    3. {
+        4. p                assume
+
+        5. {
+            6. q            assume
+            7. r            ->e 2 6
+        }
+        8.  q → r           ->i 5
+        //need: q → r
+    }
+    9. p → (q → r)          ->i 3
+}

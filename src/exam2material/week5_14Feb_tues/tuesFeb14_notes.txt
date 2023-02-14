@@ -1,8 +1,20 @@
 HW 4 due Tuesday, February 21
 
+//////////////////////////
+
 Exam 1 discussion
 
-HW 3 discussion
+High: 100/100
+
+A (90-100): 18 students
+B (80-89): 24 students
+C (70-79): 7 students
+below C (below 70): 5 students
+
+Awesome job!
+
+Exam 2 has the hardest material for the course...keep it up!
+
 
 //////////////////////////
 
@@ -52,7 +64,8 @@ d. P → Q            →i a
 
 //////////////////////////
 
-If you are trying to prove an implies statement, what should you always do?
+If you are trying to prove an implies statement, what should you
+always do?
 
 
 Review examples:
@@ -63,7 +76,12 @@ p → r, q → r ⊢ p → (q → r)
 p → r, r → a ∨ b, a → q, b → t ⊢ p → q ∨ t
 
 
+(didn't work, would be good practice on your own)
 p → (q → r) ⊢ (p → q) → (p → r)
+
+subproof, assume p -> q
+goal by the end of subproof: p->r
+    (will need a nested subproof to prove p->r )
 
 //////////////////////////
 
@@ -123,15 +141,37 @@ p → q, ¬q ⊢ ¬p
 
 
 p ⊢ ¬ ¬ p
+{
+    1. p            premise
+    2. {
+        3. ¬p       assume
+        4. _|_      ¬e 1 3
+    }
+    5. ¬ ¬ p        ¬i 2
+}
 
 
 p → ¬q ⊢ ¬(p ∧ q)
 
 
-¬p ∧ ¬q ⊢ ¬(p ∨ q)
+¬p ∧ ¬q ⊢ ¬(p ∨ q) (what is this? you'll prove the reverse on your HW)
 
 
 p → q ⊢ ¬q → ¬p (what is this?)
+
+/////////////////////////
+
+if (condition) {
+    statement
+}
+
+What do we know if "condition" is true?
+    statement
+
+What do we know if "statement" is NOT true?
+    condition couldn't have been true
+
+
 
 //////////////////////////
 
