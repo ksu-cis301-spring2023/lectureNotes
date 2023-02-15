@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/implies1.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/implies2.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/not1.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/not2.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/not3.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/not4.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week5_16Feb_thurs/thursFeb16_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/tuesFeb14_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week5_14Feb_tues/tuesFeb14_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,11 +331,17 @@
       <option name="project" value="LOCAL" />
       <updated>1676300446055</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="After class Tuesday, February 14">
+      <created>1676392833542</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1676392833542</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Thursday, January 24" />
     <MESSAGE value="Notes shell before Tuesday, January 24" />
     <MESSAGE value="Notes shell before Tuesday, January 24 (plus a few edits)" />
     <MESSAGE value="Notes shell before Tuesday, January 24 (plus a few edits take 2)" />
@@ -366,6 +366,7 @@
     <MESSAGE value="Notes after class Tuesday, February 7" />
     <MESSAGE value="Notes after class Tuesday, February 7 (added circuit/parse tree example)" />
     <MESSAGE value="Notes shell before Tuesday, February 14" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tuesday, February 14" />
+    <MESSAGE value="After class Tuesday, February 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Tuesday, February 14" />
   </component>
 </project>

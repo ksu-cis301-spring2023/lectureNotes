@@ -1,0 +1,226 @@
+HW 4 due Tuesday, February 21
+
+////////////////////////////////////
+
+Today:
+
+- remaining negation rules
+- applications to conditional statements
+- natural deduction proof strategies
+- soundness and completeness
+
+///////////////////////////////////
+
+Bottom-elimination:
+
+         ⊥
+⊥e:  ----------
+         R
+
+
+Proof by contradiction (reductio ad absurdum):
+
+       {¬P assume
+        ... ⊥}
+pbc:  ----------
+          P
+
+///////////////////////////////////
+
+
+p ∨ q, ¬p ⊢ q
+
+
+¬¬p ⊢ p
+
+
+¬q → ¬p ⊢ p → q
+
+
+
+¬(¬p ∨ ¬q) ⊢ p ∧ q
+
+
+
+////////////////////////////////////
+
+A THEOREM in propositional logic is something that is
+always true with no need for premises. For example:
+
+
+Law of the excluded middle.
+
+p ∨ ¬p
+
+⊢ p ∨ ¬p
+
+
+
+⊢ (theorem that you are trying to prove)
+
+//////////////////////////////////
+
+Example: prove the following theorem:
+
+
+((p → q) → (¬q → ¬p)) ∧ ((¬q → ¬p) → (p → q))
+
+
+Where have we seen this? What is another way to prove the same thing?
+
+
+
+/////////////////////////////////
+
+How do we approach proofs?
+
+1. Write out all the premises
+2. Extract all information from premises (∧e, →e)
+3. Look at what you are trying to prove (find its top level operator)
+
+    ∧ - prove the left and right sides separately, use ∧i to build
+
+    ∨ - do you have an OR statement already? Try OR-elimination.
+        can you get just one side? (think of them as separate things)
+        then use ∨i. (is there negation involved? maybe try pbc
+        if nothing else works. or try ⊥e if you can get a contradiction
+        to conclude whatever you want.)
+
+    → - subproof, assume LHS, get to RHS, →i
+
+    ¬ - subproof, assume is true, get ⊥, use ¬i
+
+
+Inside a subproof, think about what you are trying to prove right then.
+Treat it like a separate proof, apply strategies above.
+
+Doesn't fit a pattern or doesn't work out from above:
+- trying to prove just a propositional atom? Negation involved? Try pbc.
+- or anytime above strategies don't work out, assume ¬(what you want),
+    try to get ⊥, use pbc
+
+
+Need a contradiction? Look at all information, see where ⊥ could possibly
+come from. Prove whatever parts needed to get there.
+
+As a last resort, copy/paste LEM proof to have (something) ∨ ¬(something).
+Use OR-elimination on it.
+
+/////////////////////////////////
+
+Putting it all together.
+
+(c ∧ n) → t, h ∧ ¬s, h ∧ ¬(s ∨ c) → p ⊢ (n ∧ ¬t) → p
+
+
+(p → q) → r, s → ¬p, t, (¬s ∧ t) → q ⊢ r
+
+/////////////////////////////////
+
+SOUNDNESS and COMPLETENESS of propositional logic
+
+
+
+SOUNDNESS: everything that is provable is actually true
+
+everything we can prove with natural deduction is
+also true in truth tables
+
+
+
+
+COMPLETENESS: everything that is true is provable
+
+everything we can show is true in a truth table
+can also be proved with natural deduction
+
+
+
+
+What would it mean to be sound and complete?
+
+
+
+//////////////////////////////////////
+
+Propositional logic is SOUND, because whenever we use
+natural deduction to prove
+
+P1, P2, ..., Pn ⊢ q
+
+
+we can also use truth tables to show that
+
+whenever P1, P2, ..., Pn are all true, then q is also true
+
+
+/////////////////////////////
+
+Reasoning idea:
+
+∧e1 rule lets us have p ∧ q ⊢ p
+
+
+
+How would we prove this is a truth table?
+
+
+
+///
+
+
+∧i rule lets us have p, q ⊢ p ∧ q
+
+
+
+How would we prove this is a truth table?
+
+
+///
+
+
+Would need to show this with all proof rules.
+
+
+
+What about bottom elimination, ⊥e?
+
+Bottom elimination rule lets us do: ⊥ ⊢ anything
+
+
+
+How would this look in a truth table?
+
+
+
+
+////////////////////////////////////////
+
+Propositional logic is COMPLETE.
+
+
+If every time P1, P2, ..., Pn are all true in a truth table,
+    then q is also true
+
+...then we can also use natural deduction to prove
+
+    P1, P2, ..., Pn ⊢ q
+
+
+
+...idea involves turning each line of a truth table
+    into a sequent
+
+relies heavily on LEM
+
+
+
+///////////////////////////////////////
+
+Next time:
+
+- a bit with sets, mathematical notation
+    (what have you seen?)
+
+- limitations of propositional logic
+- predicates and quantifiers
