@@ -5,9 +5,9 @@ HW 4 due Tuesday, February 21
 Today:
 
 - remaining negation rules
-- applications to conditional statements
 - natural deduction proof strategies
 - soundness and completeness
+- begin sets
 
 ///////////////////////////////////
 
@@ -136,91 +136,92 @@ can also be proved with natural deduction
 
 
 
-
-What would it mean to be sound and complete?
-
+Propositional logic is both SOUND and COMPLETE.
 
 
-//////////////////////////////////////
-
-Propositional logic is SOUND, because whenever we use
-natural deduction to prove
-
-P1, P2, ..., Pn ⊢ q
-
-
-we can also use truth tables to show that
-
-whenever P1, P2, ..., Pn are all true, then q is also true
-
-
-/////////////////////////////
-
-Reasoning idea:
-
-∧e1 rule lets us have p ∧ q ⊢ p
-
-
-
-How would we prove this is a truth table?
-
-
-
-///
-
-
-∧i rule lets us have p, q ⊢ p ∧ q
-
-
-
-How would we prove this is a truth table?
-
-
-///
-
-
-Would need to show this with all proof rules.
-
-
-
-What about bottom elimination, ⊥e?
-
-Bottom elimination rule lets us do: ⊥ ⊢ anything
-
-
-
-How would this look in a truth table?
-
-
-
-
-////////////////////////////////////////
-
-Propositional logic is COMPLETE.
-
-
-If every time P1, P2, ..., Pn are all true in a truth table,
-    then q is also true
-
-...then we can also use natural deduction to prove
+Proving the sequent:
 
     P1, P2, ..., Pn ⊢ q
 
+Is equivalent to using truth tables to show that whenever
+
+    P1, P2, ..., Pn
+
+are true, then q is also true
+
+//////////////////////////////////////
+
+∈	∉
+∅
+⋂	⋃
+⊂   ⊆
+⋀	⋁
+ℕ   ℤ
+≠   ≤   ≥
+
+Sets.
+
+- A set is an unodered collection of elements
 
 
-...idea involves turning each line of a truth table
-    into a sequent
+    x ∈ A       means that x is an element in set A
 
-relies heavily on LEM
+    x ∉ A       means that x is not an element in set A
 
+
+
+- Common sets in math:
+
+    ℕ
+    ℤ
+    ℚ
+    ℝ
+    ℂ
+
+
+////////////////////////////////////
+
+Set builder notation.
+
+{variable : conditions}
+
+
+{x : x ∈ ℕ, 5 ≤ x ≤ 10}
+
+{x : x is prime}
+
+{d : d is a weekday}
+
+{v : v is a vowel}
+
+{k : k is a letter in "abracadabra"}
+
+{x : x = 2k, k ∈ ℕ}
+
+{n : n = k^2, k ∈ Z}
+
+{n : n = 3a + 1, a ∈ ℕ, 1 ≤ a ≤ 4}
 
 
 ///////////////////////////////////////
 
+Describe these sets in set builder notation
+
+
+{5,10,15}
+
+
+{CIS 115, CIS 200, CIS 300, CIS 301}
+
+
+{2,4,8,16,32}
+
+
+///////////////////////////////////////
+
+
 Next time:
 
-- a bit with sets, mathematical notation
-    (what have you seen?)
-
+- more with sets
 - limitations of propositional logic
 - predicates and quantifiers
