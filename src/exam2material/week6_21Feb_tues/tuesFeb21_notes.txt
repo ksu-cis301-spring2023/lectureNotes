@@ -1,6 +1,6 @@
 HW 4 extended to Thursday, February 23
 
---> there will be another (shortish) HW posted soon, due next week
+--> there will be another (shortish) HW posted today, due next week
 
 ////////////////////////////////////
 
@@ -36,11 +36,17 @@ p ∨ q, ¬p ⊢ q
 ¬¬p ⊢ p
 
 
-¬q → ¬p ⊢ p → q
+
+///////////////////////////////////
+
+In separate files:
+
+
+¬q → ¬p ⊢ p → q         //not5.logika
 
 
 
-¬(¬p ∨ ¬q) ⊢ p ∧ q
+¬(¬p ∨ ¬q) ⊢ p ∧ q      //not6.logika
 
 
 
@@ -54,7 +60,7 @@ Law of the excluded middle.
 
 p ∨ ¬p
 
-⊢ p ∨ ¬p
+⊢ p ∨ ¬p                //lem.logika
 
 
 
@@ -62,60 +68,43 @@ p ∨ ¬p
 
 //////////////////////////////////
 
-Example: prove the following theorem:
-
-
-((p → q) → (¬q → ¬p)) ∧ ((¬q → ¬p) → (p → q))
-
-
-Where have we seen this? What is another way to prove the same thing?
-
-
-
-/////////////////////////////////
-
 How do we approach proofs?
 
 1. Write out all the premises
 2. Extract all information from premises (∧e, →e)
 3. Look at what you are trying to prove (find its top level operator)
 
-    ∧ - prove the left and right sides separately, use ∧i to build
+    ∧ -
 
-    ∨ - do you have an OR statement already? Try OR-elimination.
-        can you get just one side? (think of them as separate things)
-        then use ∨i. (is there negation involved? maybe try pbc
-        if nothing else works. or try ⊥e if you can get a contradiction
-        to conclude whatever you want.)
+    ∨ -
 
-    → - subproof, assume LHS, get to RHS, →i
+    → -
 
-    ¬ - subproof, assume is true, get ⊥, use ¬i
+    ¬ -
+
+    just a propositional atom? see how to get that from premises
+        if that atom is the RHS of an implies, prove the LHS of the implies
+        to get it
 
 
-Inside a subproof, think about what you are trying to prove right then.
-Treat it like a separate proof, apply strategies above.
+After each claim - __
+
+Inside a subproof - __
+
 
 Doesn't fit a pattern or doesn't work out from above:
-- trying to prove just a propositional atom? Negation involved? Try pbc.
-- or anytime above strategies don't work out, assume ¬(what you want),
-    try to get ⊥, use pbc
-
-
-Need a contradiction? Look at all information, see where ⊥ could possibly
-come from. Prove whatever parts needed to get there.
-
-As a last resort, copy/paste LEM proof to have (something) ∨ ¬(something).
-Use OR-elimination on it.
+- Negation involved? Try pbc.
+- As a last resort, copy/paste LEM proof to have (something) ∨ ¬(something).
+    Use OR-elimination on it.
 
 /////////////////////////////////
 
 Putting it all together.
 
-(c ∧ n) → t, h ∧ ¬s, h ∧ ¬(s ∨ c) → p ⊢ (n ∧ ¬t) → p
+(c ∧ n) → t, h ∧ ¬s, h ∧ ¬(s ∨ c) → p ⊢ (n ∧ ¬t) → p        //bigger1.logika
 
 
-(p → q) → r, s → ¬p, t, (¬s ∧ t) → q ⊢ r
+(p → q) → r, s → ¬p, t, (¬s ∧ t) → q ⊢ r                    //bigger2.logika
 
 /////////////////////////////////
 
@@ -138,6 +127,9 @@ can also be proved with natural deduction
 
 
 
+
+
+
 Propositional logic is both SOUND and COMPLETE.
 
 
@@ -153,14 +145,6 @@ are true, then q is also true
 
 //////////////////////////////////////
 
-∈	∉
-∅
-⋂	⋃
-⊂   ⊆
-⋀	⋁
-ℕ   ℤ
-≠   ≤   ≥
-
 Sets.
 
 - A set is an unodered collection of elements
@@ -172,6 +156,7 @@ Sets.
 
 
 
+
 - Common sets in math:
 
     ℕ
@@ -179,6 +164,7 @@ Sets.
     ℚ
     ℝ
     ℂ
+    ∅
 
 
 ////////////////////////////////////

@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger1.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger2.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/lem.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not5.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not6.logika" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/tuesFeb21_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/tuesFeb21_notes.txt" afterDir="false" />
     </list>
@@ -359,11 +364,17 @@
       <option name="project" value="LOCAL" />
       <updated>1676897585168</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Added set operations before Tues Feb 21">
+      <created>1676906295145</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1676906295145</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Tuesday, January 24 (reordered things)" />
     <MESSAGE value="After class Tuesday, January 24" />
     <MESSAGE value="Before class Thursday, January 26" />
     <MESSAGE value="After class Thursday, January 26" />
@@ -388,6 +399,7 @@
     <MESSAGE value="Notes shell before Thursday, February 16" />
     <MESSAGE value="Moved notes shell to be for Tuesday, February 21 (no class Thurs Feb 16)" />
     <MESSAGE value="Added some set notes before Tues Feb 21" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some set notes before Tues Feb 21" />
+    <MESSAGE value="Added set operations before Tues Feb 21" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added set operations before Tues Feb 21" />
   </component>
 </project>
