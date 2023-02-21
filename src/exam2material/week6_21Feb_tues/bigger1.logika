@@ -1,1 +1,3 @@
 (c ∧ n) → t, h ∧ ¬s, h ∧ ¬(s ∨ c) → p ⊢ (n ∧ ¬t) → p
+
+//try this on your own

@@ -31,9 +31,32 @@ pbc:  ----------
 
 
 p ∨ q, ¬p ⊢ q
+{
+    1. p ∨ q                premise
+    2. ¬p                   premise
+    3. {
+        4. p                assume
+        5. _|_              ¬e 4 2
+        6. q                _|_e 5
+        //want: q
+    }
+    7. {
+        8. q                assume
+    }
+    9. q                    ∨e 1 3 7
+}
 
 
 ¬¬p ⊢ p
+{
+    1. ¬¬p                  premise
+    2. {
+        3. ¬p               assume
+        4. _|_              ¬e 3 1
+    }
+    5. p                    pbc 2
+    //conclude: p
+}
 
 
 
@@ -60,6 +83,9 @@ Law of the excluded middle.
 
 p ∨ ¬p
 
+A theorem would be a tautology in a truth table
+
+
 ⊢ p ∨ ¬p                //lem.logika
 
 
@@ -74,22 +100,35 @@ How do we approach proofs?
 2. Extract all information from premises (∧e, →e)
 3. Look at what you are trying to prove (find its top level operator)
 
-    ∧ -
+    ∧ - separately prove both sides, then use ^i
 
-    ∨ -
+    ∨ - can I prove just one side of the V? Prove that, then
+        use Vi to finish.
 
-    → -
+        Do you have an V statement as a premise? Use Ve, try
+        to get to your overall statement in both subproofs.
 
-    ¬ -
+    → - subproof, assume LHS of goal ->, try to get to the
+        RHS of goal ->. Afterwards use ->i .
+
+    ¬(something) - subproof, we assume "something". Try to get a _|_
+        use ¬i to conclude.
 
     just a propositional atom? see how to get that from premises
         if that atom is the RHS of an implies, prove the LHS of the implies
         to get it
 
+        q.
+        p->q
 
-After each claim - __
+        do the premises involve negation? Try pbc. Assume !(statement),
+        get contradiction.
 
-Inside a subproof - __
+
+After each claim - see what we can extrac that is new.
+
+Inside a subproof - think about what we are trying to prove
+    right now, approach by looking at its top-level operator.
 
 
 Doesn't fit a pattern or doesn't work out from above:
@@ -147,6 +186,9 @@ are true, then q is also true
 
 Sets.
 
+{1,1,3,5,7} = {1,3,5,7} = {7,3,1,5}
+
+
 - A set is an unodered collection of elements
 
 
@@ -156,15 +198,26 @@ Sets.
 
 
 
+Example: A = {1,4,7,11,20}
+
+    1 ∈ A
+    2 ∉ A
+
+
 
 - Common sets in math:
 
-    ℕ
-    ℤ
-    ℚ
-    ℝ
-    ℂ
-    ∅
+    ℕ = natural numbers (positive integers) {1, 2, 3, ..}
+
+    ℤ = set of all integers {...-2,-1,0,1,2,...}
+
+    ℚ = rationals p/q
+
+    ℝ = real
+
+    ℂ = complex (real + imaginary)
+
+    ∅ = empty/null set
 
 
 ////////////////////////////////////
@@ -176,19 +229,36 @@ Set builder notation.
 
 {x : x ∈ ℕ, 5 ≤ x ≤ 10}
 
+    {5,6,7,8,9,10}
+
+
 {x : x is prime}
+
+    {2,3,5,7,..}
 
 {d : d is a weekday}
 
+    {Monday, Tuesday, Wednesday, Thursday, Friday}
+
 {v : v is a vowel}
+
+    {a,e,i,o,u}
 
 {k : k is a letter in "abracadabra"}
 
+    {a,b,r,c,d}
+
 {x : x = 2k, k ∈ ℕ}
+
+    {2, 4, 6, ...}
 
 {n : n = k^2, k ∈ Z}
 
+    {0, 1, 4, 9, ...}
+
 {n : n = 3a + 1, a ∈ ℕ, 1 ≤ a ≤ 4}
+
+    {4, 7, 10, 13}
 
 
 ///////////////////////////////////////
@@ -198,11 +268,17 @@ Describe these sets in set builder notation
 
 {5,10,15}
 
+{x : x = 5k, k ∈ ℕ, 1 ≤ k ≤ 3}
+
 
 {CIS 115, CIS 200, CIS 300, CIS 301}
 
+{x : x is a CIS course and x is in the preprofessional program}
+
 
 {2,4,8,16,32}
+
+{n : n = 2^k, k ∈ Z, 1 ≤ k ≤ 5}
 
 ///////////////////////////////////////
 
@@ -248,13 +324,13 @@ B = {2,3,4,5,6,7}
 
 Find:
 
-A ⋃ B
+A ⋃ B = {1,2,3,4,5,6,7,10,11,12}
 
-A ⋂ B
+A ⋂ B = {3,7}
 
-A - B
+A - B = {1,10,11,12}
 
-B - A
+B - A = {2,4,5,6}
 
 ///////////////////////////////////////
 

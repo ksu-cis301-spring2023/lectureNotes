@@ -1,1 +1,31 @@
 (p → q) → r, s → ¬p, t, (¬s ∧ t) → q ⊢ r
+{
+    1. (p → q) → r              premise
+    2. s → ¬p                   premise
+    3. t                        premise
+    4. (¬s ∧ t) → q             premise
+
+    //goal: to get p->q. then use ->e on 1 to get r
+    5. {
+        6. p                    assume
+
+        7. {
+            8. s                assume
+            9. ¬p               →e 2 8
+            10. _|_             ¬e 6 9
+            //want: _|_
+        }
+        11. ¬s                  ¬i 7
+        //conclude ¬s
+
+        12. ¬s ∧ t              ^i 11 3
+        13. q                   ->e 4 12
+
+        //want: q. comes from (¬s ∧ t) → q
+        //want: ¬s ∧ t
+        //we have t. we want ¬s
+    }
+    14. p->q                    ->i 5
+    15. r                       ->e 1 14
+    //conclude p->q
+}

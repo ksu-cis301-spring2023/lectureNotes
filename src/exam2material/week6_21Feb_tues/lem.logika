@@ -1,1 +1,22 @@
 ⊢ p ∨ ¬p
+{
+    1. {
+        2. ¬(p ∨ ¬p)            assume
+        3. {
+            4. p                assume
+            5. p ∨ ¬p           ∨i1 4
+            6. _|_              ¬e 5 2
+            //goal: _|_
+        }
+        7. ¬p                   ¬i 3
+        //conclude ¬p
+
+        //use Vi to get p ∨ ¬p
+        8. p ∨ ¬p               ∨i2 7
+        9. _|_                  ¬e 8 2
+
+        //goal: contradiction
+        //want: p ∨ ¬p, then I would have a _|_ with 2
+    }
+    10. p ∨ ¬p                  pbc 1
+}
