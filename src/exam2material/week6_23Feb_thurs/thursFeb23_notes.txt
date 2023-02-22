@@ -1,0 +1,331 @@
+HW 4 due tonight
+
+HW 5 due Tuesday, February 28
+
+
+////////////////////////////////////
+
+Today:
+
+- more with sets
+- limitations of propositional logic
+- begin predicate logic
+
+///////////////////////////////////
+
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+
+///////////////////////////////////
+
+Quick review:
+
+A ⋃ B = {x : ???}
+
+A ⋂ B = {x : ???}
+
+A - B = {x : ???}
+
+///////////////////////////////////
+
+Subset - A is a subset of B, written A ⊆ B, if all elements in A are also in B.
+
+(We say A ⊂ B if A is a subset of B but A ≠ B.)
+
+
+
+Example:
+
+
+
+//////////////////////////////////
+
+
+Quantifiers - helps describe all or some elements in a set
+
+    ∀ - universal quantifier, read as "for all"
+
+    ∃ - existential quanitifier, read as "there exists"
+
+
+
+∀ x ∈ A ...     "For all elements x in set A such that..."
+
+∃ x ∈ A ...     "There exists at least one x in set A such that..."
+
+
+
+
+
+∀ x ∈ ℝ (x^2 ≥ 0)       //what is this saying? why is it true?
+
+
+∃ x ∈ ℤ (x^2 = 1)       //what is this saying? why is it true?
+
+
+/////////////////////////////////////
+
+How could we define whether set A is a subset of set B using quantifiers?
+
+A ⊆ B if and only if ∀ x (x ∈ A → x ∈ B)
+
+
+
+
+How could we define whether set A equals set B using quantifiers?
+
+
+
+
+
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+
+//////////////////////////////////////
+
+Properties about sets.
+
+Distributive laws
+
+    A ⋃ (B ⋂ C) = (A ⋃ B) ⋂ (A ⋃ C)
+
+    A ⋂ (B ⋃ C) = (A ⋂ B) ⋃ (A ⋂ C)
+
+
+Why?
+
+
+
+
+
+
+
+What do we know if A - B = A?
+
+
+
+
+What do we know if A - B = B - A
+
+
+//////////////////////////////////////
+
+Limitations of propositional logic:
+
+All humans are mortal.
+Socrates is human.
+Therefore, Socrates is mortal.
+
+
+p: All humans are mortal
+q: Socrates is a human
+r: Socrates is mortal
+
+p, q ⊢ r
+
+How would we prove this is propositional logic?
+
+
+
+
+///////////////
+
+Predicate logic:
+
+Instead of propositions, we will make claims about
+individuals in a domain (a set)
+
+
+These claims will involve predicates and quantifiers
+
+
+
+//////////////////
+
+Predicates.
+
+
+A predicate is a boolean function that represents whether
+    an individual has a particular property
+
+
+
+
+Example:
+
+    Domain: ℤ
+    P(x): whether x > 0
+
+    What is the value of P(1)?
+
+    What is the value of P(0)?
+
+
+
+Example:
+
+    Domain: {x : x is a student at K-State}
+    C(x): whether x is in CIS 301
+
+
+    Bob is taking: CIS 300, ECE 241, MATH 221, ENGL 200
+    Jill is taking: CIS 301, MATH 510, HIST 251, MUSIC 170
+
+
+
+
+    What is the value of C(Bob)?
+
+    What is the value of C(Jill)?
+
+
+    What is the value of C(Bob) ⋀ C(Jill)?
+
+
+////////////////
+
+Quantifiers and predicates
+
+Domain: {strawberry, blueberry, banana, orange, grapefruit, apple}
+
+Berry(x): x is a berry
+Citrus(x): x is a citrus fruit
+Peel(x): x has a peel (that needs to be removed before eating)
+Seeds(x): x contains inedible seeds
+Bite(x): f is bite-sized
+
+Are these statements true or false?
+
+∀ x Berry(x)
+
+
+
+    --> how could we express the same statement in our domain
+    WITHOUT a quantifier?
+
+
+
+∃ x (Citrus(x) ⋀ Seeds(x))
+
+
+        --> how could we express the same statement in our domain
+        WITHOUT a quantifier?
+
+
+
+∀ x (Berry(x) ⋀ Bite(x))
+
+
+∀ x (Berry(x) → Bite(x))
+
+
+¬(∀ x Peel(x))
+
+
+¬(∀ x (Seeds(x) → Citrus(x)))
+
+
+∀ x ¬Peel(x)
+
+
+¬(∃ x Peel(x))
+
+
+∃ x ¬Berry(x)
+
+
+∃ x (Citrus(x) → Berry(x))
+
+
+/////////////////
+
+Predicates in math.
+
+Can use boolean functions to represent properties in math, like this:
+
+Domain: ℕ
+Big(x): whether x > 100
+
+∃ x Big(x)
+
+
+
+But more commonly list the property itself, like this:
+
+∃ x (x > 100)
+
+(or, sometimes also list the domain in the statement: ∃ x ∈ ℕ : (x > 100)
+
+///////////////////////////////
+
+Domain: ℤ
+
+P(x, y): whether x + y = 0
+
+
+//what is this saying?
+∀ x ∃ y P(x, y)
+
+    or: ∀ x ∃ y (x + y = 0)
+
+
+//is this the same thing?
+∃ y ∀ x P(x, y)
+
+
+//////////////////////////////
+
+Domain: ℤ
+
+
+What do these mean in English? Are they true?
+
+
+∀ n ∃ m (n^2 < m)
+
+
+∀ x ∃ y (x = y^2)
+
+
+
+Write the following in predicate logic:
+----------------------------------------
+
+The sum of two negative integers is negative
+
+
+
+The difference of two positive integers is not necessarily positive
+
+
+
+The sum of the squares of two integers is greater than or equal to the square of their sum.
+
+
+
+
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+
+//////////////////////////////
+
+Writing specifications using predicate logic
+
+Domain: {x : x is a user input number}
+
+
+
+Want to specify: There is a minimum element
+
+
+
+
+Want to specify: individual "min" is the minimum user input element
+
+
+
+
+//////////////////////////////
+
+
+Next time:
+- Classifying predicate logic statements in a domain (tautology, contingent, contradictory)
+- Determining if arguments in predicate logic are valid
+- Equivalent statements in predicate logic

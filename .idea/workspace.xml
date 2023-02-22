@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_23Feb_thurs/thursFeb23_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger1.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger1.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger2.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/bigger2.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/lem.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/lem.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not5.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not5.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not6.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/not6.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/tuesFeb21_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_21Feb_tues/tuesFeb21_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,11 +373,17 @@
       <option name="project" value="LOCAL" />
       <updated>1676926685880</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="After class Tues Feb 21">
+      <created>1676997549460</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1676997549460</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Before class Thursday, January 26" />
     <MESSAGE value="After class Thursday, January 26" />
     <MESSAGE value="Notes shell for Tuesday, January 31" />
     <MESSAGE value="Edits before Tuesday, January 31" />
@@ -407,6 +408,7 @@
     <MESSAGE value="Added some set notes before Tues Feb 21" />
     <MESSAGE value="Added set operations before Tues Feb 21" />
     <MESSAGE value="Added proof files before Tues Feb 21" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added proof files before Tues Feb 21" />
+    <MESSAGE value="After class Tues Feb 21" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Tues Feb 21" />
   </component>
 </project>
