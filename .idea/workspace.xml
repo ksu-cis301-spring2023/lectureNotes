@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week6_23Feb_thurs/thursFeb23_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam2material/week6_23Feb_thurs/thursFeb23_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week6_23Feb_thurs/thursFeb23_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -380,11 +380,17 @@
       <option name="project" value="LOCAL" />
       <updated>1676997549460</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Notes shell before Thurs Feb 23">
+      <created>1677095666491</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1677095666491</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Thursday, January 26" />
     <MESSAGE value="Notes shell for Tuesday, January 31" />
     <MESSAGE value="Edits before Tuesday, January 31" />
     <MESSAGE value="After class Tuesday, January 31" />
@@ -409,6 +415,7 @@
     <MESSAGE value="Added set operations before Tues Feb 21" />
     <MESSAGE value="Added proof files before Tues Feb 21" />
     <MESSAGE value="After class Tues Feb 21" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Tues Feb 21" />
+    <MESSAGE value="Notes shell before Thurs Feb 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Thurs Feb 23" />
   </component>
 </project>
