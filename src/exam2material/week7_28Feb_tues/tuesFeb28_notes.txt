@@ -1,0 +1,310 @@
+HW 5 due by midnight tonight
+
+HW 6 will be posted after class, due Tues March 7
+
+Exam 2 will be Thurs March 9
+
+///////////////////////////////////
+
+Today:
+- Classifying predicate logic statements in a domain
+- Equivalent statements in predicate logic
+- Negating predicate logic statements, DeMorgan's laws
+- Determining if arguments in predicate logic are valid
+- Begin proofs in predicate logic
+
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+
+//////////////////////////////////
+
+Classifying predicate logic statements.
+
+
+∀ x (x > 0 → x-1 > 0)
+
+
+Is this statement always true?
+
+
+Does the domain matter?
+
+
+
+///
+
+∀ x ∃ y (x + y = 0)
+
+
+Is this statement always true?
+
+
+Does the domain matter?
+
+
+
+///////////////////////////////////
+
+Equivalence: DeMorgan's law (part 1).
+
+¬(∃ x P(x))         ∀ x ¬P(x)
+
+How might we read these two statements?
+
+
+
+We will prove this on Thursday
+
+
+...but what is the idea?
+
+
+///////////////////////////////////
+
+Equivalence: DeMorgan's law (part 2).
+
+¬(∀ x P(x))       ∃ x ¬P(x))
+
+How might we read these two statements?
+
+
+
+
+We will prove this on Thursday
+
+
+...but what is the idea?
+
+
+////////////////////////////////////
+
+Example:
+
+- want a method to return whether all numbers in an array are negative
+
+--> how could we specify this in predicate logic? any different ways?
+
+--> how could we implement this function in different ways?
+
+
+
+
+///////////////////////////////////
+
+Apply DeMorgan's laws: example
+
+Domain: students
+Predicates:
+    in5th(x): student x is in 5th grade
+    wonPrize(x): student x won a prize
+    friendsWith(x, y): student x is friends with student y
+        (not necessarily reciprocal)
+
+
+1) Express the statement in predicate logic
+
+2) Negate the statement so no negation is outside a quantifier
+or outside a statement with logical connectives
+
+    Reminder:
+        p → q is equivalent to:
+        ¬(p ⋀ q) is equivalent to:
+        ¬(p ⋁ q) is equivalent to:
+        ¬(p → q) is equivalent to:
+
+///
+
+A 5th grader won a prize
+
+
+Translation:
+
+Negation:
+
+
+///
+
+All prize-winners were 5th graders
+
+Translation:
+
+Negation:
+
+
+///
+
+All 5th graders have a friend
+
+Translation:
+
+Negation:
+
+
+///
+
+All 5th graders are friends with each other
+
+Translation:
+
+Negation:
+
+
+
+///
+
+A 5th grader is friends with all prize winners
+
+Translation:
+
+Negation:
+
+
+
+
+////////////////////////////////////
+
+Arguments in predicate logic
+
+Set of premises
+Conclusion
+
+Argument is VALID: regardless of domain, anytime all the premises are true,
+    then the conclusion is also true
+
+Argument is INVALID: we can find a domain where all the premises are true
+    but the conclusion is false
+
+
+
+Examples -- are the following arguments valid?
+
+
+Premises: ∀ x (P(x) → Q(x)), ∃ x P(x)
+Conclusion: ∃ x Q(x)
+
+
+Premises: ∀ x P(x)
+Conclusion: ∃ x P(x)
+
+
+Premises: ∀ x (¬P(x) ⋁ ¬D(x)), D(a)
+Conclusion: ¬P(a)
+
+
+/////////////////////////////////
+
+Proofs in predicate logic.
+
+- want to formalize the kind of reasoning from above and from showing equivalence
+- want valid inference rules that do NOT depend on the domain
+    (there is no way to do the equivalent of a "truth table proof" in predicate logic
+    ...there are infinitely many domains!)
+
+- add inference rules on quantifiers to our natural deduction rules
+
+
+////////////////////////////////
+
+
+For-all elimination (∀e):
+
+       ∀ x P(x)
+∀e: --------------
+       P(v)
+
+//...for some specific individual v
+
+
+
+Idea:
+
+- if we know that a statement is true for ALL individuals in
+our domain
+
+
+...then what would we know about a specific individual
+in that domain?
+
+///////////////////////////////
+
+Syntax:
+
+∀ x Human(x) ⊢ Human(Socrates)
+
+
+///////////////////////////////
+
+Example:
+
+
+∀ x (inCIS301(x) → takenCIS200(x)), inCIS301(bob) ⊢ takenCIS200(bob)
+
+
+//////////////////////////////
+
+Next rule will be for all introduction.
+
+First: consider these two statements:
+
+
+∀ x (P(x) ⋀ Q(x))           (∀ x P(x)) ⋀ (∀ x Q(x))
+
+
+are they equivalent?
+
+how would we defend our position?
+
+
+//////////////////////////////////
+
+
+For-all introduction (∀i):
+
+       { a
+        ... P(a) }
+∀i: --------------
+       ∀ x P(x)
+
+//a is a "fresh" individual (never used before)
+
+
+Idea:
+
+- We know a statement holds for some arbitrary individual
+- That individual could have been anything!
+
+...what can we say about that statement for all individuals?
+
+
+
+
+Structure involves a subproof:
+
+4. {
+    5. a            //no justification here, could be any (fresh) individual name
+    ...
+    10. P(a)        //or some combination statement with our individual, a
+}
+11. ∀ x P(x)        Ai 4
+
+
+///////////////////////////////////
+
+Example:
+
+Prove these statements are equivalent:
+
+∀ x (P(x) ⋀ Q(x))           (∀ x P(x)) ⋀ (∀ x Q(x))
+
+
+///////////////////////////////////
+
+Are these statements equivalent?
+
+∀ x (P(x) ⋁ Q(x))           (∀ x P(x)) ⋁ (∀ x Q(x))
+
+
+
+///////////////////////////////////
+
+Next time:
+- proofs and equivalences with the existential quantifier
