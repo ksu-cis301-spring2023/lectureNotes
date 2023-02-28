@@ -1,1 +1,7 @@
 ∀ x (inCIS301(x) → takenCIS200(x)), inCIS301(bob) ⊢ takenCIS200(bob)
+{
+    1. ∀ x (inCIS301(x) → takenCIS200(x))               premise
+    2. inCIS301(bob)                                    premise
+    3. inCIS301(bob) → takenCIS200(bob)                 ∀e 1 bob
+    4. takenCIS200(bob)                                 →e 3 2
+}

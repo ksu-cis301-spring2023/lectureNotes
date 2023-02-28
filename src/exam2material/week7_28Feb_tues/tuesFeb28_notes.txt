@@ -1,5 +1,27 @@
 HW 5 due by midnight tonight
 
+    Reminder (maybe our domain is people):
+
+        ∃ x student(x)
+            "there is a student"
+
+        ¬(∃ x student(x))
+            "there does not exist a student"
+
+        ∃ x ¬student(x)
+            "there exists someone who is not a student"
+
+        ∀ x student(x)
+            "everyone is a student"
+
+        ¬(∀ x student(x))
+            "not everyone is a student"
+
+        ∀ x ¬student(x)
+            "all people are not students"
+            (so no one is a student)
+
+
 HW 6 will be posted after class, due Tues March 7
 
 Exam 2 will be Thurs March 9
@@ -25,18 +47,28 @@ Classifying predicate logic statements.
 
 Is this statement always true?
 
+Z, the set of integers - no!
+    when x = 1, this statement is not true
+
 
 Does the domain matter?
 
+domain = {x : x ∈ Z ^ x > 5}
 
+would be true for that domain
 
 ///
 
 ∀ x ∃ y (x + y = 0)
 
+    for all x, there exists a y where x + y = 0
+
 
 Is this statement always true?
 
+    Z, set of integers: yes! all numbers have an additive inverse
+    N: no! none of the numbers have an additive inverse
+        because N doesn't include negatives.
 
 Does the domain matter?
 
@@ -50,9 +82,19 @@ Equivalence: DeMorgan's law (part 1).
 
 How might we read these two statements?
 
+There does not exist an x where P(x) holds
+For all x, P(x) does not hold
 
 
 We will prove this on Thursday
+
+suppose our domain is k1 through kn
+
+
+∃ x P(x) equivalent P(k1) V P(k2) V ... V P(kn)
+¬(∃ x P(x))   equivalent to ¬(P(k1) V P(k2) V ... V P(kn))
+    which is ¬P(k1) ^ ¬P(k2) ^ ... ^ ¬P(kn)
+    which is ∀ x ¬P(x)
 
 
 ...but what is the idea?
@@ -66,8 +108,10 @@ Equivalence: DeMorgan's law (part 2).
 
 How might we read these two statements?
 
-
-
+∀ x P(x) equivalent to P(k1) ^ P(k2) ^... ^ P(kn)
+¬(∀ x P(x))    equiv. to ¬(P(k1) ^ P(k2) ^... ^ P(kn))
+    which is equiv. to ¬P(k1) V ¬P(k2) V ... V ¬P(kn)
+    ∃ x ¬P(x))
 
 We will prove this on Thursday
 
@@ -83,7 +127,37 @@ Example:
 
 --> how could we specify this in predicate logic? any different ways?
 
+∀ x (x < 0) - all elements are negative
+
+A x ¬(x >= 0) - all elements are not non-negative
+
+
 --> how could we implement this function in different ways?
+
+This one: ¬(∃ x x >= 0)
+    (there does not exist an x that is not negative)
+
+public boolean allNegative(int[] nums) {
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] >= 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+∀ x (x < 0)
+public boolean allNegative(int[] nums) {
+    int count = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if (nums[i] < 0) {
+            count++;
+        }
+    }
+
+    return (count == nums.length);
+}
 
 
 
@@ -106,20 +180,32 @@ Predicates:
 or outside a statement with logical connectives
 
     Reminder:
-        p → q is equivalent to:
-        ¬(p ⋀ q) is equivalent to:
-        ¬(p ⋁ q) is equivalent to:
-        ¬(p → q) is equivalent to:
+        p → q is equivalent to: ¬p ⋁ q
+        ¬(p ⋀ q) is equivalent to: ¬p ⋁ ¬q
+        ¬(p ⋁ q) is equivalent to: ¬p ⋀ ¬q
+        ¬(p → q) is equivalent to: ¬(¬p ⋁ q) = p ^ ¬q
 
 ///
 
+    in5th(x): student x is in 5th grade
+    wonPrize(x): student x won a prize
+    friendsWith(x, y): student x is friends with student y
+        (not necessarily reciprocal)
+
 A 5th grader won a prize
 
+∃ x (in5th(x) ^ wonPrize(x))
 
 Translation:
 
 Negation:
 
+    ¬(∃ x (in5th(x) ^ wonPrize(x)))
+    ∀ x ¬(in5th(x) ^ wonPrize(x))
+    ∀ x ¬in5th(x) V ¬(wonPrize(x))
+    ∀ x (in5th(x) -> ¬wonPrize(x))
+
+    all 5th graders did win a prize
 
 ///
 
@@ -127,7 +213,15 @@ All prize-winners were 5th graders
 
 Translation:
 
+∀ x (wonPrize(x) -> in5th(x))
+
 Negation:
+
+    ¬(∀ x (wonPrize(x) -> in5th(x)))
+    ∃ x ¬(wonPrize(x) -> in5th(x))
+    ∃ x (wonPrize(x) ^ ¬in5th(x))
+
+    There is a student who won a prize and is not in 5th grade.
 
 
 ///
@@ -136,8 +230,16 @@ All 5th graders have a friend
 
 Translation:
 
+∀ x ∃ y (in5th(x) -> friendsWith(x, y))
+
 Negation:
 
+¬(∀ x ∃ y (in5th(x) -> friendsWith(x, y)))
+∃ x ¬(∃ y (in5th(x) -> friendsWith(x, y)))
+∃ x ∀ y ¬(in5th(x) -> friendsWith(x, y)))
+∃ x ∀ y (in5th(x) ^ ¬friendsWith(x, y))
+
+there is a 5th grader who is not friends with anyone
 
 ///
 
@@ -145,8 +247,16 @@ All 5th graders are friends with each other
 
 Translation:
 
-Negation:
+∀ x ∀ y (in5th(x) ^ in5th(y) -> friendsWith(x,y))
 
+Negation:
+¬(∀ x ∀ y (in5th(x) ^ in5th(y) -> friendsWith(x,y)))
+∃ x ¬(∀ y (in5th(x) ^ in5th(y) -> friendsWith(x,y)))
+∃ x ∃ y ¬(in5th(x) ^ in5th(y) -> friendsWith(x,y))
+∃ x ∃ y ¬(¬(in5th(x) ^ in5th(y) V friendsWith(x,y)))
+∃ x ∃ y (in5th(x) ^ in5th(y) ^ ¬friendsWith(x,y)))
+
+There is a 5th grader who is not friends with another 5th grader
 
 
 ///
@@ -155,9 +265,17 @@ A 5th grader is friends with all prize winners
 
 Translation:
 
+∃ x ∀ y (in5th(x) ^ wonPrize(y) -> friendsWith(x,y))
+
 Negation:
 
+¬(∃ x ∀ y (in5th(x) ^ wonPrize(y) -> friendsWith(x,y)))
+∀ x ¬(∀ y (in5th(x) ^ wonPrize(y) -> friendsWith(x,y)))
+∀ x ∃ y ¬(in5th(x) ^ wonPrize(y) -> friendsWith(x,y))
+∀ x ∃ y ¬(¬(in5th(x) ^ wonPrize(y)) V friendsWith(x,y))
+∀ x ∃ y (in5th(x) ^ wonPrize(y) ^ ¬friendsWith(x,y))
 
+All 5th graders have a prize winner who is not their friend.
 
 
 ////////////////////////////////////
@@ -167,11 +285,12 @@ Arguments in predicate logic
 Set of premises
 Conclusion
 
-Argument is VALID: regardless of domain, anytime all the premises are true,
+Argument is VALID: regardless of domain,
+    whenever all the premises are true,
     then the conclusion is also true
 
-Argument is INVALID: we can find a domain where all the premises are true
-    but the conclusion is false
+Argument is INVALID: we can find a domain where
+    all the premises are true but the conclusion is false
 
 
 
@@ -181,23 +300,34 @@ Examples -- are the following arguments valid?
 Premises: ∀ x (P(x) → Q(x)), ∃ x P(x)
 Conclusion: ∃ x Q(x)
 
+yes, valid argument. whatever thing is P is also Q.
+
 
 Premises: ∀ x P(x)
 Conclusion: ∃ x P(x)
 
 
+domain: empty set
+then premise would be true, but conclusion false
+invalid
+
+
 Premises: ∀ x (¬P(x) ⋁ ¬D(x)), D(a)
 Conclusion: ¬P(a)
 
+all elements not P or not D
+a is D
+this is valid
 
 /////////////////////////////////
 
 Proofs in predicate logic.
 
-- want to formalize the kind of reasoning from above and from showing equivalence
+- want to formalize the kind of reasoning from above and
+    from showing equivalence
 - want valid inference rules that do NOT depend on the domain
-    (there is no way to do the equivalent of a "truth table proof" in predicate logic
-    ...there are infinitely many domains!)
+    (there is no way to do the equivalent of a "truth table proof"
+        in predicate logic...there are infinitely many domains!)
 
 - add inference rules on quantifiers to our natural deduction rules
 
@@ -229,6 +359,10 @@ in that domain?
 Syntax:
 
 ∀ x Human(x) ⊢ Human(Socrates)
+{
+    1. ∀ x Human(x)                 premise
+    2. Human(Socrates)              ∀e 1 Socrates
+}
 
 
 ///////////////////////////////
@@ -280,9 +414,11 @@ Idea:
 Structure involves a subproof:
 
 4. {
-    5. a            //no justification here, could be any (fresh) individual name
+    5. a            //no justification here,
+                    //could be any (fresh) individual name
     ...
-    10. P(a)        //or some combination statement with our individual, a
+    10. P(a)        //or some combination statement with
+                    //our individual, a
 }
 11. ∀ x P(x)        Ai 4
 
