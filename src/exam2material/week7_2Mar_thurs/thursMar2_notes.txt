@@ -1,0 +1,234 @@
+HW 6 due Tues March 7
+
+Exam 2 will be Thurs March 9
+    - more information will be posted by the end of the week
+    - we'll spend some time reviewing on Tuesday
+
+//////////////////////////////////////////////////
+
+Today:
+
+- More with for all introduction
+- Deduction rules with the existential quantifier
+
+//////////////////////////////////////////////////
+
+Example:
+
+Finish the proof that these statements are equivalent:
+
+∀ x (P(x) ⋀ Q(x))           (∀ x P(x)) ⋀ (∀ x Q(x))
+
+///////////////////////////////////
+
+Are these statements equivalent?
+
+∀ x (P(x) ⋁ Q(x))           (∀ x P(x)) ⋁ (∀ x Q(x))
+
+///////////////////////////////////
+
+More for all examples:
+
+
+(forall2.logika)
+∀ x P(x) |- ∀ y P(y)
+
+
+///
+
+Suppose we have these predicates in the domain of food:
+
+P(x): x is pizza
+Q(x): x has pepperoni
+K(x): x has mushrooms
+
+Given the premises:
+All pizza has pepperoni or mushrooms
+All food is pizza
+
+We want to prove:
+All food has pepperoni or mushrooms
+
+
+
+1) Translate each statement to predicate logic
+
+2) Prove the sequent (in the file forall3.logika)
+
+////////////////////////////////////////
+
+Idea behind there exists-introduction (∃i):
+
+        P(v)
+∃i: --------------
+       ∃ x P(x)
+
+//v is some individual
+
+
+
+If we know that: Human(Socrates)
+
+Then we can conclude that: ∃ x (Human(x))
+
+
+
+If we find ONE individual in a domain where a statement holds
+
+...then THERE EXISTS an individual in the domain where the
+    statement holds
+
+
+//////////////////////////////////////////
+
+Rule syntax:
+
+
+Human(Socrates) |- ∃ x (Human(x))
+{
+    1. Human(Socrates)              premise
+    2. ∃ x (Human(x))               ∃i 1 Socrates
+}
+
+
+/////////////////////////////////////////
+
+Bigger example (exists1.logika):
+
+∀ x (Human(x)->Mortal(x)), Human(Socrates) |- ∃ x (Mortal(x))
+
+
+
+/////////////////////////////////////////
+
+
+Idea behind there exists-elimination (∃e):
+
+                { a P(a)    assume
+     ∃ x P(x),    ... Q }
+∃e: ------------------------------
+                  Q
+
+//think of a as an alias for the individual the ∃ statement held for
+//a is "fresh" (never used before)
+
+
+If we know there is at least one individual where some statement holds
+
+...then we can introduce a (or whatever) as an ALIAS for that
+    individual in a subproof
+
+    ...whatever conclusion we reach in the subproof must be true
+        overall, since a was an EXISTING individual
+
+
+
+Structure of the subproof:
+
+3. ∃ x P (x)
+4. {
+    5. a P(a)       assume //plug into your ∃ statement
+    ...
+    10. Q
+}
+11. Q               ∃e 3 4
+
+
+
+**If you have an ∃ statement as a premise, you almost always
+want to start with a block where you create an alias (e.g. a)
+and plug it into your ∃ statement, as above
+
+///////////////////////////////
+
+Examples:
+
+(exists2.logika)
+∀ x (Human(x) → Mortal(x)), ∃ x (Human(x)) ⊢ ∃ x (Mortal(x))
+
+
+(exists3.logika)
+∃ x (P(x)) ⊢ ∃ y (P(y))
+
+
+(exists4.logika)
+¬(∃ x (P(x) ^ Q(x))) ⊢ ∀ x (P(x) → ¬Q(x))
+
+    P(x): student x attends K-State
+    Q(x): student x attends KU
+
+    --> what is this argument saying?
+
+
+
+////////////////////////////
+
+Proof tactics for predicate logic
+
+- see if you can do anything right away with the premises
+    - ^ elimination
+    - ->, and the LHS, do ->e
+    - ∀, individual, ∀e
+
+- look at top-level operator for what you are trying to prove
+    trying to prove ∀ x (P(x)):
+        pattern for ∀i
+        subproof where you introduce a random individual
+        by end of subproof: P(randomIndividual)
+
+    trying to prove ∃ x (P(x)):
+        usually have a ∃ statement as a premise
+        assume an alias for the ∃ statement in a subproof
+        get ∃ x (P(x)) at end of subproof (*)will probably need ∃i on your alias)
+        afterwards claim ∃ x (P(x)) using ∃e
+
+    trying to prove ->
+        subproof
+        assume LHS
+        get to RHS
+        afterwards use ->i to conclude LHS->RHS
+
+    trying to prove ¬(something)
+        assume something in subproof
+        get _|_
+        afterwards, use ¬i to conclude ¬(something)
+
+
+
+    trying to prove an V
+        can you get just one side? then use Vi
+        do you have an V statement? use Ve
+        do you have a ∃ statement?
+            assume an alias for the ∃ statement in a subproof
+            get V statement at end of subproof
+            afterwards claim V statement using ∃e
+
+    when you are in a subproof, think about what you are trying
+    to prove. Find its top-level operator, approach as above.
+
+
+Unsure what to do?
+    - Do you have an V statement available? try Ve
+
+    - Do you have an ∃ statement available? use an ∃e subproof, try to
+        get to your goal conclusion
+
+    - Is negation involved, but not creating ¬(something)?
+        pbc
+
+
+
+/////////////////////////////////////////
+
+Proving DeMorgan's laws
+
+∀ x ¬P(x)       equivalent to       ¬(∃ x P(x))
+
+∃ x ¬P(x)       equivalent to       ¬(∀ x P(x))
+
+////////////////////////////////////////
+
+Next time:
+
+- a bit more with predicate logic proofs
+- review for exam 2

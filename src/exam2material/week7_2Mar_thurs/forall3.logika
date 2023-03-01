@@ -1,0 +1,1 @@
+∀ x (P(x) -> Q(x) V K(x)), ∀ y P(y) |- ∀ n (Q(n) V K(n))
