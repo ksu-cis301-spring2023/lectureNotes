@@ -1,1 +1,30 @@
+//P(x): student x attends K-State
+//Q(x): student x attends KU
+
+//There does not exist a student that attends K-State and KU
+//All students that attend K-State don't attend KU
+
 ¬(∃ x (P(x) ^ Q(x))) ⊢ ∀ x (P(x) → ¬Q(x))
+{
+    1. ¬(∃ x (P(x) ^ Q(x)))                 premise
+    2. {
+        3. student
+        4. {
+            5. P(student)                   assume
+            6. {
+                7. Q(student)               assume
+                8. P(student) ^ Q(student)  ^i 5 7
+                9. ∃ x (P(x) ^ Q(x))        ∃i 8 student
+                10. _|_                     ¬e 9 1
+                //want: ∃ x (P(x) ^ Q(x))
+                //want: _|_
+            }
+            11. ¬Q(student)                 ¬i 6
+            //want: ¬Q(student)
+        }
+        12. P(student) -> ¬Q(student)       ->i 4
+    }
+    13. ∀ x (P(x) → ¬Q(x))                   ∀i 2
+}
+
+

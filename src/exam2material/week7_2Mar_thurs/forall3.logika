@@ -1,1 +1,14 @@
 ∀ x (P(x) -> Q(x) V K(x)), ∀ y P(y) |- ∀ n (Q(n) V K(n))
+{
+    1. ∀ x (P(x) -> Q(x) V K(x))            premise
+    2. ∀ y P(y)                             premise
+    3. {
+        4. a
+        5. P(a) -> Q(a) V K(a)              ∀e 1 a
+        6. P(a)                             ∀e 2 a
+        7. Q(a) V K(a)                      ->e 5 6
+        //Q(a) V K(a)
+    }
+    8. ∀ n (Q(n) V K(n))                    ∀i 3
+    //use   ∀i to get   ∀ n (Q(n) V K(n))
+}

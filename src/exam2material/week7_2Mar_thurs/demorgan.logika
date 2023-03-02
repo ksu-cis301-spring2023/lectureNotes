@@ -1,0 +1,9 @@
+/*
+Proving DeMorgan's laws
+
+∀ x ¬P(x)       equivalent to       ¬(∃ x P(x))
+
+∃ x ¬P(x)       equivalent to       ¬(∀ x P(x))
+*/
+
+

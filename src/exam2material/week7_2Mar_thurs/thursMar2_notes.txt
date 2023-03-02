@@ -6,6 +6,38 @@ Exam 2 will be Thurs March 9
 
 //////////////////////////////////////////////////
 
+HW 5 comments:
+
+3 (a). {x : x ∈ Z, |3x| < 20}
+
+{-6,-5,...,5,6}
+
+4. {x : x ∈ ℤ, x ≥ -5} ∪ {x : x ∈ ℤ, x ≤ 7}
+
+Z, all integers
+
+
+7 (a). If A ⋃ C = B ⋃ C, must A = B?
+
+A ⋃ C = B ⋃ C = {1,2,3}
+
+C = {1,2}
+
+A={1,3}
+B={2,3}
+
+
+7 (b). If A ⋂ C = B ⋂ C, must A = B?
+
+A ⋃ C = B ⋃ C = {2}
+
+C = {1,2,3}
+A={2,4,6}
+B={2,5,7}
+
+
+//////////////////////////////////////////////////
+
 Today:
 
 - More with for all introduction
@@ -25,6 +57,15 @@ Are these statements equivalent?
 
 ∀ x (P(x) ⋁ Q(x))           (∀ x P(x)) ⋁ (∀ x Q(x))
 
+P(x): x is a kid
+Q(x): x is an adult
+
+All people are kids or adults
+
+All people are kids OR all people are adults
+
+NOT equivalent
+
 ///////////////////////////////////
 
 More for all examples:
@@ -33,6 +74,7 @@ More for all examples:
 (forall2.logika)
 ∀ x P(x) |- ∀ y P(y)
 
+skipped - this is like what we did in the previous example
 
 ///
 
@@ -52,6 +94,16 @@ All food has pepperoni or mushrooms
 
 
 1) Translate each statement to predicate logic
+
+All pizza has pepperoni or mushrooms
+∀ x (P(x) -> Q(x) V K(x))
+
+All food is pizza
+∀ x P(x)
+
+All food has pepperoni or mushrooms
+∀ x (Q(x) V K(x))
+
 
 2) Prove the sequent (in the file forall3.logika)
 
@@ -125,7 +177,7 @@ If we know there is at least one individual where some statement holds
 
 Structure of the subproof:
 
-3. ∃ x P (x)
+3. ∃ x P(x)
 4. {
     5. a P(a)       assume //plug into your ∃ statement
     ...
@@ -133,6 +185,9 @@ Structure of the subproof:
 }
 11. Q               ∃e 3 4
 
+
+--> Think of ∃e like OR-elimination
+    ∃ x P(x) means: P(n1) V P(n2) V ... V P(nk)
 
 
 **If you have an ∃ statement as a premise, you almost always
@@ -172,53 +227,55 @@ Proof tactics for predicate logic
 
 - look at top-level operator for what you are trying to prove
     trying to prove ∀ x (P(x)):
-        pattern for ∀i
-        subproof where you introduce a random individual
-        by end of subproof: P(randomIndividual)
+        need to use ∀i
+        subproof, introduce a random individual
+        prove P(random individual)
+        afterwards, use ∀i to conclude ∀ x (P(x))
 
     trying to prove ∃ x (P(x)):
-        usually have a ∃ statement as a premise
-        assume an alias for the ∃ statement in a subproof
-        get ∃ x (P(x)) at end of subproof (*)will probably need ∃i on your alias)
-        afterwards claim ∃ x (P(x)) using ∃e
+        is one of your premises a ∃ also?
+        try ∃e on that premise
+        is one your premises an V? try V elimination.
+        none of those available? try pbc.
 
     trying to prove ->
         subproof
         assume LHS
-        get to RHS
-        afterwards use ->i to conclude LHS->RHS
+        try to get to RHS
+        use ->i after proof to conclude LHS->RHS
+
 
     trying to prove ¬(something)
-        assume something in subproof
-        get _|_
-        afterwards, use ¬i to conclude ¬(something)
-
+        subproof
+        assume something
+        try to get _|_
+        afterwards use ¬i to conclude ¬(something)
 
 
     trying to prove an V
-        can you get just one side? then use Vi
-        do you have an V statement? use Ve
-        do you have a ∃ statement?
-            assume an alias for the ∃ statement in a subproof
-            get V statement at end of subproof
-            afterwards claim V statement using ∃e
+        is one of your premises a ∃ also?
+        try ∃e on that premise
+        is one your premises an V? try V elimination.
+        none of those available? try pbc.
+
 
     when you are in a subproof, think about what you are trying
     to prove. Find its top-level operator, approach as above.
 
 
 Unsure what to do?
-    - Do you have an V statement available? try Ve
+    - Do you have an V statement available?
 
-    - Do you have an ∃ statement available? use an ∃e subproof, try to
-        get to your goal conclusion
+    - Do you have an ∃ statement available?
 
     - Is negation involved, but not creating ¬(something)?
-        pbc
-
+            try pbc
 
 
 /////////////////////////////////////////
+
+<--- stopped here, will do the rest on Tues March 7
+
 
 Proving DeMorgan's laws
 

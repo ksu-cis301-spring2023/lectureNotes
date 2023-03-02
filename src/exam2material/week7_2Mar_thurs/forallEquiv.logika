@@ -4,7 +4,7 @@
 
 
 //--> still need to prove the other direction
-
+/*
 (∀ x P(x)) ^ (∀ x Q(x)) |- ∀ x (P(x) ^ Q(x))
 {
     1. (∀ x P(x)) ^ (∀ x Q(x))              premise
@@ -18,4 +18,28 @@
         //want: P(random) ^ Q(random)
     }
     9. ∀ x (P(x) ^ Q(x))                    ∀i 4
+}
+*/
+
+∀ x (P(x) ^ Q(x)) |- (∀ y P(y)) ^ (∀ x Q(x))
+{
+    1. ∀ x (P(x) ^ Q(x))                premise
+    //prove ∀ y P(y)
+
+    2. {
+        3. random1
+        4. P(random1) ^ Q(random1)        ∀e 1 random1
+        5. P(random1)                 ^e1 4
+        //goal: P(random1)
+    }
+    6. ∀ y P(y)                         ∀i 2
+    //use ∀i to conclude ∀ y P(y)
+     7. {
+        8. random2
+        9. P(random2) ^ Q(random2)        ∀e 1 random2
+        10. Q(random2)                  ^e2 9
+        //goal: Q(random2)
+    }
+    11. ∀ x Q(x)                         ∀i 7
+    12. (∀ y P(y)) ^ (∀ x Q(x))         ^i 6 11
 }
