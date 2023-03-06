@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/demorgan.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/tuesMar7_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists1.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists1.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists2.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists2.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists3.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists3.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists4.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/exists4.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/forall3.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/forall3.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/forallEquiv.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/forallEquiv.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/thursMar2_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/thursMar2_notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/demorgan.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/demorgan.logika" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +51,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam2material\week8_7Mar_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -71,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Package test">
-      <created>1672937993914</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1672937993914</updated>
     </task>
     <task id="LOCAL-00003" summary="Another package test">
       <created>1672938050682</created>
@@ -415,11 +403,17 @@
       <option name="project" value="LOCAL" />
       <updated>1677675979703</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Notes after class Thurs March 2">
+      <created>1677775425707</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1677775425707</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First page for Thurs Feb 2" />
     <MESSAGE value="Added detail on proofs with truth tables" />
     <MESSAGE value="Test commit" />
     <MESSAGE value="Another test" />
@@ -444,6 +438,7 @@
     <MESSAGE value="Notes shell before Tues Feb 28" />
     <MESSAGE value="After class Tues Feb 28" />
     <MESSAGE value="Notes shell before Thurs March 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Thurs March 2" />
+    <MESSAGE value="Notes after class Thurs March 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes after class Thurs March 2" />
   </component>
 </project>

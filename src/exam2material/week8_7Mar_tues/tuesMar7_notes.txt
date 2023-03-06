@@ -1,0 +1,139 @@
+HW 6 due tonight
+
+Exam 2 will be Thurs March 9
+    - we'll spend some time reviewing today
+
+
+/////////////////////////////////
+
+Today:
+- Prove DeMorgan's laws for quantifiers
+- Exam 2 review
+
+/////////////////////////////////
+
+Proving DeMorgan's laws
+
+∀ x ¬P(x)       equivalent to       ¬(∃ x P(x))
+
+∃ x ¬P(x)       equivalent to       ¬(∀ x P(x))
+
+/////////////////////////////////
+
+Exam 2:
+- Thursday, March 9 9:30-10:45 Ackert 120
+- Closed notes, closed computers
+- All "open-ended" problems - similar to HW 4-6
+
+- Natural deduction proofs in propositional logic, esp. with negation rules
+    - not elimination, not introduction, bottom elimination, and pbc
+    - still expected to be familiar with all other rules
+
+Sets, including:
+    - set builder notation
+     - union, intersection, difference, subsets
+     - general reasoning about sets
+
+Predicate logic statements, including:
+    - quantifiers
+    - interpreting predicate logic statements in English
+    - translating English statements to predicate logic
+    - evaluating predicate logic statements in a domain
+    - working with predicate logic statements involving sets of numbers
+    - DeMorgan's laws
+    - negating predicate logic statements
+
+- Natural deduction proofs in predicate logic (deduction rules with quantifiers)
+
+- Using natural deduction to prove two statements are equivalent
+
+///////////////////////////////////
+
+Previous exam
+
+- will post full solution after class
+- had a different format than yours will
+- had somewhat different content than yours will
+
+I'll work relevant problems now.
+
+///////////////////////////////////
+
+∈ ℤ ∪ ⋂  ≥ ≤ ∀ ∃ ¬
+
+Other review problems:
+
+
+What are the elements in this set?
+
+{x : x = 5k, k ∈ ℤ, 0 ≤ x ≤ 20}
+
+
+
+Use set builder notation to describe the elements in
+the set: -89, -79, -69, ..., -9, 1, 11, 21, ..., 91
+
+
+
+If A ⋂ B = A ∪ B, then what does A - B = ?
+
+
+
+///////////////////////////////////
+
+Predicates:
+
+(Domain: dogs)
+
+P(x): dog x is a spaniel
+R(x): dog x is a retriever
+F(x): dog x plays fetch
+N(x,y): dog x is nice to dog y
+
+"Rover" is an individual dog
+
+
+∈ ℤ ∪ ⋂  ≥ ≤ ∀ ∃ ¬
+
+How do you write:
+
+Rover plays fetch but is not a retriever.
+
+
+There is a spaniel who doesn't play fetch.
+
+
+All retrievers play fetch.
+
+
+Not all dogs who play fetch are retrievers.
+
+
+There is a retriever who is nicer than all spaniels.
+
+
+/////////////////////////////////
+
+Negate the statements:
+
+∃ x (R(x) ^ F(x))
+
+
+
+∀ x ∀ y (R(x) -> N(x, y))
+
+
+
+///////////////////////////////
+
+Evaluate the statement:
+
+∀ x ∀ y (x < 0 ^ y < 0 -> x - y < 0)
+
+
+
+
+
+
+
+
