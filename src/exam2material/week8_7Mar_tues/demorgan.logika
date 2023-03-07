@@ -1,9 +1,98 @@
 /*
 Proving DeMorgan's laws
 
+P(x): x is a student
+
 ∀ x ¬P(x)       equivalent to       ¬(∃ x P(x))
 
 ∃ x ¬P(x)       equivalent to       ¬(∀ x P(x))
 */
 
+//∀ x ¬P(x)       equivalent to       ¬(∃ x P(x))
+//prove both directions
 
+/*
+∀ x ¬P(x) |- ¬(∃ x P(x))
+{
+    1. ∀ x ¬P(x)                premise
+    2. {
+        3. ∃ x P(x)             assume
+        4. {
+            5. alias P(alias)   assume
+            6. ¬P(alias)        ∀e 1 alias
+            7. _|_              ¬e 5 6
+            //goal: _|_
+        }
+        8. _|_                  ∃e 3 4
+        //goal: _|_
+    }
+    9. ¬(∃ x P(x))              ¬i 2
+}
+*/
+
+/*
+¬(∃ x P(x)) |- ∀ x ¬P(x)
+{
+    1. ¬(∃ x P(x))              premise
+    2. {
+        3. random
+        4. {
+            5. P(random)        assume
+            6. ∃ x P(x)         ∃i 5 random
+            7. _|_              ¬e 6 1
+            //goal: _|_
+        }
+        8. ¬P(random)           ¬i 4
+        //goal: ¬P(random)
+    }
+    9. ∀ x ¬P(x)                ∀i 2
+}
+*/
+
+//∃ x ¬P(x)       equivalent to       ¬(∀ x P(x))
+
+/*
+∃ x ¬P(x)   |- ¬(∀ x P(x))
+{
+    1. ∃ x ¬P(x)                    premise
+    2. {
+        3. ∀ x P(x)                 assume
+        4. {
+            5. alias ¬P(alias)      assume
+            6. P(alias)             ∀e 3 alias
+            7. _|_                  ¬e 6 5
+            //goal: _|_
+        }
+        8. _|_                       ∃e 1 4
+        //goal: _|_
+    }
+    9. ¬(∀ x P(x))                  ¬i 2
+}
+*/
+
+¬(∀ x P(x)) |- ∃ x ¬P(x)
+{
+    1. ¬(∀ x P(x))          premise
+    2. {
+        3. ¬(∃ x ¬P(x))     assume
+
+        4. {
+            5. random
+            6. {
+                7. ¬P(random)   assume
+                8. ∃ x ¬P(x)    ∃i 7 random
+                9. _|_          ¬e 8 3
+                //want: _|_
+            }
+            10. P(random)       pbc 6
+            //want: P(random)
+        }
+        11. ∀ x P(x)            ∀i 4
+        12. _|_                 ¬e 11 1
+
+        //if I had ∀ x P(x)
+        //trying to use pbc
+        //goal: _|_
+    }
+    13. ∃ x ¬P(x)               pbc 2
+}

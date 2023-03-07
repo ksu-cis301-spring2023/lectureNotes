@@ -31,8 +31,8 @@ Exam 2:
 
 Sets, including:
     - set builder notation
-     - union, intersection, difference, subsets
-     - general reasoning about sets
+    - union, intersection, difference, subsets
+    - general reasoning about sets
 
 Predicate logic statements, including:
     - quantifiers
@@ -55,8 +55,6 @@ Previous exam
 - had a different format than yours will
 - had somewhat different content than yours will
 
-I'll work relevant problems now.
-
 ///////////////////////////////////
 
 ∈ ℤ ∪ ⋂  ≥ ≤ ∀ ∃ ¬
@@ -68,15 +66,19 @@ What are the elements in this set?
 
 {x : x = 5k, k ∈ ℤ, 0 ≤ x ≤ 20}
 
+{0,5,10,15,20}
 
 
 Use set builder notation to describe the elements in
 the set: -89, -79, -69, ..., -9, 1, 11, 21, ..., 91
 
+{x : x = 10k + 1, k ∈ ℤ, -89 ≤ x ≤ 91}
 
 
 If A ⋂ B = A ∪ B, then what does A - B = ?
 
+A and B must be the same
+A-B is the empty set
 
 
 ///////////////////////////////////
@@ -99,18 +101,32 @@ How do you write:
 
 Rover plays fetch but is not a retriever.
 
+F(Rover) ^ ¬R(Rover)
+
 
 There is a spaniel who doesn't play fetch.
+
+∃ x (P(x) ^ ¬F(x))
 
 
 All retrievers play fetch.
 
+∀ x (R(x) -> F(x))
+
 
 Not all dogs who play fetch are retrievers.
 
+¬(∀ x F(x) -> R(x))
 
-There is a retriever who is nicer than all spaniels.
 
+There is no spaniel who plays fetch.
+
+¬(∃ x P(x) ^ F(x))
+
+
+There is a retriever who is nice to all spaniels.
+
+∃ x ∀ y (R(x) ^ P(y) -> N(x, y))
 
 /////////////////////////////////
 
@@ -118,19 +134,40 @@ Negate the statements:
 
 ∃ x (R(x) ^ F(x))
 
+¬(∃ x (R(x) ^ F(x)))
+∀ x ¬(R(x) ^ F(x))
+∀ x (¬R(x) V ¬F(x))
+∀ x (R(x) -> ¬F(x))
+
+
 
 
 ∀ x ∀ y (R(x) -> N(x, y))
 
+¬(∀ x ∀ y (R(x) -> N(x, y)))
+∃ x ¬(∀ y (R(x) -> N(x, y)))
+∃ x ∃ y ¬(R(x) -> N(x, y))
+∃ x ∃ y ¬(¬R(x) V N(x, y))
+∃ x ∃ y (R(x) ^ ¬N(x, y))
 
 
+∈ ℤ ∪ ⋂  ≥ ≤ ∀ ∃ ¬
 ///////////////////////////////
 
 Evaluate the statement:
 
 ∀ x ∀ y (x < 0 ^ y < 0 -> x - y < 0)
 
+in the domain of integers
 
+x = -2
+y = -3
+
+(-2 - -3) = 1
+
+///////////////////////////////////
+
+If time, work some of practice exam
 
 
 

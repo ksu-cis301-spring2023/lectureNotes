@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/tuesMar7_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam2material/week7_2Mar_thurs/demorgan.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/demorgan.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/demorgan.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/demorgan.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/tuesMar7_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam2material/week8_7Mar_tues/tuesMar7_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,13 +66,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Another package test">
-      <created>1672938050682</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1672938050682</updated>
     </task>
     <task id="LOCAL-00004" summary="Renamed packages to order chronologically">
       <created>1672938223885</created>
@@ -410,11 +403,17 @@
       <option name="project" value="LOCAL" />
       <updated>1677775425707</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Notes shell before Tues March 7">
+      <created>1678108096729</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1678108096729</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added detail on proofs with truth tables" />
     <MESSAGE value="Test commit" />
     <MESSAGE value="Another test" />
     <MESSAGE value="Added logika file" />
@@ -439,6 +438,7 @@
     <MESSAGE value="After class Tues Feb 28" />
     <MESSAGE value="Notes shell before Thurs March 2" />
     <MESSAGE value="Notes after class Thurs March 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes after class Thurs March 2" />
+    <MESSAGE value="Notes shell before Tues March 7" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues March 7" />
   </component>
 </project>
