@@ -1,0 +1,340 @@
+HW 7 posted, due Tues Mar 28
+
+/////////////////////////////////
+
+Exam 2 results
+
+High: 100/100
+Average: 79/100
+
+A (90-100): 20 students
+B (80-89): 11 students
+C (70-79): 13 students
+D (60-69): 6 students
+F (below 60): 5 students
+
+
+Exam grades in Canvas
+- drops lowest among Exam 1, Exam 2, Exam 3,
+    *midterm equivalent from final*
+    
+- what does this mean with the final exam?
+
+
+Discuss exam 2
+
+/////////////////////////////////
+
+Today:
+- predicate logic proofs with nested quantifiers
+- soundness and completeness in predicate logic
+- begin mathematical induction
+
+/////////////////////////////////
+
+Proofs with nested quantifiers.
+
+- approach exactly the same as proofs with single quantifiers
+...but, can only plug in for / introduce a single quantifier at once
+
+
+Examples:
+
+//nested1.logika
+∀ x (∀ y P(x, y)) ⊢ ∀ y (∀ x P(x, y))
+
+//nested2.logika
+∃ x (∃ y P(x, y)) ⊢ ∃ y (∃ x P(x, y))
+
+//nested3.logika
+∀ x (∀ y (C(x) → D(y))), ∃ x C(x) ⊢ ∀ y D(y)
+
+//nested4.logika
+∃ y (∀ x P(x, y)) ⊢ ∀ x (∃ y P(x, y))
+
+    --> can we prove the opposite?
+
+//////////////////////////////
+
+Soundness and completeness of predicate logic.
+
+
+Soundness: definition?
+    propositional: Everything we could prove (with deduction)
+        is actually true
+
+    predicate logic: is sound
+
+
+Completeness: definition?
+    propositional: Everything that is true (with truth tables)
+        can be proved with our deduction rules
+
+    predicate logic is not complete
+
+
+
+propositional: sound and complete
+predicate: sound, not complete
+
+not complete: we can't prove everything that is true
+
+
+
+
+///////////////////////////////////
+
+Same argument might be VALID in one domain and INVALID in another
+
+- deduction can only prove arugments that are valid in ANY domain
+- we can't prove all valid arguments
+
+
+Domain with integers with operations like +
+
+
+All integers? 2 + 3 = ??
+
+
+Subset (0,1,2,3,4) of integers. 2 + 3 = ??
+
+
+
+////////////////////////////////////
+
+
+Godel's Incompleteness Theorem.
+
+Any consistent formal system where integer arithmetic is
+carried out is incomplete -- there will be statements that
+can be neither proved nor disproved.
+
+(depends on interpretations)
+
+
+
+Decidability - whether a problem can be decided one way or another
+
+Halting problem - given a computer program and a set of inputs
+    can you write another program to determine if the original
+        program will halt for the inputs
+
+
+
+//Idea: Pretend NoHalt takes Function, Input.
+//Returns whether Function terminates on Input.
+
+def Halt(Function, Input):
+    if Function(Input) halts: return true
+    else return false
+
+///
+
+def DoOpposite(Function):
+    if (Halt(Function, Function)) loop forever
+    else exit
+
+
+///
+
+What if we do: DoOpposite(DoOpposite)?
+    Suppose it exits (halts).
+        When does that happen?
+
+
+
+    Suppose it doesn't exit (doesn't halt).
+        When does that happen?
+
+
+
+
+//////////////////////////////////
+
+Mathematical induction.
+
+Tool for proving something involving natural numbers
+    (usually starting at 1)
+
+Base case: prove the statement is true for n = 1
+    (or 0...whatever is first)
+
+Inductive step: Assume the statement is true for n.
+    Given that, prove the statement is true for n+1.
+
+**we will do something similar when proving the correctness of loops*
+
+
+
+/////////////////////////////////
+
+Example:
+
+
+
+Let P(n) be the claim that for any positive integer n:
+
+    1 + 2 + ... + n = n*(n+1)/2
+
+
+LHS(n) =
+RHS(n) =
+
+
+(So to show P(n) holds, we can show that LHS(n) = RHS(n))
+
+
+
+Try it out first.
+
+n = 1?
+
+LHS(1):
+RHS(1):
+
+
+
+n = 2?
+
+LHS(2):
+RHS(2):
+
+
+
+n = 3?
+
+LHS(3):
+RHS(3):
+
+
+
+Proof by induction.
+
+
+Base case: We must show that P(n) holds for the smallest
+positive integer n.
+
+
+
+
+Inductive step: Assume the inductive hypothesis -- that P(n) holds
+for some positive integer n.
+
+We must show that...
+
+
+
+
+/////////////////////////////////
+
+Why does it make sense that we've proved the formula for
+ALL positive n?
+
+
+
+Do you think induction can be used to prove properties for ALL integers?
+
+
+
+
+/////////////////////////////////
+
+Example: Prove that the sum of the first n odd numbers is n^2.
+
+
+Let P(n) be the claim that 1 + 3 + 5 + ... + (2n−1) = n^2.
+
+LHS(n)
+RHS(n)
+
+How can we show that P(n) holds for some positive integer n?
+
+
+
+
+
+Try it out first.
+
+n = 1?
+n = 2?
+n = 3?
+
+
+
+Proof by induction.
+
+Base case:
+
+
+
+Inductive step. Assume ... We must show that ...
+
+
+
+
+/////////////////////////////////
+
+Example: 3^n - 1 is even.
+
+Let P(n) be the claim that 3^n - 1 is even for all natural numbers n.
+
+
+
+
+Try it out first.
+
+n = 1?
+
+n = 2?
+
+n = 3?
+
+
+
+
+
+Proof by induction.
+
+Base case:
+
+Inductive step. Assume ... We must show that ...
+
+
+
+/////////////////////////////////
+
+Example: Any set with n elements, where n is at least 2,
+    has n(n − 1)/2 subsets with 2 elements.
+
+
+What is P(n)?
+
+
+
+
+Try it out first.
+
+n = 2?
+n = 3?
+
+
+
+
+
+Proof by induction.
+
+Base case:
+
+
+
+Inductive step.
+
+
+
+
+//////////////////////////////////
+
+Next time:
+- more with mathematical induction
+- begin a survey of proof techniques (direct proof, conditional proof,
+    contrapositive proof, proof by contradiction)``
