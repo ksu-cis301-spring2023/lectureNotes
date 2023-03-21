@@ -59,18 +59,21 @@ Examples:
 Soundness and completeness of predicate logic.
 
 
-Soundness: definition?
-    propositional: Everything we could prove (with deduction)
-        is actually true
+Soundness: definition? everything we can prove (with natural deduction)
+    is actually true (with truth tables)
 
-    predicate logic: is sound
+    propositional: yes!
+
+    predicate logic: yes! (deduction only has us prove things
+        that are true in any domain)
 
 
-Completeness: definition?
-    propositional: Everything that is true (with truth tables)
-        can be proved with our deduction rules
+Completeness: definition? we can prove everything that is true
 
-    predicate logic is not complete
+    propositional: yes
+
+    predicate logic: not complete
+
 
 
 
@@ -86,17 +89,17 @@ not complete: we can't prove everything that is true
 
 Same argument might be VALID in one domain and INVALID in another
 
-- deduction can only prove arugments that are valid in ANY domain
+- deduction can only prove arguments that are valid in ANY domain
 - we can't prove all valid arguments
 
 
 Domain with integers with operations like +
 
 
-All integers? 2 + 3 = ??
+All integers? 2 + 3 = 5
 
 
-Subset (0,1,2,3,4) of integers. 2 + 3 = ??
+Subset (0,1,2,3,4) of integers. 2 + 3 = 0
 
 
 
@@ -106,8 +109,8 @@ Subset (0,1,2,3,4) of integers. 2 + 3 = ??
 Godel's Incompleteness Theorem.
 
 Any consistent formal system where integer arithmetic is
-carried out is incomplete -- there will be statements that
-can be neither proved nor disproved.
+carried out is incomplete -- there will be true statements
+that cannot be proved.
 
 (depends on interpretations)
 
@@ -140,8 +143,8 @@ Let P(n) be the claim that for any positive integer n:
     1 + 2 + ... + n = n*(n+1)/2
 
 
-LHS(n) =
-RHS(n) =
+LHS(n) = 1 + 2 + ... + n
+RHS(n) = n*(n+1)/2
 
 
 (So to show P(n) holds, we can show that LHS(n) = RHS(n))
@@ -152,15 +155,15 @@ Try it out first.
 
 n = 1?
 
-LHS(1):
-RHS(1):
+LHS(1): 1
+RHS(1): 1*(2)/2 = 1
 
 
 
 n = 2?
 
-LHS(2):
-RHS(2):
+LHS(2): 1 + 2 = 3
+RHS(2): 2*(3)/2 = 3
 
 
 
@@ -175,20 +178,41 @@ Proof by induction.
 
 
 Base case: We must show that P(n) holds for the smallest
-positive integer n.
-
+positive integer n, which is n = 1. We have that:
+    RHS(1) = 1
+    LHS(1) = 1*(1+1)/2 = 1
+Because RHS(1) = LHS(1), then P(1) holds.
 
 
 
 Inductive step: Assume the inductive hypothesis -- that P(n) holds
 for some positive integer n.
 
-We must show that...
+We must show that...P(n+1) holds.
+
+Since P(n) holds, we have that LHS(n) = RHS(n). To show that P(n+1)
+holds, we must show that LHS(n+1) = RHS(n+1).
+
+We have that:
+
+    LHS(n+1) = (1 + 2 + ... + n) + (n+1)
+            = LHS(n) + (n+1)
+            = n*(n+1)/2 + (n+1)
+            = (n+1)(n+2) / 2
+            = (n+1)((n+1) + 1) / 2
+            = RHS(n+1)
+
+     Thus P(n+1) holds.
+
 
 
 
 
 /////////////////////////////////
+
+<---- stopped here, will finish Thursday
+
+////////////////////////////////
 
 Why does it make sense that we've proved the formula for
 ALL positive n?

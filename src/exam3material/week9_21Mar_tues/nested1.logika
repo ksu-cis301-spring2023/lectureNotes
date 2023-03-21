@@ -1,1 +1,21 @@
 ∀ x (∀ y P(x, y)) ⊢ ∀ y (∀ x P(x, y))
+{
+    1. ∀ x (∀ y P(x, y))            premise
+    2. {
+        3. random1
+        //could have used Ae here with random1
+        //but it would not have helped
+        4. {
+            5. random2
+            6. ∀ y P(random2, y)    Ae 1 random2
+            7. P(random2, random1)  Ae 6 random1
+
+
+            //want: P(random2, random1)
+        }
+        8. ∀ x P(x, random1)        Ai 4
+        //want: ∀ x P(x, random1)
+    }
+    9. ∀ y (∀ x P(x, y))            Ai 2
+    //want: ∀ y (∀ x P(x, y))
+}

@@ -1,1 +1,18 @@
 ∀ x (∀ y (C(x) → D(y))), ∃ x C(x) ⊢ ∀ y D(y)
+{
+    1. ∀ x (∀ y (C(x) → D(y)))              premise
+    2. ∃ x C(x)                             premise
+    3. {
+        4. random
+        5. {
+            6. alias C(alias)               assume
+            7. ∀ y (C(alias) → D(y))        Ae 1 alias
+            8. C(alias) → D(random)         Ae 7 random
+            9. D(random)                    ->e 8 6
+        }
+        10. D(random)                       Ee 2 5
+        //want: D(random)
+    }
+    11. ∀ y D(y)                            Ai 3
+    //want: ∀ y D(y)
+}
