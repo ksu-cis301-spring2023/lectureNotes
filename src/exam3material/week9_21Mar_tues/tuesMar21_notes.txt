@@ -179,9 +179,9 @@ Proof by induction.
 
 Base case: We must show that P(n) holds for the smallest
 positive integer n, which is n = 1. We have that:
-    RHS(1) = 1
-    LHS(1) = 1*(1+1)/2 = 1
-Because RHS(1) = LHS(1), then P(1) holds.
+    LHS(1) = 1
+    RHS(1) = 1*(1+1)/2 = 1
+Because LHS(1) = RHS(1), then P(1) holds.
 
 
 
