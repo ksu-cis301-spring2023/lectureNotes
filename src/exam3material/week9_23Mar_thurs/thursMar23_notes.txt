@@ -16,9 +16,10 @@ Mathematical induction.
 Tool for proving a property involving natural numbers
     (usually starting at 0 or 1)
 
-Base case: ?
+Base case: prove the property holds for the lowest claimed value
 
-Inductive step: ?
+Inductive step: assume the property holds for some n (in our range).
+    Given that, we prove that it still holds for n+1.
 
 
 ///////////////////////////////
@@ -40,7 +41,7 @@ If the claim is an equality, write out LHS(n) and RHS(n) for P(n).
 3) Write "Inductive step". State the inductive hypothesis:
     "Assume P(n) is true for some arbitrary n (describe the range of n).
     (Write what P(n) means.) We must prove that P(n+1) also holds --
-        that is, that (write what P(n+1) means).
+        that is, that" (write what P(n+1) means).
 
     Use the information from P(n) to prove P(n+1).
 
@@ -53,15 +54,25 @@ Recall our claim from Tuesday that the sum of numbers from 1 to n
 equals n(n+1)/2.
 
 
+--> Friedrich Gauss was the mathematician who discovered this
+    property as a kid.
+
+1 + 100 = 101
+2 + 99 = 101
+...
+50 + 51 = 101
+
+
 From Tuesday:
 
 1) Let P(n) be the claim that for any positive integer n:
 
     1 + 2 + ... + n = n*(n+1)/2
 
+We write:
 
-LHS(n) = 1 + 2 + ... + n
-RHS(n) = n*(n+1)/2
+    LHS(n) = 1 + 2 + ... + n
+    RHS(n) = n*(n+1)/2
 
 To prove P(n) for some arbitrary positive integer n, we must
 show that LHS(n) = RHS(n).
@@ -100,10 +111,12 @@ We have that:
 
 Why does it make sense that we've proved P(n) for all positive integers?
 
+n = 5
 
 
 Do you think we can use induction to prove some property for ALL integers?
 
+NO! There must be a lowest value so we can have a base case.
 
 
 ///////////////////////////////////
@@ -112,21 +125,54 @@ Example: Use mathematical induction to prove that the
 sum of the first n odd numbers is n^2.
 
 
+sum of the 1st odd number
+    1 yep
+    1 + 3 = 4
+    1 + 3 + 5 = 3^2
+
+
 --> What is P(n)?
 
+P(n) is the claim that for all positive integers n:
 
---> What is P(1)?
+    1 + 3 + 5 + ... (2n - 1) = n^2
+
+We write:
+
+    LHS(n) = 1 + 3 + 5 + ... (2n - 1)
+    RHS(n) = n^2
+
+We can prove P(n) holds for some positive integer n by showing that
+LHS(n) = RHS(n).
 
 
---> What is P(3)?
-
-
---> What is the inductive hypothesis?
 
 
 --> Use the mathematical induction template
 
+Base case. We must show that P(1) holds.
+    We have that:
+        LHS(1) = 1
+        RHS(1) = 1^2 = 1
+LHS(1) = RHS(1), so P(1) holds.
 
+
+Inductive step. We assume the inductive hypothesis -- that
+P(n) holds for some positive integer n. In other words, we assume
+LHS(n) = RHS(n). We must prove that P(n+1) holds -- that
+LHS(n+1) = RHS(n+1).
+
+We have that:
+
+LHS(n+1) = 1 + 3 + 5 + ... (2n - 1) + (2(n+1) - 1)
+        = LHS(n) + (2(n+1) - 1)
+        = RHS(n) + (2(n+1) - 1)
+        = n^2 + (2(n+1) - 1)
+        = n^2 + 2n + 1
+        = (n+1)^2
+        = RHS(n+1)
+
+Thus LHS(n+1) = RHS(n+1), so P(n+1) holds.
 
 ///////////////////////////////////
 
@@ -134,20 +180,35 @@ Example: Use mathematical induction to prove that
  3^n - 1 is even for any nonnegative n.
 
 
+
+
 --> What is P(n)?
 
+P(n) is the claim that for any nonnegative integer n
+then 3^n - 1 is even.
 
---> What is P(1)?
-
-
---> What is P(3)?
-
-
---> What is the inductive hypothesis?
 
 
 --> Use the mathematical induction template
 
+Base case. We must show that P(0) holds.
+We have that 3^0 - 1 = 1 - 1 = 0. 0 is an even number,
+so the base case holds.
+
+Inductive step. Assume the inductive hypothesis -- that
+P(n) holds for some nonnegative integer n. In other words,
+we assume that 3^n - 1 is even. We must show that P(n+1) holds,
+or that 3^(n+1) - 1 is even.
+
+We have that:
+
+3^(n+1) - 1 = 3*3^n - 1
+            = 3*(3^n - 1) + 2
+
+We know from the inductive hypothesis that 3^n - 1 is even,
+so 3*(3^n - 1) is also even. Adding 2 to an even number yields
+another even number, so 3*(3^n - 1) + 2 = 3^(n+1) - 1  is also
+even. Thus P(n+1) holds.
 
 
 ////////////////////////////////////
@@ -157,19 +218,38 @@ Example: Use mathematical induction to prove that a set with n elements,
 
 
 --> What is P(n)?
+P(n) is the claim that if n is a set with n elements,
+where n is at least 2, has n(n − 1)/2 subsets with 2 elements.
 
-
---> What is P(1)?
-
-
---> What is P(3)?
-
-
---> What is the inductive hypothesis?
 
 
 --> Use the mathematical induction template
 
+Base case. We must show that a set with 2 elements has
+2(2-1)/2 = 1 subset with 2 elements. A set with 2 elements has
+only one size-2 subset -- the one that contains both elements.
+Thus the base case holds.
+
+Inductive step. Let n be at least 2. Assume P(n) holds -- that
+a set with n elements has n(n − 1)/2 subsets of size 2.
+We must show that P(n+1) holds, or that a set with n+1 elements
+has (n+1)((n+1) − 1)/2 subsets of size 2.
+
+A set with n+1 elements still contains all n(n − 1)/2  size-2
+subsets using just the first n elements. Adding an additional
+yields an extra n size-2 subsets by pairing the new element
+with each of the original n elements. This gives a total of:
+
+n(n-1)/2 + n
+
+total subsets. We have that:
+
+n(n-1)/2 + n = (n*(n-1) + 2n) / 2
+            = n*(n-1+2) / 2
+            = n*(n+1) / 2
+            (n+1)((n+1) − 1)/2
+
+Thus P(n+1) holds.
 
 
 ////////////////////////////////////
@@ -177,6 +257,7 @@ Example: Use mathematical induction to prove that a set with n elements,
 Errors in mathematical induction.
 
 P(n): all horses in a set of n horses are the same color
+    (where n is at least 1)
 
 
 Base case: We must show that P(1) holds. Clearly, all
@@ -238,6 +319,10 @@ x-1 = y-1. It follows that x = y, so the inductive step holds.
 
 //////////////////////////////////
 
+<--- stopped here, will continue Tuesday
+
+//////////////////////////////////
+
 Recursive definitions.
 
 - similar to recursion
@@ -280,16 +365,25 @@ g(n) = n * g(n-1), for n > 0
 
 //////////////////////////////////
 
-Consider this recursive function:
+Consider this pattern: 1, 2, 4, 7, 11, 16, ...
 
-f(0) = 1
-f(n) = f(n-1) -1, for n > 0
+Write a recursive definition.
+
+    f(1) = ??
+    f(n) = ??, for n > 1
 
 
 Come up with a non-recursive formula for f(n).
 
+Hint: how does it compare to the sum of the first n number?
+
+
+
 Use mathematical induction to prove that it is equivalent to
 the recursive definition.
+
+
+
 
 ////////////////////////////////
 
