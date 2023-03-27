@@ -255,6 +255,29 @@ Suppose x ∈ Z. If 7x+9 is even, then x is odd.
 
 
 
+/////////////////////////////
+
+Mistakes in proofs.
+
+We want to "prove" that 1 = 2.
+
+
+"Proof:"
+Let a and b be two equal positive integers. We have that:
+
+    1) a = b                    (premise)
+    2) a^2 = ab                 (multiply both sides by a)
+    3) a^2 - b^2 = ab - b^2     (subtract b^2 from both sides)
+    4) (a-b)(a+b) = b(a-b)      (factor both sides)
+    5) a+b = b                  (divide both sides by a-b)
+    6) 2b = b                   (replace "a" with "b", since a = b)
+    7) 2 = 1                    (divide both sides by b)
+
+
+What went wrong?
+
+
+
 
 
 /////////////////////////////
