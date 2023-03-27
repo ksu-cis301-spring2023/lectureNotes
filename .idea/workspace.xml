@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week10_28Mar_tues/tuesMar28_notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week10_30Mar_thurs/thursMar30_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week9_23Mar_thurs/thursMar23_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week9_23Mar_thurs/thursMar23_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week10_30Mar_thurs" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam2material\week8_7Mar_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
     </key>
@@ -65,13 +67,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Pre-lecture notes for Tues Jan 17">
-      <created>1673875159033</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1673875159033</updated>
     </task>
     <task id="LOCAL-00010" summary="Pre-lecture notes for Tues Jan 17, some edits">
       <created>1673903993086</created>
@@ -409,11 +404,17 @@
       <option name="project" value="LOCAL" />
       <updated>1679521100087</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Notes after class Thurs March 23">
+      <created>1679585870232</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1679585870232</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Thursday, February 2" />
     <MESSAGE value="Notes shell before Tuesday, February 7" />
     <MESSAGE value="Notes shell with edits before Tuesday, February 7" />
     <MESSAGE value="Notes after class Tuesday, February 7" />
@@ -438,6 +439,7 @@
     <MESSAGE value="Notes shell before Tues March 21, with edits" />
     <MESSAGE value="After class Tues March 21" />
     <MESSAGE value="Notes shell before Thurs March 23" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Thurs March 23" />
+    <MESSAGE value="Notes after class Thurs March 23" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes after class Thurs March 23" />
   </component>
 </project>

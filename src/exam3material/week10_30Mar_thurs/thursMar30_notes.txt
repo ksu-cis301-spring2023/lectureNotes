@@ -1,0 +1,20 @@
+HW 8 due Tuesday, April 4
+
+//////////////////////////
+
+Today:
+- Proof by cases
+- Proof by contradiction
+- Proofs on sets
+
+//////////////////////////
+
+More definitions.
+
+
+A number r is *rational* if r = p/q for some integers p and q, where q ≠ 0.
+
+
+Suppose a and b are integers. We say that a *divides* b,
+written a | b, if b = ac for some c ∈ Z.
+In this case we also say that a is a *divisor* of b, and that b is a *multiple* of a.
