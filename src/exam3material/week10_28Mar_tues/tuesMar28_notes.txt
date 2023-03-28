@@ -2,6 +2,66 @@ HW 7 due today
 
 HW 8 will be posted after class, due next Tuesday
 
+I have your Exam 2 if you still need to pick it up
+
+//////////////////////////
+
+HW 7 problem 1:
+
+∀ x ∀ y (S(y) → P(x)) ⊢ (∃ y S(y)) → (∀ x P(x))
+
+need to prove ->
+    assume ∃ y S(y)
+        follow pattern for ∀i to get our goal
+    goal: ∀ x P(x)
+
+
+HW 7 problem 2:
+
+∃ x ∀ y (K(x) V M(y)) ⊢ ∀ x ∃ y (M(x) V K(y))
+
+need to prove a ∀ statement - follow pattern for ∀i
+    use Ee on the premise to build to your conclude E statement
+
+
+HW 7 problem 3:
+
+∀ x ∀ y ∀ z (P(x, y) ^ P(y, z) → P(x, z)), ∀ x ¬P(x, x) ⊢
+                        ∀ x ∀ y (P(x, y) → ¬P(y, x))
+
+need to prove a ∀ statement - follow pattern for ∀i (Ax)
+    need to prove a ∀ statement - follow pattern for ∀i (Ay)
+        need to prove the inner implies - use ->i
+            assume LHS of ->
+            try to get RHS of -> (will need to use !i)
+
+
+
+HW 7 problem 4:
+
+2 + 4 + ... + 2n = n(n+1)
+
+look for example last Thursday adding odd numbers
+
+
+HW 7 problem 5:
+
+n^5 - n is divisible by 5
+
+look for similar divisibility example last Thurs.
+
+
+HW 7 problem 6:
+
+1*1! + 2*2! + ... + n*n! = (n+1)! - 1
+
+think about factoring
+
+(n+1)n! = (n+1)!
+
+(n+2)(n+1)! = (n+2)!
+
+
 //////////////////////////
 
 Today:
@@ -34,13 +94,18 @@ Recursive step: Give a rule for finding the value of the function
 
 //////////////////////////////////
 
-Example:
+Example (domain: all nonnegative integers):
 
 f(0) = 3
 f(n) = 2f(n-1) + 3, for n > 0
 
 
 What is f(4)?
+
+f(1) = 2*f(0) + 3 = 2*3 + 3 = 9
+f(2)= 2*f(1) + 3 = 2*9 + 3 = 21
+f(3) = 2*21 + 3 = 45
+f(4) = 2*45 + 3 = 93
 
 
 //////////////////////////////////
@@ -50,21 +115,27 @@ What does this define?
 g(1) = 1
 g(n) = n * g(n-1), for n > 1
 
+factorial
 
+g(3) = 3*g(2) = 6
+
+g(2) = 2*g(1) = 2
 
 //////////////////////////////////
 
-Consider this pattern: 1, 2, 4, 7, 11, 16, ...
+Consider this pattern: 1, 2, 4, 7, 11, 16, 22, ...
 
 Write a recursive definition.
 
-    f(1) = ??
-    f(n) = ??, for n > 1
+    f(1) = 1
+    f(n) = f(n-1) + (n-1), for n > 1
 
 
-Come up with a non-recursive formula for f(n).
+Next, come up with a non-recursive formula for f(n)
 
-Hint: how does it compare to the sum of the first n numbers?
+
+(might come back on Thursday)
+
 
 
 
@@ -72,6 +143,21 @@ Hint: how does it compare to the sum of the first n numbers?
 ////////////////////////////////
 
 Suppose f(n) = n^2, for n >= 0. Write a recursive definition for f(n).
+
+f(0) = 0
+f(1) = 1
+f(2) = 4
+f(3) = 9
+f(4) = 16
+f(5) = 25
+
+pattern: previous function value + next odd number
+
+recursive definition:
+f(0) = 0
+f(n) = f(n-1) + (2n+ 1), n > 0
+
+
 
 
 ////////////////////////////////
@@ -86,6 +172,11 @@ is the maximum of the n numbers a1, a2, ..., an.
 
 --> How many base cases?
 
+max(a1) = a1
+max(a1, a2) = a1, if a1 >= a2
+max(a1, a2) = a2, if a2 > a1
+max(a1, a2, ..., an) = max(max(a1, ...,a_(n-1)), an), if n > 2
+
 
 
 
@@ -93,7 +184,7 @@ is the maximum of the n numbers a1, a2, ..., an.
 
 Recursively defined sets.
 
-Base case: list an element that is in a set
+Base case: list an element (or elements) that is in a set
 
 Recursive case: If (some elements are in a set),
     then (some other element is in a set).
@@ -111,14 +202,23 @@ Recursive case: If x ∈ S and y ∈ S, then xy ∈ S
 
 --> what are the elements in S?
 
+{1,2,4,8,16,..}
+
 
 --> how might we write S using set builder notation?
+
+S = {x : x = 2^k, k >=0, k ∈ Z}
 
 
 ////////////////////////////////
 
 
 Recursive definition for linked list?
+
+Base case: NIL is a linked list (it is the empty list)
+Recursive case: if x is a linked list, then
+    data -> x is a linked list
+
 
 /////////////////////////////////
 
@@ -138,7 +238,8 @@ Now we will look at more informal proofs.
 Terms.
 
 Proposition - what were these in propositional logic?
-
+    a statement from propositional / predicate logic
+    in general, a statement that can be proved to be true or false
 
 
 
@@ -173,7 +274,12 @@ Direct (conditional) proof
 
 - Often want to prove things of the form: "If P, then Q"
 
---> how would we do this with natural deduction?
+--> how would we do this with natural deduction? (P->Q)
+
+Assume P
+...
+Q
+
 
 --> how can we do something similar in words?
 
@@ -182,9 +288,11 @@ Direct (conditional) proof
 
 /////////////////////////////
 
-Direct proof template.
+Direct proof template. If P, then Q
 
-
+Assume P
+...
+Q
 
 
 
@@ -194,7 +302,34 @@ Direct proof template.
 
 Example.
 
+Even(..)
+
+∀x ∀y (Even(x) ^ Even(y) -> Even(xy))
+
+in predicate logic:
+    introduce two random individuals
+    assume the two individuals are even
+    ...
+    try to show their product is even
+
 The product of two even integers is even.
+
+(If I have two even integers, then their product is even)
+
+
+Let x and y be even integers.
+Because x is even, there exists an integer k such that x = 2k.
+Because y is even, there exists an integer m such that y = 2m.
+
+Consider xy. We have that:
+    xy = (2k)(2m)
+        = 4km
+        = 2(2km)
+
+Thus xy = 2b where b the integer 2km.
+Thus xy is even by the definition of even numbers.
+
+
 
 
 
@@ -209,6 +344,23 @@ Example.
 
 The square of any odd integer is odd.
 
+∀x (Odd(x) -> Odd(x^2))
+
+
+Assume x is an odd integer. Because x is odd, there exists an integer
+k such that x = 2k + 1.
+
+We have that:
+    x^2 = (2k+1)^2
+        = 4k^2 + 2k + 1
+        = 2(2k^2 + k) + 1
+
+Thus x^2 = 2b+1 where b is the integer 2k^2 + k.
+Thus x^2 is also an odd integer.
+
+
+
+
 
 
 How would we have written this in predicate logic?
@@ -221,12 +373,18 @@ How would we have written this in predicate logic?
 
 Proof by contrapositive
 
+P->Q
+contrapositive: !Q -> !P
+
 - Also for proving things of the form "If P, then Q"
 
 
 
 Proof by contrapositive template:
 
+Assume !Q
+...
+!P
 
 
 /////////////////////////////
@@ -235,7 +393,16 @@ Example (contrapositive)
 
 If x^2 is odd for an integer x, then x is odd.
 
+Proof (contrapositive).
+Assume x is not odd. Thus x must be even, so there exists an integer k
+such that x = 2k. We have that:
 
+    x^2 = (2k)^2
+         = 4k^2
+         = 2(2k^2)
+
+So x^2 = 2b where b is the integer 2k^2. Thus x^2 is even,
+so it follows that x^2 is not odd.
 
 
 How would we write this in predicate logic?
@@ -243,6 +410,8 @@ How would we write this in predicate logic?
 
 
 /////////////////////////////
+
+(will do on Thursday)
 
 Example (contrapositive)
 
