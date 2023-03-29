@@ -1,5 +1,11 @@
 HW 8 due Tuesday, April 4
 
+New part (2) on 1_recursiveDefs.txt:
+
+Write recursive definition for the set S of all positive
+integers that are one more than a multiple of 5.
+
+
 //////////////////////////
 
 Today:
@@ -241,11 +247,15 @@ Prove that {x : x ∈ ℤ, 12|x} ⊆ {x : x ∈ ℤ, 6|x}
 
 Example.
 
-Prove that {x : x ∈ ℤ, 2|x} ⋂ {x : x ∈ ℤ, 3|x} = {x : x = 6a - 12, a ∈ ℤ}
+Prove that {x : x ∈ ℤ, 2|x} ⋂ {x : x ∈ ℤ, 3|x} = {x : x = 6a + 12, a ∈ ℤ}
 
 
 
+//////////////////////////////
 
+(if time)
+
+look at HW 8 proofs - how to start?
 
 
 //////////////////////////////
