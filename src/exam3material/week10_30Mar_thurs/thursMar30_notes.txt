@@ -8,6 +8,117 @@ Today:
 - Proofs on sets
 
 //////////////////////////
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+/////////////////////////////////
+
+Direct proof template (If P, then Q):
+
+
+
+
+
+Contrapositive proof template (If P, then Q):
+
+
+
+
+
+
+//////////////////////////
+
+Example (contrapositive)
+
+Suppose x ∈ Z. If 7x+9 is even, then x is odd.
+
+
+
+
+
+
+
+//////////////////////////
+
+Proof by cases.
+
+- might be easiest to consider several possibilities separately
+
+- used in conjunction with another proof technique (often direct)
+
+- turns something like "If P, then Q" into:
+
+    "If (P1 V P2 V ... V Pn), then Q"
+
+  where P will be one of P1 V P2 V ... V Pn
+
+
+
+
+///////////////////////////
+
+Proof by cases template (If P, then Q)
+
+P will be one of the cases: P1, P2, ..., Pn
+
+
+Suppose P1
+    ... Q
+Suppose P2
+    ... Q
+...
+Suppose Pn
+    ...Q
+
+These cases show that (no matter which case P is), then Q.
+
+
+
+///////////////////////////
+
+Example.
+
+The sum of two integers with the same parity will be even.
+
+--> what cases should we have?
+
+
+
+
+
+
+//////////////////////////
+
+Example.
+
+If n is an integer, then n ≤ n^2
+
+--> what cases should we have?
+
+
+
+
+
+
+
+//////////////////////////
+
+Example:
+
+min(x,y) = x, if x ≤ y
+min(x,y) = y, if x > y
+
+
+Suppose a and b are integers.
+
+Prove with cases that min(a,b) = (a + b - |a - b|) / 2
+
+--> what cases do we need?
+
+
+
+
+
+
+///////////////////////////
 
 More definitions.
 
@@ -15,6 +126,128 @@ More definitions.
 A number r is *rational* if r = p/q for some integers p and q, where q ≠ 0.
 
 
+
+Any number that is not rational is irrational,
+and any number that is not irrational is rational.
+
+
+
 Suppose a and b are integers. We say that a *divides* b,
 written a | b, if b = ac for some c ∈ Z.
-In this case we also say that a is a *divisor* of b, and that b is a *multiple* of a.
+In this case we also say that a is a *divisor* of b, and that b is
+a *multiple* of a.
+
+
+
+
+//////////////////////////
+
+Proof by contradiction.
+
+- same idea as pbc in natural deduction
+
+- assume that what you are trying to prove is not true
+
+- try to get a contradiction
+
+- conclude what you are trying to prove is true after all
+
+
+
+
+/////////////////////////
+
+Proof by contradiction template 1 (trying to prove P)
+
+Suppose, for the sake of contradiction, ¬P.
+...
+C ^ ¬C.
+We have a contradiction between C and ¬C, so P must hold.
+
+
+
+
+
+//////////////////////////
+
+Proof by contradiction template 2 (trying to prove If P, then Q):
+
+Suppose P.
+Assume, for the sake of contradiction, ¬Q.
+...
+C ^ ¬C.
+We have a contradiction between C and ¬C, so Q must hold.
+
+
+
+
+
+///////////////////////////
+
+Example (use proof by contradiction):
+
+Suppose x ∈ Z. If x^2 is even, then x is even.
+
+
+
+
+
+
+//////////////////////////
+
+Example (use proof by contradiction):
+
+Suppose n ∈ Z. If 3 does not divide n^2, then 3 does not divide n.
+
+
+
+
+
+
+//////////////////////////
+
+Example: use proof by contradiction to prove that sqrt(2) is irrational.
+
+
+
+
+
+
+////////////////////////////////
+
+Proofs with sets.
+
+Prove that A ⊆ B?
+    --> how would we express this in predicate logic?)
+
+    --> proof template?
+
+
+
+
+Prove that A = B?
+
+
+///////////////////////////////
+
+Example.
+
+Prove that {x : x ∈ ℤ, 12|x} ⊆ {x : x ∈ ℤ, 6|x}
+
+
+
+
+///////////////////////////////
+
+Example.
+
+Prove that {x : x ∈ ℤ, 2|x} ⋂ {x : x ∈ ℤ, 3|x} = {x : x = 6a - 12, a ∈ ℤ}
+
+
+
+
+
+
+//////////////////////////////
+
+Next time: begin programming logic
