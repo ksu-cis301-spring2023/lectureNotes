@@ -17,13 +17,25 @@ Today:
 ∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
 /////////////////////////////////
 
+First: see if you can rewrite the claim as an If...Then... statement
+
+
 Direct proof template (If P, then Q):
+
+Assume/suppose P.
+...
+!
 
 
 
 
 
 Contrapositive proof template (If P, then Q):
+P->Q is equivalent to !Q -> !P
+
+Suppose !Q
+...
+!P
 
 
 
@@ -36,9 +48,19 @@ Example (contrapositive)
 
 Suppose x ∈ Z. If 7x+9 is even, then x is odd.
 
+Contrapositive is: If x is even (not odd), then 7x + 9 is odd (not even)
 
+Proof (contrapositive)
+Suppose x is even. Then there exists and integer k such that x = 2k.
 
+We have that:
 
+7x + 9 = 7(2k) + 9
+        = 14k + 9
+        = 2(7k + 4) + 1
+
+Thus 7x + 9 = 2b + 1, where b is the integer 7k + 4, so 7x + 9
+is odd by the definition of an odd number.
 
 
 
@@ -82,12 +104,37 @@ These cases show that (no matter which case P is), then Q.
 
 Example.
 
+same parity: both even or both odd
+
 The sum of two integers with the same parity will be even.
 
---> what cases should we have?
+--> what cases should we have? both even, both odd
+
+Let x and y be two integers with the same parity. We consider
+two cases: that x and y and both even and that x and y are both odd.
+
+Case 1: x and y are both even
+If x is even, then there exists an integer k such that x = 2k.
+If y is even, then there exists an integer m such that y = 2m.
+
+We have that:
+    x + y = 2k + 2m
+        = 2(k+m)
+
+We have that x + y = 2b where b is the integer k+m. Thus x+y is even.
 
 
+Case 2: x and y are both odd
+If x is odd, then there exists an integer k such that x = 2k+1.
+If y is odd, then there exists an integer m such that y = 2m+1.
 
+We have that:
+    x + y = 2k + 1 + 2m + 1
+        = 2(k+m+1)
+
+We have that x + y = 2b where b is the integer k+m+1. Thus x+y is even.
+
+In both cases, we have that x+y is even.
 
 
 
@@ -97,12 +144,23 @@ Example.
 
 If n is an integer, then n ≤ n^2
 
---> what cases should we have?
+--> what cases should we have? n <= -1, n = 0, n >= 1
+
+Suppose n is an integer. We consider three cases: n <= -1,
+n = 0, n >= 1.
+
+Case 1, n <= -1: For any negative number n, n^2 > 0. Since
+n is negative in this case, then n <= n^2.
 
 
+Case 2, n = 0:
+We have that 0 <= 0^2, so the claim holds for case 2.
 
+Case 3, n >= 1: We have that 1 <= n. Multiplying both sides
+by n yields n <= n^2 (since n is positive). The claim holds for
+case 3.
 
-
+The claim holds in all three cases.
 
 
 //////////////////////////
@@ -115,12 +173,37 @@ min(x,y) = y, if x > y
 
 Suppose a and b are integers.
 
+|7-4| = 3
+|4-7| = (7-4) = 3
+
 Prove with cases that min(a,b) = (a + b - |a - b|) / 2
 
 --> what cases do we need?
 
+We consider two cases: a <= b and a > b.
+
+Case 1 (a <= b): If a <= b, then min(a,b) = a.
+We have that:
+    (a + b - |a - b|) / 2 = (a + b - (b-a)) / 2
+                         = (a + b -b + a) / 2
+                          = 2a /2
+                           = a
+
+We have that min(a,b) = (a + b - |a - b|) / 2 = a, so the claim
+holds for case 1.
+
+Case 2 (a > b): If a > b, then min(a,b) = b.
+We have that:
+    (a + b - |a - b|) / 2 = (a + b - (a-b)) / 2
+                         = (a + b - a + b) / 2
+                          = 2b /2
+                           = b
+
+We have that min(a,b) = (a + b - |a - b|) / 2 = b, so the claim
+holds for case 2.
 
 
+The claim holds for both cases.
 
 
 
@@ -139,10 +222,15 @@ and any number that is not irrational is rational.
 
 
 Suppose a and b are integers. We say that a *divides* b,
-written a | b, if b = ac for some c ∈ Z.
+written a | b, if b = ak for some k ∈ Z.
 In this case we also say that a is a *divisor* of b, and that b is
 a *multiple* of a.
 
+3 divides 12, 3 | 12
+
+12 = 3*k where k = 4
+
+3 is a divisor of 12, 12 is a multiple of 3
 
 
 
@@ -165,6 +253,7 @@ Proof by contradiction.
 
 Proof by contradiction template 1 (trying to prove P)
 
+
 Suppose, for the sake of contradiction, ¬P.
 ...
 C ^ ¬C.
@@ -177,6 +266,7 @@ We have a contradiction between C and ¬C, so P must hold.
 //////////////////////////
 
 Proof by contradiction template 2 (trying to prove If P, then Q):
+
 
 Suppose P.
 Assume, for the sake of contradiction, ¬Q.
@@ -194,19 +284,39 @@ Example (use proof by contradiction):
 
 Suppose x ∈ Z. If x^2 is even, then x is even.
 
+(We will use template 2).
 
+Proof. Suppose x ∈ Z and that x^2 is even.
+Assume, for the sake of contradiction, that x is not even (i.e., that
+x is odd).
+
+If x^2 is even, then there exists an integer k such that x^2 = 2k.
+If x is odd, then there exists an integer m such that x = 2m + 1.
+
+We have that:
+
+x^2 = (2m + 1)^2
+    = 4m^2 + 4m + 1
+    = 2(2m^2 + 2m) + 1
+
+Thus x^2 = 2b + 1 for the integer 2m^2 + 2m, and so x^2 by definition
+is odd. This is a contradiction with our assumption that x^2 was even.
+
+Thus x must be even.
+
+...want contradiction
 
 
 
 
 //////////////////////////
 
-Example (use proof by contradiction):
+Example, if time (use proof by contradiction):
 
 Suppose n ∈ Z. If 3 does not divide n^2, then 3 does not divide n.
 
 
-
+(try on your own)
 
 
 
@@ -214,25 +324,67 @@ Suppose n ∈ Z. If 3 does not divide n^2, then 3 does not divide n.
 
 Example: use proof by contradiction to prove that sqrt(2) is irrational.
 
+(Use proof template 1)
 
+Assume, for the sake of contradiction, that sqrt(2) is rational.
+Then sqrt(2) = p/q for some integers p and q, where q ≠ 0. Let p/q
+be fully reduced, so that p and q share no common factors.
 
+We have that:
 
+(sqrt(2))^2 = (p/q)^2
 
+Which means:
+
+   2 = p^2/q^2
+
+Multiplying both sides by q^2, we have:
+
+    2q^2 = p^2
+
+We have that p^2 = 2b where b is the integer q^2, and so by definition
+p^2 is even. From our previous example, we have that p is even.
+
+Since p is even, then p = 2k for some integer k.
+
+Substituting in, we have:
+
+    2q^2 = p^2
+        = (2k)^2
+        = 4k^2
+
+Dividing both sides by 2 yields:
+
+    q^2 = 2k^2
+
+Thus q^2 = 2c where c is the integer k^2, so by definition q^2 is even.
+By our previous example, q is even.
+
+We have a contradiction -- p and q are both even, so both have 2 as
+a factor, but this contradicts with our assumption that p and q
+share no common factors.
+
+Thus sqrt(2) is irrational.
 
 ////////////////////////////////
 
 Proofs with sets.
 
 Prove that A ⊆ B?
-    --> how would we express this in predicate logic?)
+    --> how would we express this in predicate logic?
+
+    all elements in A are in B
+
+    ∀ x (x ∈ A -> x ∈ B)
 
     --> proof template?
+    Let x ∈ A.
 
 
+    ...x ∈ B
 
-
-Prove that A = B?
-
+Prove that A = B? This is equivalent to proving
+    A ⊆ B ^ B ⊆ A. Treat as separate proofs.
 
 ///////////////////////////////
 
@@ -240,24 +392,45 @@ Example.
 
 Prove that {x : x ∈ ℤ, 12|x} ⊆ {x : x ∈ ℤ, 6|x}
 
-
+(try this one on your own)
 
 
 ///////////////////////////////
 
 Example.
 
-Prove that {x : x ∈ ℤ, 2|x} ⋂ {x : x ∈ ℤ, 3|x} = {x : x = 6a + 12, a ∈ ℤ}
+Prove that {x : x ∈ ℤ, 2|x} ⋂ {x : x ∈ ℤ, 3|x} = {x : x = 6a, a ∈ ℤ}
 
+Let A = {x : x ∈ ℤ, 2|x}
+Let B = {x : x ∈ ℤ, 3|x}
+Let C = {x : x = 6a, a ∈ ℤ}
+
+To prove A ⋂ B = C, we must show that A ⋂ B ⊆  C and that C ⊆ A ⋂ B.
+
+Step 1: show A ⋂ B ⊆  C
+Suppose x ∈ A ⋂ B.  Thus x ∈ A ^ x ∈ B. Since x ∈ A, we have that 2|x.
+So there exists an integer k such that x = 2k. Since x ∈ B, we have
+that 3|x. So there exists an integer m such that x = 3m.
+
+x = 4x - 3x
+  = 4(3m) - 3(2k)
+  = 12m - 6k
+  = 6(2m - k)
+
+x = 6a where a is the integer 2m - k.
+Thus x ∈ C, so A ⋂ B ⊆  C.
+
+Step 2: show C ⊆ A ⋂ B.
+Suppose x ∈ C. Then there exists an integer a such that x = 6a.
+We have that x = 2(3a), so x = 2m where m is the integer 3a. Thus
+x ∈ A. We also have that x = 3(2a), so x = 3b where b is the integer 2a.
+Thus x ∈ B. Since x is in A and B, we have that x ∈ A ⋂ B.
+It follows that C ⊆ A ⋂ B.
+
+Since A ⋂ B ⊆  C and C ⊆ A ⋂ B, we have that A ⋂ B = C.
 
 
 //////////////////////////////
 
-(if time)
-
-look at HW 8 proofs - how to start?
-
-
-//////////////////////////////
 
 Next time: begin programming logic
