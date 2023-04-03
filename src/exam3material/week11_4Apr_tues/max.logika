@@ -1,0 +1,14 @@
+import org.sireum.logika._
+
+val x: Z = readInt("Enter first number: ")
+val y: Z = readInt("Enter second number: ")
+
+//how do we assume x is bigger than y?
+
+
+val max: Z = x
+
+//what can we put in a logic block here?
+
+
+//how do we assert max is greater than or equal to both x and y?

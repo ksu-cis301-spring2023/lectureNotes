@@ -1,0 +1,355 @@
+HW 8 due tonight
+
+HW 9 will be posted later today
+
+
+//////////////////////////
+
+Today:
+- Intro to programming logic
+- Assume statements
+- Assert statements
+- Processing assignment statements
+
+//////////////////////////
+
+Next section: programming logic
+
+Apply proof techniques and similar reasoning to prove correctness
+of basic programs.
+
+(Why does this matter?)
+
+
+
+
+
+
+
+////////////////////////////
+
+Our Logika programs are a subset of Scala
+    - variables (boolean, int, sequences)
+    - printing and user input
+    - math operations
+    - conditional operations
+    - if and if/else statements
+    - while loops
+    - functions
+
+
+Basic Logika program #1
+    - get user input number, add one to it, print it out
+
+Basic Logika program #2
+    - get user input number, print whether it is positive or negative
+
+Basic Logika program #3
+    - use a loop to print the numbers from 10 down to 1
+
+Basic Logika program #4
+    - write a separate function to add all elements in a sequence
+    - create a sequence, call the function, print the result
+
+
+
+
+
+
+////////////////////////
+
+assume statements
+    - preconditions
+    - things we must assume about user input or parameters
+
+
+
+assert statements
+    - postconditions
+    - what we want to be true after some code
+    - PROVE, not test
+    - must prove EXACTLY that statement before we assert it
+
+
+What is our goal with an assert statement?
+
+
+
+How are Logika asserts different from C# (and other languages)?
+
+
+
+
+
+////////////////////////
+
+Process of validating a program:
+
+
+
+(claims about inputs/preconditions - assume)
+
+program statement
+
+(claims)
+
+program statement
+
+(claims)
+
+program statement
+
+(claims about output/results/postconditions - assert)
+
+
+
+
+
+
+///////////////////////////////
+
+Claims go in "logic blocks", which look like:
+
+l"""{
+    //line numbers with claims and justifications
+    //similar to prop/pred logic proofs
+
+    x. claim            justification lineNumbers
+}"""
+
+//////////////////////////////
+
+Justifications (for now):
+
+premise
+    - something from an assume
+    - a program assignment that was just executed
+        (use == to show equality in the claim)
+    - something shown in a previous logic block
+
+
+algebra
+    - any algebraic manipulation on a previous claim
+    - include all relevant line numbers in whatever order
+        (might be zero or 3+)
+
+ANY of your propositional/predicate logic justifications
+    (especially ^e1, ^e2, ^i, Vi1, Vi2)
+
+
+
+
+//////////////////////////////
+
+(add.logika)
+Example: write a program that creates a number, x, with value 2
+
+Create a value, y, that is initialized to x + 2
+
+We want to assert at the end that y is 4
+
+Write the necessary logic blocks
+
+
+
+
+--> How could we also assert that x is still 2 using ONE assert?
+
+
+
+
+
+//////////////////////////////
+
+Example (max.logika):
+
+get 2 user inputs: x and y
+assume that x > y
+set a max variable to x
+
+want to assert that max >= x and max >= y
+
+
+
+
+
+
+
+//////////////////////////////
+
+The algebra justification works for most mathematical manipulations
+
+Will not work on claims involving ∧, ∨, →, ⊥, ∀, ∃
+
+Another justification: subst
+
+
+
+
+
+
+
+
+
+/////////////////////////////
+
+subst1 m n
+
+l"""{
+    ...
+    m. LHS_M == RHS_M
+    ...
+    n. LHS_N == RHS_N
+    ...
+    x. (claim)              subst1 m n
+}"""
+
+(claim) rewrites claim n by substituting all occurrences of
+    LHS_M with RHS_M
+
+
+Example:
+
+l"""{
+    ...
+    m. x + 1 == y - 4
+    ...
+    n. x*(x + 1) == (x + 1) + y
+    ...
+    j. x*(y - 4) == (y - 4) + y     subst1 m n
+}"""
+
+
+
+
+
+
+/////////////////////////////
+
+subst2 m n
+
+l"""{
+    ...
+    m. LHS_M == RHS_M
+    ...
+    n. LHS_N == RHS_N
+    ...
+    x. (claim)              subst2 m n
+}
+
+(claim) rewrites claim n by substituting all occurrences of
+    RHS_M with LHS_M
+
+
+Example:
+
+l"""{
+    ...
+    m. x + 1 == y
+    ...
+    n. y*(x + 1) == (x + 1) + y
+    ...
+    x. (x + 1)*(x + 1) == (x + 1) + (x + 1) subst2 m n
+}"""
+
+
+
+
+
+/////////////////////////////////
+
+Example (code fragment):
+
+val a: Z = 4
+val b: Z = 4
+val y: Z = a + 2
+val z: Z = b + 2
+
+
+--> want to be able to assert that y and z are the same
+
+
+
+
+
+
+
+//////////////////////////////
+
+Assignment with mutation
+
+
+var x: Z = 2
+
+//what could we put in a logic block here?
+
+x = x + 2
+
+//what could we put in a logic block here?
+
+
+
+(what are we missing?)
+
+
+//////////////////////////////
+
+If you change the value of a variable:
+    -> add this claim to the next logic block:
+
+x = x + 3
+l"""{
+    1. x == x_old + 3               premise
+
+}"""
+
+The name_old refers to the OLD value of the variable, just before
+the latest update.
+
+By the end of that logic block, want to state what the
+variable's current value is WITHOUT using the _old value
+(it won't be available after the next logic block)
+
+
+
+
+
+//////////////////////
+
+Example (add3.logika):
+
+- get an input number
+- save out an "orig" value that is equal to the input
+
+add 1 to the input number
+add 2 to the input number
+
+want to assert that the resulting number is 3 more than the orig value
+
+
+
+--> what if we added an assume that the input number was positive?
+
+--> could we add to our assert that the resulting number is positive?
+
+//////////////////////
+
+Example (swap.logika):
+
+
+inputs x and y (save their original values)
+
+x = x + y
+y = x - y
+x = x - y
+
+now x and y will have switched
+
+Example: x is 10 and y is 3
+
+///////////////////////
+
+Next time:
+- programs with division and modulus
+- programs with conditional statements
+

@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add3.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/max.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample1.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample2.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample3.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample4.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/swap.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/tuesApr4_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week10_30Mar_thurs/thursMar30_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week10_30Mar_thurs/thursMar30_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +58,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week11_4Apr_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week10_30Mar_thurs" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam2material\week8_7Mar_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
@@ -66,13 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Notes shell before Tuesday, January 24 (plus a few edits)">
-      <created>1674496219836</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1674496219836</updated>
     </task>
     <task id="LOCAL-00016" summary="Notes shell before Tuesday, January 24 (plus a few edits take 2)">
       <created>1674509582496</created>
@@ -410,11 +412,17 @@
       <option name="project" value="LOCAL" />
       <updated>1680128937150</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="After class Thurs March 30">
+      <created>1680191180301</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1680191180301</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Tuesday, February 14" />
     <MESSAGE value="Notes shell before Thursday, February 16" />
     <MESSAGE value="Moved notes shell to be for Tuesday, February 21 (no class Thurs Feb 16)" />
     <MESSAGE value="Added some set notes before Tues Feb 21" />
@@ -439,6 +447,7 @@
     <MESSAGE value="After class Tues March 28" />
     <MESSAGE value="Before class Thurs March 30" />
     <MESSAGE value="Before class Thurs March 30, with edits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before class Thurs March 30, with edits" />
+    <MESSAGE value="After class Thurs March 30" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Thurs March 30" />
   </component>
 </project>

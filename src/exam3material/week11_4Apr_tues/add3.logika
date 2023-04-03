@@ -1,0 +1,25 @@
+import org.sireum.logika._
+
+var x: Z = readInt("Enter a positive number: ")
+
+
+//orig will always be the original user input value
+val orig: Z = x
+
+
+
+x = x + 1
+
+//what can we put in a logic block here?
+
+
+x = x + 2
+
+
+//what can we put in a logic block here?
+
+//what do we want to assert? How has x changed?
+
+
+//Once it is working - if x was originally positive,
+//how could we assert that x was still positive at the end?
