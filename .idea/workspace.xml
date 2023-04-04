@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add3.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/max.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample1.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample2.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample3.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/sample4.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/swap.logika" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/tuesApr4_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add3.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/add3.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/max.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/max.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/swap.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/samplePrograms/swap.logika" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/tuesApr4_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week11_4Apr_tues/tuesApr4_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Notes shell before Tuesday, January 24 (plus a few edits take 2)">
-      <created>1674509582496</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1674509582496</updated>
     </task>
     <task id="LOCAL-00017" summary="Notes shell before Tuesday, January 24 (reordered things)">
       <created>1674513388085</created>
@@ -419,11 +408,17 @@
       <option name="project" value="LOCAL" />
       <updated>1680191180301</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Notes shell before Tues April 4">
+      <created>1680530645530</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1680530645531</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Thursday, February 16" />
     <MESSAGE value="Moved notes shell to be for Tuesday, February 21 (no class Thurs Feb 16)" />
     <MESSAGE value="Added some set notes before Tues Feb 21" />
     <MESSAGE value="Added set operations before Tues Feb 21" />
@@ -448,6 +443,7 @@
     <MESSAGE value="Before class Thurs March 30" />
     <MESSAGE value="Before class Thurs March 30, with edits" />
     <MESSAGE value="After class Thurs March 30" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Thurs March 30" />
+    <MESSAGE value="Notes shell before Tues April 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues April 4" />
   </component>
 </project>

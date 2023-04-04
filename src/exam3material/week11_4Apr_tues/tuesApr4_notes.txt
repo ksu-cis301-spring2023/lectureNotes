@@ -1,5 +1,24 @@
 HW 8 due tonight
 
+Use proof by contradiction to prove that the sum of a rational and
+irrational number is irrational.
+
+IF (I have a rational and irrational number) THEN their sum is irrational.
+
+Assume r is a rational number and i is an irrational number.
+
+Assume, for the sake of contradiction, that r+i is rational.
+
+Since r is rational, there exist integers p and q (q not 0) such that
+r = p/q. (Do the same kind of thing for i+r.)
+
+We have that:
+
+i = (r+i) - r
+
+
+(want a contradiction)
+
 HW 9 will be posted later today
 
 
@@ -60,7 +79,7 @@ Basic Logika program #4
 
 assume statements
     - preconditions
-    - things we must assume about user input or parameters
+    - things we must assume about user input
 
 
 
@@ -69,9 +88,6 @@ assert statements
     - what we want to be true after some code
     - PROVE, not test
     - must prove EXACTLY that statement before we assert it
-
-
-What is our goal with an assert statement?
 
 
 
@@ -87,7 +103,7 @@ Process of validating a program:
 
 
 
-(claims about inputs/preconditions - assume)
+(claims about inputs - assume)
 
 program statement
 
@@ -260,13 +276,23 @@ l"""{
 
 Example (code fragment):
 
-val a: Z = 4
-val b: Z = 4
-val y: Z = a + 2
-val z: Z = b + 2
+val num: Z = x + 2
+val answer: Z = 4*num + 8
+val another: Z = 5 - (x + 2)*3
 
 
---> want to be able to assert that y and z are the same
+l"""{
+    1. num == x + 2             premise
+    2. answer == 4*num + 8      premise
+    3. another == 5 - (x+2)*3   premise
+    4. answer == 4*(x+2) + 8    subst1 1 2
+    5. another == 5 - num*3     subst2 1 3
+}"""
+
+--> substitute in for "num" in "answer" calculation (using subst)
+
+
+--> substitute in for "x+2" in "another" calculation
 
 
 
@@ -283,7 +309,15 @@ var x: Z = 2
 
 //what could we put in a logic block here?
 
+l"""{
+    1. x == 2               premise
+}"""
+
 x = x + 2
+
+l"""{
+    1. x == x + 2            premise <-- doesn't make sense
+}"""
 
 //what could we put in a logic block here?
 
@@ -297,9 +331,13 @@ x = x + 2
 If you change the value of a variable:
     -> add this claim to the next logic block:
 
+y = y + 4
+<-- y_old only exists here
 x = x + 3
 l"""{
     1. x == x_old + 3               premise
+    2. y == y_old + 4               premise //NO! y isn't the one
+                                            //that just changed
 
 }"""
 
@@ -339,9 +377,11 @@ Example (swap.logika):
 
 inputs x and y (save their original values)
 
-x = x + y
-y = x - y
-x = x - y
+//x = 4, y = 7
+
+x = x + y         //x = 11, y = 7
+y = x - y         //x = 11, y = 4 (y became x!)
+x = x - y         //x = 7, y = 4 (x became y!)
 
 now x and y will have switched
 
