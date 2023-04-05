@@ -1,0 +1,222 @@
+HW 9 due Tuesday, April 11
+
+//////////////////////////////
+
+Today:
+
+- verifying programs with division and modulo
+- verifying programs with conditional statements
+
+//////////////////////////////
+
+Programs with division.
+
+
+Recall: what is the only numerical type in our toy programs?
+
+--> what does that mean about division?
+
+
+
+--> what do you think we'll need to demonstrate before using division?
+
+
+
+//what should go here?
+
+x = a / 2
+
+
+
+--> consider this snippet:
+
+
+val a: Z = num / 3
+val b: Z = num*3
+
+l"""{
+    1. a == num/3               premise
+    2. a*3 == num               algebra 1           //is this true?
+
+    3. b == num*3               premise
+    4. b/3 == num               algebra 3           //is this true?
+}"""
+
+
+/////////////////////////////
+
+Programs with modulo.
+
+
+To keep things easier to think about, modulo is only defined for:
+    - nonnegative "numerators"
+    - positive "denominators"
+
+
+--> what does that mean we'll need to demonstrate before using modulo?
+
+
+
+
+//what should go here?
+
+x = a % 2
+
+
+
+
+
+--> consider this snippet:
+
+val test: Z = num/3
+
+l"""{
+    1. test == num/3                premise
+    2. num == 3*test + num%3        algebra 1           //is this true?
+}"""
+
+--> and this one:
+
+l"""{
+    1. x % 2 == 0                   (some justification)
+    2. div = x / 2                  (some justification)
+    3. 2*div == x                   algebra 1 2         //is this true?
+}"""
+
+////////////////////////////
+
+Example (mod.logika):
+
+- get positive, even input number
+
+- add 1 to the number
+    (assert that it is now odd)
+
+- multiply the number by 2
+    (assert that the number is now even)
+
+
+
+
+/////////////////////////////
+
+When working with multiplication and division...
+
+Try to avoid using division in logic blocks if you can
+help it. Try to express things with multiplication instead.
+
+//////////////////////////////////
+
+Verifying conditional statements.
+
+For now, we'll just look at if/else statements:
+
+
+if (condition) {
+
+} else {
+
+}
+
+
+/////////////////////////////////
+
+(maxOfTwo.logika)
+
+Example: max of two numbers
+
+--> write our assert -- how do we know our program found the max?
+
+
+
+...we still need to prove our assert
+
+
+/////////////////////////////////
+
+How to validate programs with conditionals.
+
+if (C) {
+
+} else {
+
+}
+
+assert(something)
+
+/////////////////////////////////
+
+l"""{
+    1. P
+}"""
+
+if (C) {
+    l"""{
+        1. P            premise
+        2. C            premise
+    }"""
+
+    claims
+
+    l"""{
+        1. Q            (some justification)
+        2. A            (some justification)
+    }"""
+
+} else {
+    l"""{
+        1. P            premise
+        2. !(C)         premise
+    }"""
+
+    claims
+
+    l"""{
+        1. Q            (some justification)
+        2. B            (some justification)
+    }"""
+}
+
+l"""{
+    1. Q                premise //proved Q in both branches
+    2. A V B            premise //A from "if", B from "else"
+}"""
+
+/////////////////////////////
+
+Revisit the max example (maxOfTwo.logika)
+
+- what claims can we make in BOTH branches?
+- what claim will be different in the two branches?
+- finish the validation
+
+////////////////////////////////
+
+(abs.logika)
+
+Example: absolute value
+
+
+////////////////////////////////
+
+Verifying programs with nested conditionals
+
+- same idea as non-nested
+- include "summary" logic block after each inner if/else
+
+
+///////////////////////////////
+
+Max of 3 numbers
+
+-- see code
+
+-- in each branch, what do we know about max?
+
+-- do verification
+
+///////////////////////////////
+
+Next time:
+
+- analysis of functions

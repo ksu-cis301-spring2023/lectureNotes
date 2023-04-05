@@ -1,0 +1,105 @@
+//just the code for finding the biggest of three numbers
+
+import org.sireum.logika._
+
+val a: Z = readInt()    //suppose a is 3
+val b: Z = readInt()    //suppose b is 5
+val c: Z = readInt()    //suppose c is 10
+var max: Z = 0
+
+
+if (a >= b) {
+    //what do we know is NOT the max? b
+    if (a >= c) {
+        max = a
+
+        //logic block here
+        //want: max is a, and max >= a, b, c
+        l"""{
+            //FILL IN
+        }"""
+    } else {
+        max = c
+
+        //logic block here
+        //want: max is c, and max >= a, b, c
+        l"""{
+            //FILL IN
+        }"""
+    }
+
+    //summary logic block
+    l"""{
+        //FILL IN
+        //what can we state as premises?
+
+        //how do we get max == a V max == b V max == c?
+    }"""
+} else {
+    //what do we know is NOT the max? a
+    if (b >= c) {
+        max = b
+
+        //block here
+        l"""{
+            1. !(a >= b)                        premise //in the else of the outer if
+            2. b >= c                           premise //in the inner if statement
+            3. max == b                         premise //from the assignment
+            4. max >= a                         algebra 3 1
+            5. max >= b                         algebra 3
+            6. max >= c                         algebra 3 2
+        }"""
+    } else {
+        max = c
+
+        //block here
+        l"""{
+            1. !(a >= b)                        premise //in the else of the outer if
+            2. !(b >= c)                        premise //in the inner else
+            3. max == c                         premise //assignment
+            4. max >= a                         algebra 3 1 2
+            5. max >= b                         algebra 3 2
+            6. max >= c                         algebra 3
+        }"""
+    }
+
+    //summary logic block
+    l"""{
+        1. max >= a                             premise //true in both
+        2. max >= b                             premise //true in both
+        3. max >= c                             premise //true in both
+        4. max == b V max == c                  premise //LHS from if, RHS from else
+
+        //get max == a V max == b V max == c
+        5. {
+            6. max == b                         assume
+            7. max == a V max == b              Vi2 6
+            8. max == a V max == b V max == c   Vi1 7
+        }
+        9. {
+            10. max == c                        assume
+            11. max == a V max == b V max == c  Vi2 10
+        }
+        12. max == a V max == b V max == c      Ve 4 5 9
+    }"""
+}
+
+//overall summary here
+//summarize both branches
+l"""{
+    1. max >= a                             premise //true in outer if and outer else
+    2. max >= b                             premise //same
+    3. max >= c                             premise //same
+    4. max == a V max == b V max == c       premise //same
+
+}"""
+
+//Reminder: how do we run Logika programs?
+print("Max between ", a, ", ", b, " and ", c, " is ", max)
+
+//How do we know we have the max?
+//what assert(s) do we want?
+assert(max >= a)
+assert(max >= b)
+assert(max >= c)
+assert(max == a | max == b | max == c)

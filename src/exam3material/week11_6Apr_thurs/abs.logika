@@ -1,0 +1,16 @@
+import org.sireum.logika._
+
+var num: Z = readInt("Enter a number: ")
+val numOrig : Z = num
+
+//update num to be the absolute value of the input
+if (num < 0) {
+    num = num * -1
+} else {
+
+    //do nothing -- num is already its own absolute value
+}
+
+//assert that num is now the correct absolute value
+
+//do the verification

@@ -1,0 +1,17 @@
+import org.sireum.logika._
+
+val a: Z = readInt("Enter first number: ")
+val b: Z = readInt("Enter second number: ")
+
+var max: Z = 0
+
+if (a > b) {
+    max = a
+} else {
+    max = b
+}
+
+
+//write assert that we have found the max
+
+//do the verification

@@ -1,0 +1,16 @@
+import org.sireum.logika._
+
+var num: Z = readInt("Enter a positive even number: ")
+
+//what do we need to assume?
+
+
+num = num + 1
+
+//assert that num is now odd
+
+
+
+num = num * 2
+
+//assert that num is now even
