@@ -7,11 +7,38 @@ var max: Z = 0
 
 if (a > b) {
     max = a
+
+    l"""{
+        1. a > b        premise //if condition is true
+        2. max == a     premise //assignment
+        3. max >= a     algebra 2
+        4. max >= b     algebra 1 2
+        5. max >= a ^ max >= b  ^i 3 4
+        //want: max >= a
+        //want: max >= b
+    }"""
 } else {
     max = b
+
+    l"""{
+        1. !(a > b)         premise //if condition is false
+        2. a <= b           algebra 1
+        3. max == b         premise //assignment
+        4. max >= b         algebra 3
+        5. max >= a         algebra 2 3
+        6. max >= a ^ max >= b  ^i 5 4
+        //want: max >= a
+       //want: max >= b
+    }"""
 }
 
+l"""{
+    1. max >= a ^ max >= b      premise //this claim true in both branches
+    2. max == a V max == b      premise //LHS from if, RHS from else
+}"""
 
 //write assert that we have found the max
+assert(max >= a & max >= b)
+assert(max == a | max == b)
 
 //do the verification

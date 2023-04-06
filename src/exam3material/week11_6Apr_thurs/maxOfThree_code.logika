@@ -9,7 +9,7 @@ var max: Z = 0
 
 
 if (a >= b) {
-    //what do we know is NOT the max?
+    //what do we know is NOT the max? b (max must be a or c)
     if (a >= c) {
         max = a
 
@@ -21,7 +21,7 @@ if (a >= b) {
     }
     //summary logic block
 } else {
-    //what do we know is NOT the max?
+    //what do we know is NOT the max? a (max must be b or c)
     if (b >= c) {
         max = b
 

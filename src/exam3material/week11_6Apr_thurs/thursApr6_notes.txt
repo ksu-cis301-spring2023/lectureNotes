@@ -1,5 +1,20 @@
 HW 9 due Tuesday, April 11
 
+
+Problem 3:
+
+assume(x > 0 & y > 0 & z > 0)
+
+l"""{
+    1. x > 0 ^ y > 0 ^ z > 0            premise
+    2. x > 0 ^ y > 0                     ^e1 1
+}"""
+
+//first introduce one ^ two
+//then introduce the ^ three
+assert(one & two & three)
+
+
 //////////////////////////////
 
 Today:
@@ -12,17 +27,23 @@ Today:
 Programs with division.
 
 
-Recall: what is the only numerical type in our toy programs?
+Recall: what is the only numerical type in our toy programs? ints
 
 --> what does that mean about division?
+
+always integer division
 
 
 
 --> what do you think we'll need to demonstrate before using division?
 
-
+must prove we are not dividing by zero
 
 //what should go here?
+
+l"""{
+    1. 2 != 0       algebra
+}"""
 
 x = a / 2
 
@@ -34,12 +55,16 @@ x = a / 2
 val a: Z = num / 3
 val b: Z = num*3
 
+suppose num is 16, then a would be 5
+
 l"""{
     1. a == num/3               premise
-    2. a*3 == num               algebra 1           //is this true?
+    2. a*3 == num               algebra 1           //is this true? NO!
 
     3. b == num*3               premise
-    4. b/3 == num               algebra 3           //is this true?
+    4. b/3 == num               algebra 3           //is this true? YES!
+                                                    //we know b is a multiple
+                                                    //of 3
 }"""
 
 
@@ -52,6 +77,8 @@ To keep things easier to think about, modulo is only defined for:
     - nonnegative "numerators"
     - positive "denominators"
 
+numerator % denominator
+
 
 --> what does that mean we'll need to demonstrate before using modulo?
 
@@ -59,6 +86,11 @@ To keep things easier to think about, modulo is only defined for:
 
 
 //what should go here?
+
+l"""{
+    1. a >= 0           (some justification) //numerator is nonnegative
+    2. 2 > 0            algebra //denominator is postive
+}"""
 
 x = a % 2
 
@@ -70,9 +102,13 @@ x = a % 2
 
 val test: Z = num/3
 
+//maybe num is 16
+//test is 5
+
 l"""{
     1. test == num/3                premise
     2. num == 3*test + num%3        algebra 1           //is this true?
+                                                //YES! and will always be
 }"""
 
 --> and this one:
@@ -81,6 +117,8 @@ l"""{
     1. x % 2 == 0                   (some justification)
     2. div = x / 2                  (some justification)
     3. 2*div == x                   algebra 1 2         //is this true?
+                                //YES! this reasoning holds if I know
+                                 //x is even
 }"""
 
 ////////////////////////////
@@ -115,7 +153,7 @@ For now, we'll just look at if/else statements:
 if (condition) {
 
 } else {
-
+    //can put another if/else in here
 }
 
 
@@ -153,7 +191,7 @@ l"""{
 if (C) {
     l"""{
         1. P            premise
-        2. C            premise
+        2. C            premise //condition is true because I'm in the if
     }"""
 
     claims
@@ -166,7 +204,7 @@ if (C) {
 } else {
     l"""{
         1. P            premise
-        2. !(C)         premise
+        2. !(C)         premise //condition is not true (in else)
     }"""
 
     claims

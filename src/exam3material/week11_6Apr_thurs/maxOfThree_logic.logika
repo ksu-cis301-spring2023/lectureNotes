@@ -17,6 +17,12 @@ if (a >= b) {
         //want: max is a, and max >= a, b, c
         l"""{
             //FILL IN
+            1. a >= b               premise //outer if is true
+            2. a >= c               premise //inner if is true
+            3. max == a             premise //from assignment
+            4. max >= a             algebra 3
+            5. max >= b             algebra 1 4
+            6. max >= c             algebra 2 4
         }"""
     } else {
         max = c
@@ -25,6 +31,13 @@ if (a >= b) {
         //want: max is c, and max >= a, b, c
         l"""{
             //FILL IN
+            1. a >= b               premise //outer if is true
+            2. !(a >= c)            premise //inner if is false
+            3. a < c                algebra 2
+            4. max == c             premise //from assignment
+            5. max >= c             algebra 4
+            6. max >= a             algebra 3 5
+            7. max >= b             algebra 1 6
         }"""
     }
 
@@ -32,7 +45,20 @@ if (a >= b) {
     l"""{
         //FILL IN
         //what can we state as premises?
-
+        1. max >= a                     premise //true in if and else
+        2. max >= b                     premise //true in if and else
+        3. max >= c                     premise //true in if and else
+        4. max == a V max == c          premise //LHS true in if, RHS true in else
+        5. {
+            6. max == a                 assume
+            7. max == a V max == b      Vi1 6
+            8. max == a V max == b V max == c   Vi1 7
+        }
+        9. {
+            10. max == c                assume
+            11. max == a V max == b V max == c  Vi2 10
+        }
+        12. max == a V max == b V max == c      Ve 4 5 9
         //how do we get max == a V max == b V max == c?
     }"""
 } else {

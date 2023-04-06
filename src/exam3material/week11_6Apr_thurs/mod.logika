@@ -3,14 +3,39 @@ import org.sireum.logika._
 var num: Z = readInt("Enter a positive even number: ")
 
 //what do we need to assume?
+assume(num > 0)
 
+//numerator must be nonnegative
+//denominator must be positive
+l"""{
+    1. 2 > 0                algebra
+    2. num > 0              premise //from the assume
+    3. num >= 0             algebra 2
+}"""
+assume(num % 2 == 0)
 
 num = num + 1
 
+l"""{
+    1. num_old >= 0         premise //from previous block
+    2. num_old % 2 == 0     premise //from assume
+    3. num == num_old + 1   premise //from variable update
+    4. num % 2 == 1         algebra 2 3
+    5. num >= 0             algebra 1 3
+    //want: num % 2 == 1
+}"""
+
 //assert that num is now odd
-
-
+assert(num % 2 == 1)
 
 num = num * 2
 
+l"""{
+    1. num == num_old * 2           premise //from variable update
+    2. num % 2 == 0                 algebra 1
+    3. num_old >= 0                 premise //from previous block
+    4. num >= 0                     algebra 1 3
+}"""
+
 //assert that num is now even
+assert(num % 2 == 0)
