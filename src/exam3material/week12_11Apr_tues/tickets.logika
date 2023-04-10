@@ -1,0 +1,28 @@
+
+import org.sireum.logika._
+
+    //adult tickets: $50
+    //kid tickets: $30
+def getTicketCosts(adult: Z, kid: Z): Z = {
+    //function contract
+    l"""{
+        //what should we require about the parameters?
+        //what kind of result should we promise to return?
+    }"""
+
+    //return the total ticket cost
+    val overall: Z = adult*50 + kid*30
+
+    return overall
+}
+
+////////////// Test code /////////////////
+
+val k: Z = 3
+val a: Z = 2
+
+//what goes here?
+val cost: Z = getTicketCosts(a, k)
+
+
+//what *should* cost be?

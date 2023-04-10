@@ -1,0 +1,38 @@
+import org.sireum.logika._
+
+//want to return x * y, through repeated addition
+//recursively compute x + x + ... + x (y times)
+def mult(x: Z, y: Z): Z = {
+    //what goes here?
+
+    var answer: Z = 0
+
+    //base case (no more recursive calls - you know the answer)
+    if (y == 0) {
+        //do nothing -- answer is already 0
+    } else {
+        //(what do we know about y?)
+        //want to make a recursive call
+
+        //add up y-1 x's
+        answer = mult(x, y-1)
+
+        //add on one of the x's
+        answer = answer + x
+    }
+
+    //what goes here?
+
+    return answer
+}
+
+////////////// Test code //////////////
+
+val a: Z = 5
+val b: Z = 4
+
+//what goes here?
+
+var answer: Z = mult(a, b)
+
+//what do we want to assert that it is?
