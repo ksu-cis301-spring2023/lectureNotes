@@ -17,6 +17,7 @@ def sumOdds(n: Z): Z = {
     //Base case?
 
     //Recursive case?
+    //What is the nth odd number?
 }
 
 ////////////// Test code //////////////

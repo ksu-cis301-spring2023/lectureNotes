@@ -7,11 +7,24 @@ def getTicketCosts(adult: Z, kid: Z): Z = {
     //function contract
     l"""{
         //what should we require about the parameters?
+        requires adult >= 0 ^ kid >= 0
+
         //what kind of result should we promise to return?
+        ensures result == adult*50 + kid*30
+            result >= 0
     }"""
 
     //return the total ticket cost
     val overall: Z = adult*50 + kid*30
+
+    l"""{
+        1. adult >= 0 ^ kid >= 0            premise //from precondition
+        2. overall == adult*50 + kid*30     premise //from assignment,
+                                                    //proves 1st postcondition
+        3. adult >= 0                       ^e1 1
+        4. kid >= 0                         ^e2 1
+        5. overall >= 0                     algebra 2 3 4 //proves 2nd postcondition
+    }"""
 
     return overall
 }
@@ -21,8 +34,25 @@ def getTicketCosts(adult: Z, kid: Z): Z = {
 val k: Z = 3
 val a: Z = 2
 
+//prove preconditions
+l"""{
+    1. k == 3           premise
+    2. a == 2           premise
+    3. a >= 0           algebra 2
+    4. k >= 0           algebra 1
+    5. a >= 0 ^ k >= 0  ^i 3 4  //proves precondition
+    //need: a >= 0 ^ k >= 0
+}"""
+
 //what goes here?
 val cost: Z = getTicketCosts(a, k)
 
+l"""{
+    1. a == 2               premise
+    2. k == 3               premise
+    3. cost == a*50 + k*30  premise //from postcondition
+    4. cost == 190          algebra 1 2 3
+}"""
 
 //what *should* cost be?
+assert(cost == 190)

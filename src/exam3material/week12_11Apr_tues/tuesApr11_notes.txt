@@ -1,5 +1,29 @@
 HW 9 due tonight
 
+--> Logika hanging on #6
+
+either check on a lab machine
+or can email me your 6.logika link in your repo by 5:00pm today
+
+
+--> #6 reasoning
+
+we have:
+
+val k: Z = (a+b)/2
+
+...but want to claim that if a+b is odd, then
+a+b = 2*k + 1
+
+
+--> Why would this be?
+
+
+1. (a+b) % 2 == 1           (try to get here)
+2. k == (a+b)/2             premise //from assignment
+3. a+b == 2*k + 1           algebra 1 2 //can do this if you have 1 and 2
+
+
 HW 10 will be posted after class
 
 Exam 3 is Thursday, April 20
@@ -14,7 +38,6 @@ Function contracts - just under function definition:
 
 l"""{
     requires (precondition)
-    modifies (list of variables)        <-- skip for now
     ensures (postcondition)
 }"""
 
@@ -78,11 +101,12 @@ Four steps:
 
     --> what would we need to do before the function call?
 
+    1. (4-2) < 0 | (4-2) > 10
 
 
 2) What can the function itself do with the preconditions?
 
-
+list any precondition as a premise
 
 
 3) What must the function do with the postconditions?
@@ -91,22 +115,26 @@ Four steps:
 
     and we have:
 
-        return answer
+        return answer-y
 
-    what do we have to prove?
+    what do we have to prove before returning?
+
+    answer-y > 0
 
 
 
 4) What can the calling code do with the postcondition after
     the function returns?
 
-    x = function(param)
+    x = function(y+7)
 
 
 
-maybe a postcondition is: result > 0
+maybe a postcondition is (num is the param): result > num
 
 What can we claim?
+
+x > y+7
 
 
 
@@ -152,7 +180,10 @@ Example (mult_recursive.logika):
 - do verification
 
 
-///////////////////////////////
+/////////////////////////////// <--- stopped here
+
+(will do the rest on Thursday)
+
 
 SumOdds example (sumOdds_recursive.logika)
 

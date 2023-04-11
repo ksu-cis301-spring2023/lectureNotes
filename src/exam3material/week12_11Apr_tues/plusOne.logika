@@ -3,10 +3,28 @@ import org.sireum.logika._
 
 def plusOne(n: Z): Z = {
     //what goes here?
+    l"""{
+        //if we did have a precondition, maybe require
+        //that n is not the max integer
+        requires n > 0
+
+        ensures result == n+1
+            result > 1
+    }"""
 
     val answer: Z = n+1
 
     //what do we need to do before returning?
+
+    l"""{
+        1. answer == n+1            premise //from assignment
+                                    //this satisfies postcondition
+
+        2. n > 0                    premise //from precondition
+        3. answer > 1               algebra 1 2
+        //need: answer == n+1 for first postcondition
+        //need answer > 1  for second postcondition
+    }"""
 
     return answer
 }
@@ -16,8 +34,19 @@ def plusOne(n: Z): Z = {
 var x: Z = 5
 
 //do we need a logic block here?
+l"""{
+    1. x == 5               premise
+    2. x > 0                algebra 1 //proves the precondition
+    //need: x > 0
+}"""
 
 var added: Z = plusOne(x)
+
+l"""{
+    1. added == x+1                 premise
+    2. x == 5                       premise
+    3. added == 6                   algebra 1 2
+}"""
 
 //how do we get the assert to hold?
 

@@ -4,55 +4,80 @@
 
 import org.sireum.logika._
 
-var num: Z = readInt("Enter a number: ")
-val numOrig : Z = num
-
-//update num to be the absolute value of the input
-if (num < 0) {
-    num = num * -1
-
+def absVal(numOrig: Z) : Z = {
     l"""{
-        1. num_old < 0          premise //if condition true
-        2. num == num_old * -1  premise //assignment
-        3. numOrig == num_old   premise //from previous assignment
-        4. num >= 0             algebra 1 2
-        5. num == numOrig * -1  subst2 3 2
+        ensures
+            result >= 0
+            result == numOrig V result == numOrig*-1
     }"""
 
-} else {
+    var num : Z = numOrig
 
-    //do nothing -- num is already its own absolute value
+    //update num to be the absolute value of the input
+    if (num < 0) {
+        num = num * -1
+
+        l"""{
+            1. num_old < 0          premise //if condition true
+            2. num == num_old * -1  premise //assignment
+            3. num_old == numOrig  premise //from previous assignment
+            4. num >= 0             algebra 1 2
+            5. num == numOrig * -1  algebra 3 2
+        }"""
+
+    } else {
+
+        //do nothing -- num is already its own absolute value
+
+        l"""{
+            1. !(num < 0)           premise //condition is false
+            2. num >= 0             algebra 1
+            3. num == numOrig       premise //hasn't changed
+        }"""
+    }
 
     l"""{
-        1. !(num < 0)           premise //condition is false
-        2. num >= 0             algebra 1
-        3. numOrig == num       premise //hasn't changed
-        4. num == numOrig       algebra 3
+        1. num >= 0             premise //proves post
+        2. num == numOrig*-1 V num == numOrig   premise //LHS if, RHS from else
+        3. {
+            4. num == numOrig*-1        assume //LHS
+            5. num == numOrig V num == numOrig*-1   Vi2 4
+        }
+        6. {
+            7. num == numOrig           assume //RHS
+            8. num == numOrig V num == numOrig*-1   Vi1 7
+        }
+        9. num == numOrig V num == numOrig*-1       Ve 2 3 6 //proves post
     }"""
+
+    return num
 }
-
-l"""{
-    1. num >= 0             premise //needs to be true in both if/else
-    2. num == numOrig*-1 V num == numOrig   premise //LHS if, RHS from else
-    3. {
-        4. num == numOrig*-1        assume //LHS
-        5. num == numOrig V num == numOrig*-1   Vi2 4
-    }
-    6. {
-        7. num == numOrig           assume //RHS
-        8. num == numOrig V num == numOrig*-1   Vi1 7
-    }
-    9. num == numOrig V num == numOrig*-1       Ve 2 3 6
-}"""
-
-//assert that num is now the correct absolute value
-assert(num >= 0)
-assert(num == numOrig | num == numOrig*-1)
 
 //do the verification
 
 ////////////////// Test code //////////////
 
 val x: Z = 4
+
+val abs: Z = absVal(x)
+
+l"""{
+    1. abs >= 0                 premise //from 1st postcondition
+    2. abs == x V abs == x*-1   premise //from 2nd postcondition
+    3. x == 4                   premise
+    4. abs == 4 V abs == 4*-1   subst1 3 2
+    5. {
+        6. abs == 4             assume
+    }
+    7. {
+        8. abs == 4*-1          assume
+        9. abs == -4            algebra 8
+        10. _|_                 algebra 1 9
+        11. abs == 4            _|_e 10
+    }
+    12. abs == 4                Ve 4 5 7
+}"""
+
+assert(abs == 4)
 
 //use function to get absolute value of x
