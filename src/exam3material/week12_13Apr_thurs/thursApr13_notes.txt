@@ -1,0 +1,202 @@
+HW 10 due Tuesday, April 18
+
+Exam 3 is Thursday, April 20
+    (I'll post more details soon)
+
+///////////////////////
+
+Today:
+
+- finish recursive function verification
+- loop invariants and verifying loops
+- "Logika facts" (recursive definitions)
+
+//////////////////////
+
+Reminder:
+
+- What is a function contract?
+
+- What does "requires" mean?
+
+- What does "ensures" mean?
+
+- What can the function do with the precondition?
+
+- What must the function do with the postcondition?
+
+- What must the calling code do with the precondition?
+
+- What can the calling code do with the postcondition?
+
+//////////////////////
+
+SumOdds example (sumOdds_recursive.logika)
+
+Want to get sum of first n odd numbers
+
+
+
+First 2 odd numbers?
+
+
+First 5 odd numbers?
+
+
+
+--> How do we find the nth odd number, starting with 1?
+    (Hint: 2*n is the nth even number)
+
+
+
+- write the code
+
+- write the function contract
+
+- verify it (with some test code)
+
+/////////////////////////////
+
+Validating loops.
+
+while (condition) {
+    statements
+}
+
+
+We want to be able to make claims about our program after loop
+is done
+    ...but we don't know how many times it will execute
+    ...or even IF it will execute
+
+//////////////////////////////
+
+Solution: kind of like mathematical induction
+
+Come up with a loop INVARIANT that summarizes the behavior
+in a loop
+
+invariant should be true when loop begins
+should be STILL true at the end of each iteration
+
+1) Prove the invariant is true before the loop begins
+
+    (what is this like in mathematical induction?)
+    base case
+
+
+
+2) Assume the invariant is true at the beginning of an iteration.
+    Prove the invariant still holds at the end of the iteration.
+
+    (what is this like in mathematical induction?)
+    inductive step
+
+/////////////////////////
+
+When loop ends, you know two things:
+    1) About the invariant? it is true
+
+    2) About the loop condition? it is false
+
+
+If your loop is in a function, you can use those two pieces
+to prove the postcondition of the function.
+
+(And if you can't, you need to make your invariant stronger.)
+
+/////////////////////////
+
+Loop invariant block: just inside the loop
+
+while (condition) {
+    l"""{
+        invariant (list the invariant[s])
+        modifies (list all variables modified in the loop)
+    }"""
+
+    code for the loop
+}
+
+
+/////////////////////////
+
+Example: see code for multiplication with repeated additional using a loop
+(mult_loop.logika)
+
+--> should the function contract be different than our recursive implementation?
+
+--> should the test cases/asserts be different?
+
+--> what if the loop condition was "i < y" instead?
+
+
+///////////////////////
+
+See our factorial function
+(factorial_loop.logika)
+
+--> How would we write the function contract?
+--> How would we specify what we are trying to return?
+
+
+
+
+
+/////////////////////////////////
+
+Answer: Logika facts
+
+- allow us to create our own proof rules
+- similar to a recursive definition in math
+
+
+Recursive definition of factorial:
+
+factDef(1) = ?
+factDef(n) = ? , if n > 1
+
+
+
+Here is the equivalent Logika fact for this definition:
+
+l"""{
+    fact
+        def factDef(n: Z): Z
+            fOne. factDef(1) == 1
+            fBig.  ∀x: Z  x > 1 → factDef(x) == factDef(x - 1) * x
+}"""
+
+
+Example: what is factDef(3)?
+
+
+--> we can now use "factDef(n)" in our function contracts
+    would mean n!
+
+--> we can also do:
+
+l"""{
+    1. factDef(1) == 1                                      fact fOne
+    2. ∀x: Z  x > 1 → factDef(x) == factDef(x - 1) * x      fact fBig
+}"""
+
+/////////////////////////////////
+
+Revisit factorial example.
+
+--> Add Logika fact
+
+--> Write function contract
+
+--> Write loop invariant
+
+--> Do verification
+
+/////////////////////////////////
+
+Next time:
+
+- finding loop invariants
+- verifying nested loops
+- Exam 3 review

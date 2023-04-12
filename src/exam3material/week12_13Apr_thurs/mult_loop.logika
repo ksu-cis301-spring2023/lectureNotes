@@ -1,0 +1,46 @@
+import org.sireum.logika._
+
+//finding x*y by doing x + x + x + ... + x (y times)
+def mult(x: Z, y: Z): Z = {
+    l"""{
+        requires y >= 0 //(precondition) because that's the number of times I'm stepping
+        ensures result == x*y   //postcondition
+    }"""
+
+    var total: Z = 0
+    var i: Z = 0
+
+    while (i != y) {
+        //ADD INVARIANT BLOCK
+
+        total = total + x
+
+        i = i + 1
+    }
+
+    return total
+}
+
+//////////// test code /////////
+
+val a: Z = 5
+val b: Z = 4
+
+//call mult to get the product between a and b
+
+//prove the precondition before calling function
+l"""{
+    1. b == 4                       premise // from assignment
+    2. b >= 0                       algebra 1 //proves the precondition
+}"""
+var answer: Z = mult(a, b)
+
+l"""{
+    1. answer == a*b                premise //from the postcondition
+    2. a == 5                       premise //from assignment
+    3. b == 4                       premise //from assignment
+    4. answer == 20                 algebra 1 2 3 //proves the assert
+}"""
+
+//what do we want to assert that it is?
+assert(answer == 20)

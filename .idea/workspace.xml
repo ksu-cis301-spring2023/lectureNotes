@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week12_13Apr_thurs/factorial_loop.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week12_13Apr_thurs/mult_loop.logika" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exam3material/week12_13Apr_thurs/thursApr13_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/absFn.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/absFn.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/mult_recursive.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/mult_recursive.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/plusOne.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/plusOne.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/sumOdds_recursive.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/sumOdds_recursive.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/tickets.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/tickets.logika" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/tuesApr11_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/tuesApr11_notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week12_11Apr_tues/sumOdds_recursive.logika" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week12_13Apr_thurs/sumOdds_recursive.logika" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/julie/Documents/cis301/spring2023/hw_starters/hw10_starter",
+    "last_opened_file_path": "C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -58,6 +56,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week12_13Apr_thurs" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week11_4Apr_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week10_30Mar_thurs" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam2material\week8_7Mar_tues" />
@@ -75,13 +74,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00021" summary="After class Thursday, January 26">
-      <created>1674756031304</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1674756031304</updated>
     </task>
     <task id="LOCAL-00022" summary="Notes shell for Tuesday, January 31">
       <created>1675093739659</created>
@@ -419,11 +411,17 @@
       <option name="project" value="LOCAL" />
       <updated>1681159199485</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Notes after class Tues April 11">
+      <created>1681227707027</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1681227707027</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Tues Feb 21" />
     <MESSAGE value="Notes shell before Thurs Feb 23" />
     <MESSAGE value="After class Thurs Feb 23" />
     <MESSAGE value="Notes shell before Tues Feb 28" />
@@ -448,6 +446,7 @@
     <MESSAGE value="Notes shell before Thurs April 6" />
     <MESSAGE value="After class Thurs April 6" />
     <MESSAGE value="Notes shell before Tues April 11" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues April 11" />
+    <MESSAGE value="Notes after class Tues April 11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes after class Tues April 11" />
   </component>
 </project>
