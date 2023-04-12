@@ -124,7 +124,7 @@ while (condition) {
 Example: see code for multiplication with repeated additional using a loop
 (mult_loop.logika)
 
---> should the function contract be different than our recursive implementation?
+--> can we use the function contract from the recursive implementation?
 
 --> should the test cases/asserts be different?
 

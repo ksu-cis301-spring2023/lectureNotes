@@ -2,7 +2,7 @@
 import org.sireum.logika._
 
 def sumOdds(n: Z): Z = {
-    //write the recursive function
+    //see the recursive function
     //then write the function contract and do the verification
 
     //should return the sum of the first n odd numbers
@@ -18,6 +18,23 @@ def sumOdds(n: Z): Z = {
 
     //Recursive case?
     //What is the nth odd number?
+
+    var sum: Z = 0
+    if (n == 1) {
+        //the sum is the first odd number
+
+        sum = 1
+    } else {
+        //get the sum of the previous n-1 odd numbers
+
+        sum = sumOdds(n-1)
+
+        //and add on the nth odd number (which is 2n-1)
+
+        sum = sum + 2*n - 1
+    }
+
+    return sum
 }
 
 ////////////// Test code //////////////
