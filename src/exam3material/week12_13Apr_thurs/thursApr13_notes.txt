@@ -7,7 +7,7 @@ Exam 3 is Thursday, April 20
 
 Today:
 
-- finish recursive function verification
+- another recursive function verification
 - loop invariants and verifying loops
 - "Logika facts" (recursive definitions)
 
@@ -17,17 +17,44 @@ Reminder:
 
 - What is a function contract?
 
+requires/ensures
+
+
 - What does "requires" mean?
+
+precondition
+something function needs to know is true
+
+
 
 - What does "ensures" mean?
 
+postcondition
+promise about what the function will return/change
+
+
 - What can the function do with the precondition?
+
+list it as a premise
+
+
 
 - What must the function do with the postcondition?
 
+prove it true
+
+
+
 - What must the calling code do with the precondition?
 
+must prove the preconditions
+
+
 - What can the calling code do with the postcondition?
+
+list it as a premise (because it has been proved by the function
+
+
 
 //////////////////////
 
@@ -39,17 +66,22 @@ Want to get sum of first n odd numbers
 
 First 2 odd numbers?
 
+1 + 3 = 4
+
 
 First 5 odd numbers?
+
+1 + 3 + 5 + 7 + 9 = 25
 
 
 
 --> How do we find the nth odd number, starting with 1?
     (Hint: 2*n is the nth even number)
 
+2*n - 1
 
 
-- write the code
+- see the code
 
 - write the function contract
 
@@ -66,8 +98,15 @@ while (condition) {
 
 We want to be able to make claims about our program after loop
 is done
-    ...but we don't know how many times it will execute
-    ...or even IF it will execute
+
+
+    ...why is this more challenging than an if-statement?
+
+maybe the condition was false all along
+maybe loop executed once
+maybe it executed 100
+
+...I DO know the condition is false
 
 //////////////////////////////
 
@@ -76,8 +115,12 @@ Solution: kind of like mathematical induction
 Come up with a loop INVARIANT that summarizes the behavior
 in a loop
 
-invariant should be true when loop begins
-should be STILL true at the end of each iteration
+- invariant should be true when loop begins
+- should be STILL true at the end of each iteration
+
+
+Steps to proving correctness of a loop:
+----------------------------------------
 
 1) Prove the invariant is true before the loop begins
 
@@ -95,10 +138,13 @@ should be STILL true at the end of each iteration
 /////////////////////////
 
 When loop ends, you know two things:
-    1) About the invariant? it is true
+    1) About the invariant?
 
-    2) About the loop condition? it is false
+        is true!
 
+    2) About the loop condition?
+
+        is false!
 
 If your loop is in a function, you can use those two pieces
 to prove the postcondition of the function.
@@ -126,9 +172,17 @@ Example: see code for multiplication with repeated additional using a loop
 
 --> can we use the function contract from the recursive implementation?
 
+    def mult(x: Z, y: Z): Z
+
+    l"""{
+        requires y >= 0
+        ensures result == x*y
+    }"""
+
 --> should the test cases/asserts be different?
 
 --> what if the loop condition was "i < y" instead?
+
 
 
 ///////////////////////
@@ -140,7 +194,11 @@ See our factorial function
 --> How would we specify what we are trying to return?
 
 
+5! = 5*4*3*2*1
 
+factorial(n)
+
+want postcondition : result == n * (n-1) * ... * 2 * 1
 
 
 /////////////////////////////////
@@ -153,8 +211,8 @@ Answer: Logika facts
 
 Recursive definition of factorial:
 
-factDef(1) = ?
-factDef(n) = ? , if n > 1
+factDef(1) = 1
+factDef(n) = n*factDef(n-1) , if n > 1
 
 
 

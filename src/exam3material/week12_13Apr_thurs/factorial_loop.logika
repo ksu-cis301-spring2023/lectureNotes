@@ -3,8 +3,8 @@ import org.sireum.logika._
 l"""{
     fact
         def factDef(n: Z): Z
-            fOne. factDef(1) == 1
-            fBig.  ∀x: Z  x > 1 → factDef(x) == factDef(x - 1) * x
+            fZero. factDef(0) == 1
+            fBig.  ∀x: Z  x > 0 → factDef(x) == factDef(x - 1) * x
 }"""
 
 //want to return n!
@@ -12,17 +12,72 @@ l"""{
 def factorial(n: Z): Z = {
     //function contract
     l"""{
-        requires n >= 1
+        requires n >= 0
         ensures result == factDef(n)    //I promise to return n!
     }"""
 
     var product: Z = 1
     var count: Z = 0
 
+    //must prove invariant holds before loop begins
+
+    l"""{
+        1. product == 1                 premise
+        2. count == 0                   premise
+        3. factDef(0) == 1              fact fZero
+        4. product == factDef(count)    algebra 1 2 3 //proves invariant
+        5. n >= 0                       premise //from precondition
+        6. count >= 0                   algebra 2 //proves 2nd invariant
+    }"""
+
+    //need: product == factDef(count)
+
     while (count != n) {
+        l"""{
+            invariant product == factDef(count)
+                count >= 0
+            modifies count, product
+        }"""
+
+        //after count iterations, what is product?
+        //product is count!
+
         count = count + 1
+
+        l"""{
+            1. count == count_old + 1           premise //assignment
+            2. product == factDef(count_old)    premise //loop invariant
+            3. product == factDef(count-1)      algebra 1 2
+            4. count_old >= 0                   premise //2nd loop invariant
+            5. count > 0                        algebra 1 4
+        }"""
+
         product = product * count
+
+        l"""{
+            1. product == product_old * count                   premise //times assignment
+            2. product_old == factDef(count-1)                  premise //from previous block
+            3. ∀x: Z  x > 0 → factDef(x) == factDef(x - 1) * x  fact fBig
+            4. count > 0                                        premise //from previous block
+            5. count > 0 → factDef(count) == factDef(count - 1) * count     Ae 3 count
+            6. factDef(count) == factDef(count - 1) * count     ->e 5 4
+            7. product == factDef(count-1) * count              algebra 1 2
+            8. product == factDef(count)                        algebra 6 7 //proves invariant
+            9. count >= 0                                       algebra 4 //proves 2nd invariant
+        }"""
+
+        //need to prove invariant holds at end of iteration
+        //need: product == factDef(count)
     }
+
+    //need to prove postcondition
+    l"""{
+        1. !(count != n)                premise //loop condition is false
+        2. product == factDef(count)    premise //loop invariant is true
+        3. count == n                   algebra 1
+        4. product == factDef(n)        algebra 2 3 //proves postcondition
+        //need: product == factDef(n)
+    }"""
 
     return product
 }
@@ -31,7 +86,57 @@ def factorial(n: Z): Z = {
 
 val test: Z = 3
 
+l"""{
+    1. test == 3            premise //from assignment
+    2. test >= 0            algebra 1 //proves precondition
+}"""
+
 val answer: Z = factorial(test)
 
+l"""{
+    1. answer == factDef(test)          premise     //factorial postcondition
+    2. test == 3                        premise
+    3. answer == factDef(3)             algebra 1 2
+
+    //pull in Logika fact
+    4. ∀x: Z  x > 0 → factDef(x) == factDef(x - 1) * x  fact fBig
+
+    //plug in "3" for "x"
+    5. 3 > 0 → factDef(3) == factDef(3 - 1) * 3         Ae 4 3
+    6. 3 > 0                            algebra
+
+    //3 > 0, so use →
+    7. factDef(3) == factDef(3 - 1) * 3  →e 5 6
+
+    //plug in "2" for "x"
+    8. 2 > 0 → factDef(2) == factDef(2 - 1) * 2         Ae 4 2
+    9. 2 > 0                            algebra
+
+    //2 > 1, so use →
+    10. factDef(2) == factDef(2 - 1) * 2  →e 8 9
+
+    //plug in "1" for "x"
+    11. 1 > 0 → factDef(1) == factDef(1 - 1) * 1        Ae 4 1
+    12. 1 > 0                            algebra
+
+    //1 > 0, so use →
+    13. factDef(1) == factDef(1 - 1) * 1  →e 11 12
+
+    //pull in Logika fact
+    14. factDef(0) == 1                  fact fZero
+
+    //simplify our recursive definition lines
+    15. factDef(3) == factDef(2) * 3     algebra 7
+    16. factDef(2) == factDef(1) * 2    algebra 10
+    17. factDef(1) == factDef(0) * 1      algebra 13
+
+    //plug in our values
+    18. factDef(1) == 1                 algebra 17 14
+    19. factDef(2) == 2                 algebra 16 18
+    20. factDef(3) == 6                 algebra 19 15
+
+    //proves claim in assert
+    21. answer == 6                     algebra 3 20
+}"""
 
 assert(answer == 6)

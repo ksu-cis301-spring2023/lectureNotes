@@ -3,20 +3,67 @@ import org.sireum.logika._
 //finding x*y by doing x + x + x + ... + x (y times)
 def mult(x: Z, y: Z): Z = {
     l"""{
-        requires y >= 0 //(precondition) because that's the number of times I'm stepping
+        requires y >= 0 //(precondition) because that's the number of
+                        //times I'm stepping
         ensures result == x*y   //postcondition
     }"""
 
     var total: Z = 0
     var i: Z = 0
 
+    //prove invariant is true before loop begins
+
+    l"""{
+        1. total == 0               premise
+        2. i == 0                   premise
+        3. total == i*x             algebra 1 2 //proves invariant
+        //need: total == i*x
+    }"""
+
     while (i != y) {
         //ADD INVARIANT BLOCK
+        l"""{
+            invariant total == i*x
+            modifies total, i
+        }"""
+
+        //we can assume the loop invariant is true here
+
+        l"""{
+            1. total == i*x         premise //from invariant
+        }"""
 
         total = total + x
 
+        l"""{
+            1. total_old == i*x     premise //from invariant
+            2. total == total_old + x   premise //from assignment
+            3. total == i*x + x         algebra 1 2
+        }"""
+
         i = i + 1
+
+        l"""{
+            1. i == i_old + 1           premise //from assignment
+            2. total == i_old*x + x     premise //from previous block
+            3. total == (i-1)*x + x     algebra 1 2
+            4. total == i*x - x + x     algebra 3
+            5. total == i*x             algebra 4 //proves invariant
+        }"""
+
+
+        //need to prove loop invariant still holds
+        //need: total == i*x
     }
+
+    l"""{
+        1. !(i != y)                premise //loop condition is false
+        2. i == y                   algebra 1
+        3. total == i*x             premise //loop invariant is true
+        4. total == x*y             algebra 2 3
+    }"""
+
+    //need: total == x*y
 
     return total
 }
