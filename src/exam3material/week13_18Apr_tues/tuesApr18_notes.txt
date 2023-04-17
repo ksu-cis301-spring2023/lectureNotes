@@ -1,0 +1,174 @@
+HW 10 due tonight
+
+Exam 3 is Thursday, April 20
+    (we'll review today)
+
+There will be one more HW assignment, posted next week
+
+//////////////////////////////
+
+Today:
+- Quick review: functions and loops
+- Coming up with loop invariants
+- Exam 3 review
+
+///////////////////////////////
+
+def functionName(p1, p2, ..., pn) : returnType = {
+    l"""{
+        requires A
+        ensures B
+    }"""
+
+    return something
+}
+
+var mine: type = functionName(a1, a2, ..., an)
+
+
+
+--> What does "requires" mean?
+    Where do we prove it?
+    What can we do with it?
+
+
+
+--> What does "ensures" mean?
+    Where do we prove it?
+    What can we do with it?
+
+
+
+//////////////////////////////
+
+def functionName(p1, p2, ..., pn) : returnType = {
+    l"""{
+        requires A
+        ensures B
+    }"""
+
+    while (C) {
+        //invariant I
+    }
+}
+
+--> Where must we prove I?
+
+
+
+--> Where can we list I as a premise?
+
+
+
+--> How do we prove B?
+
+
+
+///////////////////////////////
+
+Practice writing loop invariants -- loopInvariants.txt
+
+
+///////////////////////////////
+
+Exam 3:
+
+- Covers everything since Exam 2, including HW 7-10
+- Closed notes, closed computers
+- All open-ended problems
+- NO verification using modulus or division
+- NO verification using Logika facts
+
+
+Topics:
+- Predicate logic proofs with nested quantifiers
+- Recursive definitions
+- Proof techniques, including:
+    - Mathematical induction
+    - Direct (conditional) proofs
+    - Contrapositive proofs
+    - Proof by cases
+    - Proof by contradiction
+    - Proofs on sets
+- Programming logic, including:
+    - Assumes and asserts
+    - The subst rules and the algebra rule
+    - Verifying asserts in programs with variable assignments/
+        expressions/updates
+    - Verifying programs with if/else statements, functions,
+        loops, and recursion
+    - Function contracts (including the meaning of preconditions
+        and postconditions)
+    - Loop invariants
+    - Verifying "test code" that calls a function
+
+
+Work through parts of practice exam.
+
+
+///////////////////////////////
+
+Other review problems:
+
+
+Use mathematical induction to prove:
+
+For all integers n >= 4, n! > 2^n
+
+
+
+
+
+///
+
+Use a direct proof to show that:
+
+The product of three odd integers is odd.
+
+
+
+
+
+
+
+
+
+///
+
+Prove that {x : x = 6k, k ∈ Z} ⊆ {x : x = 3k + 3, k ∈ Z}
+
+x = 6k = 3(2k -1) + 3
+
+
+
+
+
+///
+
+Prove with natural deduction:
+
+∃ y (∀ x P(x, y)) |- ∀ x (∃ y P(x, y))
+
+
+
+
+
+
+///
+
+Use a recursive definition to describe the pattern 10, 7, 4, 1, ...
+
+
+
+
+
+///////////////////////////////
+
+Next time: Exam 3
+
+After exam:
+
+- Termination
+- Formal specifications in practice (using Java)
+- Global invariants
+- Java asserts and JUnit tests
