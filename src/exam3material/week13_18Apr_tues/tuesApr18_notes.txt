@@ -23,18 +23,21 @@ def functionName(p1, p2, ..., pn) : returnType = {
     return something
 }
 
+//prove A, but substituting a1 for p1, a2 for p2....
+
 var mine: type = functionName(a1, a2, ..., an)
+//list B as a premise, but substitute a1 for p1, a2 for p2....
+    //use "mine" to substitute for "result"
 
 
-
---> What does "requires" mean?
-    Where do we prove it?
+--> What does "requires" mean? precondition
+    Where do we prove it? we must prove A before we call it
     What can we do with it?
 
 
 
---> What does "ensures" mean?
-    Where do we prove it?
+--> What does "ensures" mean? postcondition
+    Where do we prove it? by the end of the function
     What can we do with it?
 
 
@@ -47,20 +50,31 @@ def functionName(p1, p2, ..., pn) : returnType = {
         ensures B
     }"""
 
+    //premise: A
+
+    //prove I
     while (C) {
         //invariant I
+
+        //(just inside the loop)
+        //premise: C
+        //premise: probably still A if nothing changed
+        //premise: I
+
+
+        //(at the end of the code in the loop)
+        //prove I
     }
+
+    //premise: !C
+    //premise: I
+
+    //prove B
 }
 
---> Where must we prove I?
+--> What are all the premises we have different places?
 
-
-
---> Where can we list I as a premise?
-
-
-
---> How do we prove B?
+--> What must we prove?
 
 
 
@@ -116,8 +130,40 @@ Use mathematical induction to prove:
 For all integers n >= 4, n! > 2^n
 
 
+Let P(n) be the claim that for all integers n >= 4, n! > 2^n.
+We write:
+    LHS(n) = n!
+    RHS(n) = 2^n
+To prove P(n) for some integer n >= 4, we must show that LHS(n) > RHS(n)
 
+Base case. We must prove P(n) for the smallest value of n, where n = 4.
+We have that:
+    LHS(4) = 4! = 4*3*2*1 = 24
+    RHS(4) = 2^4 = 16
+Since 24 > 16, the base case holds.
 
+Inductive step. Assume P(n) holds for some n >= 4. We must prove that
+P(n+1) holds.
+
+Since we are assuming P(n), we have that LHS(n) > RHS(n), or that
+n! > 2^n. To prove P(n+1), we must show that LHS(n+1) > RHS(n+1).
+
+We have that:
+    LHS(n+1) = (n+1)!
+            = (n+1)*n!
+            = LHS(n)*(n+1)
+
+and:
+    RHS(n+1) = 2^(n+1)
+            = 2*(2^n)
+            = 2*RHS(n)
+
+We know LHS(n) > RHS(n) by the inductive hypothesis. LHS(n) is being
+multiplied by n+1, which is at least 5 (since n >= 4). RHS(n) is being
+multiplied by 2. LHS(n) is already greater than RHS(n), and it
+is being multiplied by a bigger value than RHS(n) (5 versus 2). Thus
+LHS(n)*(n+1) > 2*RHS(n), and so LHS(n+1) > RHS(n+1). The inductive step
+holds.
 
 ///
 
@@ -125,21 +171,34 @@ Use a direct proof to show that:
 
 The product of three odd integers is odd.
 
+If integers x, y, and z are odd, then x*y*z is odd.
 
+Assume integers x, y, and z are odd. Since x is odd, we have that
+x = 2k + 1 for some integer k. Similarly, we have that y = 2m+1 and
+z = 2c + 1 for some integers m and c.
 
+We have that:
 
+x*y*z = (2k + 1)(2m + 1)(2c + 1)
+      = (4km + 2k + 2m + 1)(2c + 1)
+      = (8kmc + 4km + 4kc + 4k + 4cm + 2m + 2c + 1)
+      = 2(4kmc + 2km + 2kc + 2k + 2cm + m + c) + 1
 
-
-
-
+We have that x*y*z = 2b+ 1 where b is the integer
+4kmc + 2km + 2kc + 2k + 2cm + m + c. Thus x*y*z is odd.
 
 ///
 
 Prove that {x : x = 6k, k ∈ Z} ⊆ {x : x = 3k + 3, k ∈ Z}
 
-x = 6k = 3(2k -1) + 3
+Let A = {x : x = 6k, k ∈ Z} and B = {x : x = 3k + 3, k ∈ Z}.
 
+Suppose x ∈ A. Then x = 6k for some integer k. We have that:
+    x = 6k
+      = 3(3k - 1) + 3
 
+And so x = 3m + 3 where m is the integer 3k-1. Thus x ∈ B, and so
+A ⊆ B.
 
 
 
@@ -148,6 +207,21 @@ x = 6k = 3(2k -1) + 3
 Prove with natural deduction:
 
 ∃ y (∀ x P(x, y)) |- ∀ x (∃ y P(x, y))
+{
+    1. ∃ y (∀ x P(x, y))            premise
+    2. {
+        3. random
+        4. {
+            5. alias ∀ x P(x, alias)    assume
+            6. P(random, alias)         Ae 5 random
+            7. ∃ y P(random, y)         Ei 6 alias
+            //goal: ∃ y P(random, y)
+        }
+        8. ∃ y P(random, y)             Ee 1 4
+        //prove ∃ y P(random, y)
+    }
+    9. ∀ x (∃ y P(x, y))                Ai 2
+}
 
 
 
@@ -158,7 +232,8 @@ Prove with natural deduction:
 
 Use a recursive definition to describe the pattern 10, 7, 4, 1, ...
 
-
+f(1) = 10
+f(n) = f(n-1) - 3, if n > 1
 
 
 
@@ -170,5 +245,6 @@ After exam:
 
 - Termination
 - Formal specifications in practice (using Java)
+- Specifications and invariants involving arrays
 - Global invariants
 - Java asserts and JUnit tests

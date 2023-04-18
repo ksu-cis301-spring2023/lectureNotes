@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/loopInvariants.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/tuesApr18_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/loopInvariants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/loopInvariants.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/tuesApr18_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/tuesApr18_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,13 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Edits after class Tues Jan 31">
-      <created>1675184044623</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1675184044623</updated>
     </task>
     <task id="LOCAL-00026" summary="First page for Thurs Feb 2">
       <created>1675196402379</created>
@@ -416,11 +409,17 @@
       <option name="project" value="LOCAL" />
       <updated>1681403896139</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Notes shell before Tues April 18">
+      <created>1681767127015</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1681767127015</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Tues Feb 28" />
     <MESSAGE value="Notes shell before Thurs March 2" />
     <MESSAGE value="Notes after class Thurs March 2" />
     <MESSAGE value="Notes shell before Tues March 7" />
@@ -445,6 +444,7 @@
     <MESSAGE value="Notes shell before Thurs April 13" />
     <MESSAGE value="Notes shell before Thurs April 13, with edits" />
     <MESSAGE value="After class Thurs April 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Thurs April 13" />
+    <MESSAGE value="Notes shell before Tues April 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues April 18" />
   </component>
 </project>

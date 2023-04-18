@@ -9,19 +9,26 @@ while (x >= a) {
 
 Suppose n is 10 and a is 3.
 
+10/3
+
+Iterations: |   0   |   1   |   2   |   3   |       |
+------------------------------------------------------
+x:          |  10   |   7   |   4   |  1   |       |
+------------------------------------------------------
+d:          |   0   |   1   |   2   |  3    |       |
 
 
+integer division / modulus of n/a and n%a
 
 What about general n and a?
 
+x: n, n-a, n-2a, ...
+d: counts iterations
 
 
+x == n - da
 
 2) Choose an invariant
-
-
-
-3) Where would we need to prove the invariant?
 
 
 
@@ -37,43 +44,31 @@ var total: Z = 0
 var i: Z = 0
 var j: Z = 0
 
-while (i < x) {
+while (i != x) {
+    //invariant: total == 5*y*i
+
     var line: Z = 0
-    while (j < y) {
+    while (j != y) {
+        //invariant: line == 5*j
+
         line = line + 5
         j = j + 1
     }
+
+    //line == 5*j (premise)
+    //j == y        (loop condition is false)
+    //line == 5*y
 
     i = i + 1
     total = total + line
 }
 
+//i == x premise (loop condition is false)
+//total == 5*y*i premise (outer invariant is true)
+//total == 5*y*x
+
 1) What is the code doing? Walk through variable updates.
+
+
 
 2) Choose invariants
-
-
-
-///////////////////////////////////////
-
-
-//this is not a Logika program, but the idea remains
-
-//nums is an int array
-
-int val = nums[0];
-int i = 1;
-
-while (i < nums.length) {
-    if (nums[i] < val) {
-        val = nums[i];
-    }
-    i++;
-}
-
-nums: {7,2,4,-1,3}
-
-1) What is the code doing? Walk through variable updates.
-
-2) How can we describe the progress at a particular point?
-
