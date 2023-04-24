@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/loopInvariants.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/loopInvariants.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/tuesApr18_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/exam3material/week13_18Apr_tues/tuesApr18_notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lectureNotes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lectureNotes.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
       <list>
         <option value="package-info" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,17 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week12_13Apr_thurs" />
@@ -60,9 +71,37 @@
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam2material\week8_7Mar_tues" />
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\lectureNotes\src\exam1material\tuesJan17" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="exam1material" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="finalMaterial.week14_25Apr_tues" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="JMLExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lectureNotes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="finalMaterial.week14_25Apr_tues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="finalMaterial.week14_25Apr_tues" />
+      <option name="MAIN_CLASS_NAME" value="finalMaterial.week14_25Apr_tues.JMLExampleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.JMLExampleTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -72,13 +111,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00026" summary="First page for Thurs Feb 2">
-      <created>1675196402379</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1675196402379</updated>
     </task>
     <task id="LOCAL-00027" summary="Added detail on proofs with truth tables">
       <created>1675196963088</created>
@@ -416,11 +448,17 @@
       <option name="project" value="LOCAL" />
       <updated>1681767127015</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="After class Tues Apr 18">
+      <created>1681836525397</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1681836525398</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Thurs March 2" />
     <MESSAGE value="Notes after class Thurs March 2" />
     <MESSAGE value="Notes shell before Tues March 7" />
     <MESSAGE value="Notes after class Tues March 7" />
@@ -445,6 +483,7 @@
     <MESSAGE value="Notes shell before Thurs April 13, with edits" />
     <MESSAGE value="After class Thurs April 13" />
     <MESSAGE value="Notes shell before Tues April 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues April 18" />
+    <MESSAGE value="After class Tues Apr 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Tues Apr 18" />
   </component>
 </project>

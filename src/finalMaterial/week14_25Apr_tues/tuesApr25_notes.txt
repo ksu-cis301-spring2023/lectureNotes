@@ -1,0 +1,175 @@
+HW 11 (last assignment) will be posted after class
+    - due Tuesday, May 2
+
+Final exam: Wednesday, May 10 2:00-3:50 pm
+
+///////////////////////////
+
+Exam 3 discussion.
+
+Added 2 to each score -- your circled score is the one in Canvas (after the +2)
+
+High: 100/100
+Average: 74/100 (not counting the 0s for those who didn't take it)
+
+A (90-100): 13 students
+B (80-89): 8 students
+C (70-79): 8 students
+D (60-69): 9 students
+F (below 60): 10 students
+Did not take exam: 5 students
+
+///////////////////////////
+
+Today:
+
+- Design by contract
+- Transition to other languages (Java)
+- Formal specifications with and without verification
+- Enforcing preconditions and checking postconditions
+- Intro to JML (Java Modeling Language)
+- Specifications for arrays
+- Writing asserts
+- Writing unit tests (JUnit)
+
+///////////////////////////
+
+Design by contract
+
+When is this useful? When is it less useful?
+
+///////////////////////////
+
+Formal verification options in other languages
+
+
+Tim sort bug
+
+Java binary search bug
+
+///////////////////////////
+
+Halfway option
+
+- Write a formal specification (avoids ambiguity) that *could* be used with a verification tool
+- Enforce preconditions
+- Check postconditions
+- (Check invariants)
+
+
+//////////////////////////
+
+Java Modeling Language (JML)
+
+(background)
+
+See jmlSyntax.txt for a primer
+
+
+How to enforce preconditions?
+
+
+
+How to enforce postconditions?
+
+
+/////////////////////////////
+
+JMLExample.java
+
+
+- add our function contract checks
+
+- do full contract + checks on mult example
+
+
+////////////////////////////
+
+JUnit tests
+
+- what are they for?
+
+- how to generate a test file for a class
+
+- how to add necessary libraries
+
+
+////////////////////////////
+
+Types of asserts in JUnit tests:
+
+
+Basic assert for checking an expected value after a method call:
+
+assertEquals((test expression), (expected value), "message describing expected value");
+
+
+
+///
+
+Assert that a method is throwing an exception (a good way to test enforcement of preconditions):
+
+assertThrows(IllegalArgumentException.class,
+                () -> {
+                    methodCall(params);
+                }, "should get exception if ...explain");
+
+
+
+///
+
+Assert that two arrays have the same values:
+
+
+assertArrayEquals(firstArray, secondArray);
+assertArrayEquals(new int[] {10,1,2,3,4,5,6,7,8,9}, test);
+
+--> Can include message as an optional 1st parameter
+
+
+///////////////////////////////////////
+
+Example: Write unit tests for each of our methods
+
+
+///////////////////////////////////////
+
+Example: Write a method that returns an array that is a copy of another array
+
+--> specification?
+
+--> write test method
+
+///////////////////////////////////////
+
+Example: Write a method that returns the min element in an array
+
+--> specification?
+
+--> write test method
+
+
+///////////////////////////////////////
+
+Example: write a method that finds the index of an element in an array
+
+--> specification?
+
+//@ensures result == -1 <==> (\forall int k; 0 <= k && k < nums.length; nums[k] != val);
+//@ensures result >= 0 && result < nums.length <==> (nums[result] == val &&
+                    (\forall int k; 0 <= k && k < nums.length; nums[k] == val ==> result <= k)
+
+--> any ambiguity?
+
+--> write test method
+
+////////////////////////////////////////
+
+HW 11 discussion
+
+
+////////////////////////////////////////
+
+Next time:
+
+- global invariants
