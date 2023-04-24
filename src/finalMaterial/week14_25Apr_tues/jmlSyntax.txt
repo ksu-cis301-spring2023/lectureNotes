@@ -1,22 +1,34 @@
 //@requires precondition;
 //@ensures postcondition;
 
-precondition/postcondition are predicate logic statements using parameters, the return value, and/or public methods
+precondition/postcondition are predicate logic statements using parameters,
+    the return value, and/or public methods
+
 
 can have several @requires and several @ensures
 
+
+
 Use && for AND, || for OR, ! for NOT
+
+
 
 a ==> b - means a implies b
 
-a <==> b - means a iff (if and only if) b. Equivalent to (a==>b) && (b==>a)
+a <==> b - means a iff (if and only if) b.
+    Equivalent to (a==>b) && (b==>a)
+
+
 
 \result - refers to the return value
 
+
 \old(something) - refers to the value of "something" at the beginning of the method call
+
 
 These are handy for making statements about arrays:
 (\forall declaration; range; body)
+
 
 (\exists declaration; range; body)
 

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lectureNotes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lectureNotes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,13 +109,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Added detail on proofs with truth tables">
-      <created>1675196963088</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1675196963088</updated>
     </task>
     <task id="LOCAL-00028" summary="Test commit">
       <created>1675197301965</created>
@@ -455,11 +446,17 @@
       <option name="project" value="LOCAL" />
       <updated>1681836525398</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="First draft of notes before Tues April 25">
+      <created>1682363767876</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1682363767876</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes after class Thurs March 2" />
     <MESSAGE value="Notes shell before Tues March 7" />
     <MESSAGE value="Notes after class Tues March 7" />
     <MESSAGE value="Notes shell before Tues March 21" />
@@ -484,6 +481,7 @@
     <MESSAGE value="After class Thurs April 13" />
     <MESSAGE value="Notes shell before Tues April 18" />
     <MESSAGE value="After class Tues Apr 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Tues Apr 18" />
+    <MESSAGE value="First draft of notes before Tues April 25" />
+    <option name="LAST_COMMIT_MESSAGE" value="First draft of notes before Tues April 25" />
   </component>
 </project>
