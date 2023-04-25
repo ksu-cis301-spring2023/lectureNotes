@@ -3,6 +3,11 @@ HW 11 (last assignment) will be posted after class
 
 Final exam: Wednesday, May 10 2:00-3:50 pm
 
+Remaining graded categories for the semester:
+- HW 11
+- final exam
+- "midterm equivalent from final"
+
 ///////////////////////////
 
 Exam 3 discussion.
@@ -45,9 +50,10 @@ Design by contract
 When is this useful? When is it less useful?
 
 
+library functions
 
-
-
+more serious algorithms
+when you are writing a "stateful" class
 
 
 ///////////////////////////
@@ -96,9 +102,15 @@ See jmlSyntax.txt for a primer
 
 How to enforce preconditions?
 
+return if they're not true - can be done, but doesn't tell the calling
+code that something was wrong
+
+what we will do: throw an IllegalArugmentException
 
 
 How to enforce postconditions?
+
+assert statements at the end of the method
 
 
 /////////////////////////////
@@ -146,7 +158,7 @@ assertThrows(IllegalArgumentException.class,
 
 
 
-///
+/// <--- stopped here, will continue on Thursday
 
 Assert that two arrays have the same values:
 

@@ -4,6 +4,7 @@
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" afterDir="false" />
     </list>
@@ -79,7 +80,7 @@
       <recent name="finalMaterial.week14_25Apr_tues" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.JMLExampleTest.plusOne">
     <configuration name="JMLExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lectureNotes" />
       <extension name="coverage">
@@ -95,8 +96,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JMLExampleTest.plusOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lectureNotes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="finalMaterial.week14_25Apr_tues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="finalMaterial.week14_25Apr_tues" />
+      <option name="MAIN_CLASS_NAME" value="finalMaterial.week14_25Apr_tues.JMLExampleTest" />
+      <option name="METHOD_NAME" value="plusOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JMLExampleTest.plusOne" />
         <item itemvalue="JUnit.JMLExampleTest" />
       </list>
     </recent_temporary>
@@ -109,13 +127,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Test commit">
-      <created>1675197301965</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1675197301965</updated>
     </task>
     <task id="LOCAL-00029" summary="Another test">
       <created>1675197933653</created>
@@ -453,11 +464,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682363767876</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Second draft of notes before Tues April 25">
+      <created>1682374613752</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1682374613753</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Tues March 7" />
     <MESSAGE value="Notes after class Tues March 7" />
     <MESSAGE value="Notes shell before Tues March 21" />
     <MESSAGE value="Notes shell before Tues March 21, with edits" />
@@ -482,6 +499,7 @@
     <MESSAGE value="Notes shell before Tues April 18" />
     <MESSAGE value="After class Tues Apr 18" />
     <MESSAGE value="First draft of notes before Tues April 25" />
-    <option name="LAST_COMMIT_MESSAGE" value="First draft of notes before Tues April 25" />
+    <MESSAGE value="Second draft of notes before Tues April 25" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second draft of notes before Tues April 25" />
   </component>
 </project>
