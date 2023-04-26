@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/JMLExampleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/jmlSyntax.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_25Apr_tues/tuesApr25_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,24 +45,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\julie\Documents\cis301\spring2023\lectureNotes\src\exam3material\week12_13Apr_thurs" />
@@ -77,6 +78,7 @@
       <recent name="exam1material" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="finalMaterial.week14_27Apr_thurs" />
       <recent name="finalMaterial.week14_25Apr_tues" />
     </key>
   </component>
@@ -127,13 +129,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Another test">
-      <created>1675197933653</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1675197933653</updated>
     </task>
     <task id="LOCAL-00030" summary="Added logika file">
       <created>1675198003348</created>
@@ -471,11 +466,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682374613753</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="After class Tuesday, April 25">
+      <created>1682438747144</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1682438747144</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes after class Tues March 7" />
     <MESSAGE value="Notes shell before Tues March 21" />
     <MESSAGE value="Notes shell before Tues March 21, with edits" />
     <MESSAGE value="After class Tues March 21" />
@@ -500,6 +501,7 @@
     <MESSAGE value="After class Tues Apr 18" />
     <MESSAGE value="First draft of notes before Tues April 25" />
     <MESSAGE value="Second draft of notes before Tues April 25" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second draft of notes before Tues April 25" />
+    <MESSAGE value="After class Tuesday, April 25" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Tuesday, April 25" />
   </component>
 </project>

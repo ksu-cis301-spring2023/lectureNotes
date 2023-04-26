@@ -1,0 +1,207 @@
+HW 11 (last assignment) due Tuesday, May 2
+    - follow HW instructions to add JUnit libraries
+    - may need to specify the JDK/SDK in the project
+        (see Canvas announcement
+    --> try it out soon to make sure you don't have tech issues
+
+
+Final exam: Wednesday, May 10 2:00-3:50 pm
+
+Remaining graded categories for the semester:
+- HW 11
+- final exam
+- "midterm equivalent from final"
+
+///////////////////////////////////////
+
+Today:
+- specifying programs with arrays
+- specifying programs with global invariants
+
+///////////////////////////////////////
+
+Example: Write a method that takes an array of Strings and returns
+    a corresponding array of string lengths
+
+--> specification?
+
+
+--> write test method
+
+
+
+///////////////////////////////////////
+
+Example: Write a method that returns the min element in an array
+
+--> specification?
+
+
+--> write test method
+
+
+
+///////////////////////////////////////
+
+Example: write a method that updates each array element to be its
+own absolute value
+
+--> specification?
+
+
+--> write test method
+
+
+
+///////////////////////////////////////
+
+Example: write specification for a method that finds
+the index of an element in an array
+
+--> specification?
+
+
+public static int getIndex(int[] arr, int num)
+
+
+
+--> any ambiguity?
+
+
+
+////////////////////////////
+
+Types of asserts in JUnit tests:
+
+
+Basic assert for checking an expected value after a method call:
+
+assertEquals((test expression), (expected value),
+    "message describing expected value");
+
+
+
+///
+
+Assert that a method is throwing an exception
+(to test enforcement of preconditions):
+
+assertThrows(IllegalArgumentException.class,
+                () -> {
+                    methodCall(params);
+                }, "should get exception if ...explain");
+
+
+
+/// <--- stopped here, will continue on Thursday
+
+Assert that two arrays have the same values:
+
+
+assertArrayEquals(firstArray, secondArray);
+assertArrayEquals(new int[] {10,1,2,3,4,5,6,7,8,9}, test);
+
+--> Can include message as an optional 1st parameter
+
+
+///////////////////////////////////////
+
+"Stateful" programs with global invariants
+
+- have global variables that help represent the state of the system
+- global invariants: state what should always be true about the system
+
+When writing methods that affect global variables:
+- global invariants are required to be true at the time of the method call
+- global invariants should STILL be true at the end of the method
+
+
+//////////////////////////////////////
+
+Example: bank account
+
+- balance field
+- elite field
+
+--> account holders have elite status if their balance is >= $1M
+
+--> what should our global invariants be?
+
+
+//////////////////////////////////////
+
+Global invariants in JML:
+
+//@public invariant (say something about public members);
+
+--> what does that mean about global invariants and PRIVATE fields?
+
+--> what can we use instead of a private field?
+
+
+///////////////////////////////////////
+
+Writing method specifications to help protect global invariants:
+
+- Preconditions (@requires) should NOT allow parameters that would violate
+    global invariants
+
+- Postconditions (@ensures) should describe what the method does
+    using PUBLIC members
+
+--> An *implied* part of the postcondition is that the global invariants
+    will still hold
+
+    - but you don't need to list global invariants as additional
+    postconditions
+
+
+////////////////////////////////////////
+
+Finishing Account class:
+
+- write withdraw and deposit methods
+
+--> how should we write specifications?
+
+
+////////////////////////////////////////
+
+Enforcing global invariants AND function specifications:
+
+public returnType method(params) {
+    //assert that the global invariants hold here
+    //if the preconditions don't hold, throw an exception
+
+    code for the method
+
+    //assert that the global invariants still hold
+    //assert that the postconditions hold
+}
+
+--> add checks to withdraw and deposit
+
+--> write JUnit tests for Account
+
+
+--> what if we wanted to only allow withdrawals that were multiples
+    of $20?
+
+--> what if we wanted an "overdraft" marker - if a user tried
+    to withdraw too much, this marker would block any withdrawals
+    until their next deposit
+
+//////////////////////////////////////
+
+If time:
+
+- Money example
+
+//////////////////////////////////////
+
+Next time:
+- Specifying sorting algorithms
+- Using a verification tool on our JML specifications
+- Termination
+- The Halting problem
+- How to prove the corrrectness of new algorithms
