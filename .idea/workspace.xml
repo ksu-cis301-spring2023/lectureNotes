@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" afterDir="false" />
+    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="Before class Thurs April 27">
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/AccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -82,7 +83,39 @@
       <recent name="finalMaterial.week14_25Apr_tues" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JMLExampleTest.plusOne">
+  <component name="RunManager" selected="JUnit.AccountTest.withdrawal">
+    <configuration name="AccountTest.withdrawal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lectureNotes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="finalMaterial.week14_27Apr_thurs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="finalMaterial.week14_27Apr_thurs" />
+      <option name="MAIN_CLASS_NAME" value="finalMaterial.week14_27Apr_thurs.AccountTest" />
+      <option name="METHOD_NAME" value="withdrawal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JMLArraysTest.getStringLengths" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lectureNotes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="finalMaterial.week14_27Apr_thurs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="finalMaterial.week14_27Apr_thurs" />
+      <option name="MAIN_CLASS_NAME" value="finalMaterial.week14_27Apr_thurs.JMLArraysTest" />
+      <option name="METHOD_NAME" value="getStringLengths" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JMLExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lectureNotes" />
       <extension name="coverage">
@@ -116,6 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AccountTest.withdrawal" />
+        <item itemvalue="JUnit.JMLArraysTest.getStringLengths" />
         <item itemvalue="JUnit.JMLExampleTest.plusOne" />
         <item itemvalue="JUnit.JMLExampleTest" />
       </list>
@@ -129,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Added logika file">
-      <created>1675198003348</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1675198003348</updated>
     </task>
     <task id="LOCAL-00031" summary="Notes shell before Thursday, February 2">
       <created>1675279687209</created>
@@ -473,11 +501,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682438747144</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Before class Thurs April 27">
+      <created>1682542522838</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1682542522838</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Tues March 21" />
     <MESSAGE value="Notes shell before Tues March 21, with edits" />
     <MESSAGE value="After class Tues March 21" />
     <MESSAGE value="Notes shell before Thurs March 23" />
@@ -502,6 +536,7 @@
     <MESSAGE value="First draft of notes before Tues April 25" />
     <MESSAGE value="Second draft of notes before Tues April 25" />
     <MESSAGE value="After class Tuesday, April 25" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Tuesday, April 25" />
+    <MESSAGE value="Before class Thurs April 27" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before class Thurs April 27" />
   </component>
 </project>

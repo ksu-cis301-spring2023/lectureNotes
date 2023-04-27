@@ -43,24 +43,16 @@ Example: Write a method that returns the min element in an array
 
 ///////////////////////////////////////
 
-Example: write a method that updates each array element to be its
-own absolute value
-
---> specification?
-
-
---> write test method
-
-
-
-///////////////////////////////////////
-
 Example: write specification for a method that finds
 the index of an element in an array
 
 --> specification?
 
-
+//@requires arr != null;
+//@requires arr.length != 0;
+//@ensures \result >= 0 && \result < arr.length <==> arr[\result] == num;
+//@ensures \result == -1 <==> (\forall int k; 0 <= k && k < nums.length; arr[k] != num);
+//@ensures \result >= 0 && \result < arr.length <==> (\forall int k; 0 <= k; k < \result; arr[k] != num);
 public static int getIndex(int[] arr, int num)
 
 
@@ -70,41 +62,6 @@ public static int getIndex(int[] arr, int num)
 
 
 ////////////////////////////
-
-Types of asserts in JUnit tests:
-
-
-Basic assert for checking an expected value after a method call:
-
-assertEquals((test expression), (expected value),
-    "message describing expected value");
-
-
-
-///
-
-Assert that a method is throwing an exception
-(to test enforcement of preconditions):
-
-assertThrows(IllegalArgumentException.class,
-                () -> {
-                    methodCall(params);
-                }, "should get exception if ...explain");
-
-
-
-/// <--- stopped here, will continue on Thursday
-
-Assert that two arrays have the same values:
-
-
-assertArrayEquals(firstArray, secondArray);
-assertArrayEquals(new int[] {10,1,2,3,4,5,6,7,8,9}, test);
-
---> Can include message as an optional 1st parameter
-
-
-///////////////////////////////////////
 
 "Stateful" programs with global invariants
 
@@ -184,24 +141,12 @@ public returnType method(params) {
 --> write JUnit tests for Account
 
 
---> what if we wanted to only allow withdrawals that were multiples
-    of $20?
-
---> what if we wanted an "overdraft" marker - if a user tried
-    to withdraw too much, this marker would block any withdrawals
-    until their next deposit
-
 //////////////////////////////////////
 
-If time:
-
-- Money example
-
-//////////////////////////////////////
 
 Next time:
+- Best practices for specifications outside this class
 - Specifying sorting algorithms
 - Using a verification tool on our JML specifications
 - Termination
 - The Halting problem
-- How to prove the corrrectness of new algorithms
