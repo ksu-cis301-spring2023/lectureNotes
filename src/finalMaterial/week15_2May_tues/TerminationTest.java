@@ -7,14 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class TerminationTest {
 
     @Test
-    void mult() {
-    }
-
-    @Test
-    void multRec() {
-    }
-
-    @Test
     void collatz() {
+        int num = Termination.collatz(52);
+        assertEquals(1, num, "should always get 1");
     }
 }

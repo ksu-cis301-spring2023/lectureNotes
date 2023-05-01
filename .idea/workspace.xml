@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <recent name="finalMaterial.week14_25Apr_tues" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest.withdrawal">
+  <component name="RunManager" selected="JUnit.TerminationTest.collatz">
     <configuration name="AccountTest.withdrawal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lectureNotes" />
       <extension name="coverage">
@@ -145,8 +145,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TerminationTest.collatz" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lectureNotes" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="finalMaterial.week15_2May_tues.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="finalMaterial.week15_2May_tues" />
+      <option name="MAIN_CLASS_NAME" value="finalMaterial.week15_2May_tues.TerminationTest" />
+      <option name="METHOD_NAME" value="collatz" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TerminationTest.collatz" />
         <item itemvalue="JUnit.AccountTest.withdrawal" />
         <item itemvalue="JUnit.JMLArraysTest.getStringLengths" />
         <item itemvalue="JUnit.JMLExampleTest.plusOne" />
@@ -162,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Notes shell (with more details) before Thursday, February 2">
-      <created>1675288568630</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1675288568630</updated>
     </task>
     <task id="LOCAL-00033" summary="After class Thursday, February 2">
       <created>1675356411210</created>
@@ -506,11 +516,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682610331302</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Notes shell before Tues May 2">
+      <created>1682974002753</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1682974002753</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="After class Tues March 21" />
     <MESSAGE value="Notes shell before Thurs March 23" />
     <MESSAGE value="Notes after class Thurs March 23" />
     <MESSAGE value="Before class Tues March 28" />
@@ -535,6 +551,7 @@
     <MESSAGE value="After class Tuesday, April 25" />
     <MESSAGE value="Before class Thurs April 27" />
     <MESSAGE value="After class Thurs April 27" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Thurs April 27" />
+    <MESSAGE value="Notes shell before Tues May 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues May 2" />
   </component>
 </project>

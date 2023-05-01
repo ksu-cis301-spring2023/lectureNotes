@@ -31,10 +31,15 @@ Best practices outside class
 
 Highly recommend:
 - write global invariants for any class with fields/properties
-- write preconditions and postconditions for methods that
-    change arrays or do any sort of calculation
+- think about whether any parameters would violate global invariants
+    --> and if so, don't allow them!
+
 - don't need to use JML - but try to write your invariants/specifications
     in a clear, unambiguous way
+
+- write preconditions and postconditions for methods that
+    change arrays or do any sort of calculation
+
 - throw exceptions in a method where your preconditions aren't met
 
 
@@ -42,6 +47,7 @@ Highly recommend:
 Next level:
 - add asserts at the end of methods that modify fields/properties
     to make sure your global invariants aren't violated
+    
 - add asserts at the end of methods that are destined for a
     reusable library to make sure you are fulfilling the postcondition
     (use as a development tool)
