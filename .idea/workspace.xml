@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="Before class Thurs April 27">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/AccountTest.java" afterDir="false" />
+    <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArrays.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/JMLArraysTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/Money.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week14_27Apr_thurs/thursApr27_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,7 +54,7 @@
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/IntelliJML-1.1.4.jar&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julie/Documents/cis301/spring2023/finalPractice&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -79,6 +76,7 @@
       <recent name="exam1material" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="finalMaterial.week15_2May_tues" />
       <recent name="finalMaterial.week14_27Apr_thurs" />
       <recent name="finalMaterial.week14_25Apr_tues" />
     </key>
@@ -164,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Notes shell before Thursday, February 2">
-      <created>1675279687209</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1675279687209</updated>
     </task>
     <task id="LOCAL-00032" summary="Notes shell (with more details) before Thursday, February 2">
       <created>1675288568630</created>
@@ -508,11 +499,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682542522838</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="After class Thurs April 27">
+      <created>1682610331302</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1682610331302</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Tues March 21, with edits" />
     <MESSAGE value="After class Tues March 21" />
     <MESSAGE value="Notes shell before Thurs March 23" />
     <MESSAGE value="Notes after class Thurs March 23" />
@@ -537,6 +534,7 @@
     <MESSAGE value="Second draft of notes before Tues April 25" />
     <MESSAGE value="After class Tuesday, April 25" />
     <MESSAGE value="Before class Thurs April 27" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before class Thurs April 27" />
+    <MESSAGE value="After class Thurs April 27" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Thurs April 27" />
   </component>
 </project>

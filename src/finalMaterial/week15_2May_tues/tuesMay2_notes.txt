@@ -1,0 +1,162 @@
+HW 11 (last assignment) due Tuesday, May 2
+    - Fan problem:
+        - changing speed CAN turn fan on/off
+        - changing speed CANNOT change rotation
+        - be sure to not refer to private fields in specifications
+
+
+Final exam: Wednesday, May 10 2:00-3:50 pm
+
+
+
+Remaining graded categories for the semester:
+- HW 11
+- final exam
+- "midterm equivalent from final"
+
+///////////////////////////////////////
+
+Today:
+
+- Best practices for specifications outside this class
+- Termination
+- The Halting problem
+- Using a verification tool on our JML specifications
+    (including a sorting algorithm)
+
+///////////////////////////////////////
+
+Best practices outside class
+
+
+Highly recommend:
+- write global invariants for any class with fields/properties
+- write preconditions and postconditions for methods that
+    change arrays or do any sort of calculation
+- don't need to use JML - but try to write your invariants/specifications
+    in a clear, unambiguous way
+- throw exceptions in a method where your preconditions aren't met
+
+
+
+Next level:
+- add asserts at the end of methods that modify fields/properties
+    to make sure your global invariants aren't violated
+- add asserts at the end of methods that are destined for a
+    reusable library to make sure you are fulfilling the postcondition
+    (use as a development tool)
+
+
+--> be careful with documentation
+
+
+--> content of CIS 575
+
+
+//////////////////////////////////////
+
+If you want to prove correctness of an algorithm or function, need:
+
+   - function contract (preconditions and postconditions)
+   - loop invariant for any loops
+
+The process of proving correctness of a non-Logika algorithm or function
+is EXACTLY the same approach we used in Logika.
+
+/////////////////////////////////////
+
+Termination - whether a program will finish on all inputs
+
+
+Partial Correctness:
+    if the precondition is satisfied
+    we guarantee the postcondition as long as the program terminates
+
+
+Total Correctness:
+    if the precondition is satisfied
+    we guarantee the postcondition AND termination
+
+
+We need to show termination to achieve total correctness
+
+
+////////////////////////////////////////
+
+Termination with a loop.
+    - create measure of how much work is left
+        (i.e., how many iterations are left)
+    - show that the measure DECREASES from the beginning
+        of the iteration to the end
+    - show that if there is no more work to do, then the loop has finished
+
+
+
+Termination with recursion.
+    - use induction
+    ...what does this mean about our preconditions?
+
+
+
+Collatz function.
+
+
+
+////////////////////////////////////////
+
+Decidability - whether a problem can be decided one way or another
+
+Halting problem - given a computer program and a set of inputs
+    can you write another program to determine if the original
+        program will halt for the inputs
+
+
+
+//Idea: Pretend Halt takes Function, Input.
+//Returns whether Function terminates on Input.
+
+def Halt(Function, Input):
+    if Function(Input) halts: return true
+    else return false
+
+///
+
+def DoOpposite(Function):
+    if (Halt(Function, Function)) loop forever
+    else exit
+
+
+///
+
+What if we do: DoOpposite(DoOpposite)?
+    Suppose it exits (halts).
+        When does that happen?
+
+
+
+    Suppose it doesn't exit (doesn't halt).
+        When does that happen?
+
+
+//////////////////////////////////
+
+Using OpenJML
+
+- can verify total correctness if you:
+    - provide function contracts
+    - for loops, provide loop invariants and termination measure
+
+- you can also add assume/assert statements in the same line as Logika
+    --> assumptions you need to make for logic to hold
+    --> assert statements must be able to be verified by proof checker
+
+
+--> see examples
+
+
+/////////////////////////////////////
+
+
+Next time:
+
+- review for final exam
