@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/TerminationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,13 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00033" summary="After class Thursday, February 2">
-      <created>1675356411210</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1675356411210</updated>
     </task>
     <task id="LOCAL-00034" summary="Notes shell before Tuesday, February 7">
       <created>1675687723525</created>
@@ -523,11 +516,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682974002753</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Notes shell before Tues May 2, added OpenJML test file">
+      <created>1682979305972</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1682979305973</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes shell before Thurs March 23" />
     <MESSAGE value="Notes after class Thurs March 23" />
     <MESSAGE value="Before class Tues March 28" />
     <MESSAGE value="Before class Tues March 28, added proof error" />
@@ -552,6 +551,7 @@
     <MESSAGE value="Before class Thurs April 27" />
     <MESSAGE value="After class Thurs April 27" />
     <MESSAGE value="Notes shell before Tues May 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues May 2" />
+    <MESSAGE value="Notes shell before Tues May 2, added OpenJML test file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues May 2, added OpenJML test file" />
   </component>
 </project>

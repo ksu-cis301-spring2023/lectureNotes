@@ -47,7 +47,7 @@ Highly recommend:
 Next level:
 - add asserts at the end of methods that modify fields/properties
     to make sure your global invariants aren't violated
-    
+
 - add asserts at the end of methods that are destined for a
     reusable library to make sure you are fulfilling the postcondition
     (use as a development tool)
@@ -56,10 +56,10 @@ Next level:
 --> be careful with documentation
 
 
---> content of CIS 575
-
-
 //////////////////////////////////////
+
+Content of CIS 575.
+
 
 If you want to prove correctness of an algorithm or function, need:
 
@@ -95,12 +95,13 @@ Termination with a loop.
     - show that the measure DECREASES from the beginning
         of the iteration to the end
     - show that if there is no more work to do, then the loop has finished
-
+    - see example
 
 
 Termination with recursion.
     - use induction
     ...what does this mean about our preconditions?
+    - see example
 
 
 
@@ -114,7 +115,7 @@ Decidability - whether a problem can be decided one way or another
 
 Halting problem - given a computer program and a set of inputs
     can you write another program to determine if the original
-        program will halt for the inputs
+    program will halt for the inputs?
 
 
 
@@ -130,7 +131,6 @@ def Halt(Function, Input):
 def DoOpposite(Function):
     if (Halt(Function, Function)) loop forever
     else exit
-
 
 ///
 
@@ -152,10 +152,6 @@ Using OpenJML
     - provide function contracts
     - for loops, provide loop invariants and termination measure
 
-- you can also add assume/assert statements in the same line as Logika
-    --> assumptions you need to make for logic to hold
-    --> assert statements must be able to be verified by proof checker
-
 
 --> see examples
 
@@ -165,4 +161,6 @@ Using OpenJML
 
 Next time:
 
+- verification with recursion
+- contrapositive
 - review for final exam
