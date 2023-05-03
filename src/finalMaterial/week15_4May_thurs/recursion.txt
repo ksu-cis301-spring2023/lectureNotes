@@ -1,0 +1,43 @@
+import org.sireum.logika._
+
+
+
+//At each "PREMISES" heading, list ALL claims we could make using the justification "premise"
+
+//At each "SHOW" heading, list the claim that we MUST prove for the program to be validated in Logika's manual mode
+    //(you don't have to prove it - just list what we want to prove)
+
+
+def diff(big: Z, small: Z): Z = {
+    l"""{
+        requires big >= small
+        ensures result == big-small
+    }"""
+
+    //PREMISES:
+
+    var count: Z = 0
+
+    if (big == small) {
+        //PREMISES
+
+        //SHOW
+    } else {
+        //PREMISES
+
+        //SHOW
+        count = diff(big-1, small)
+
+        //PREMISES
+
+        count = count + 1
+
+        //SHOW
+    }
+
+    //PREMISES
+
+    //SHOW
+
+    return count
+}

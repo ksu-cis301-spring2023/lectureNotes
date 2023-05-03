@@ -1,0 +1,17 @@
+
+//Step 1: Write the JML function contract for the addToNeg method below.
+
+
+//Step 2: Add code to enforce the precondition
+
+
+//Step 3: Add code (with asserts) to verify the postcondition
+
+
+
+public static void addToNeg(int pos, int[] arr) {
+    for (int i = pos; i < arr.length; i++) {
+        if (arr[i] < 0) arr[i]++;
+    }
+}
+

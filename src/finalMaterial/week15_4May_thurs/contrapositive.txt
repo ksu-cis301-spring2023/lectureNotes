@@ -1,0 +1,3 @@
+Use proof by contrapositive to prove the following claim:
+
+If x^2 + 1 is even for some integer x, then x is odd.

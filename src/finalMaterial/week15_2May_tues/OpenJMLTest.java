@@ -42,17 +42,18 @@ public class OpenJMLTest {
         }
     }
 
-    // @requires num != null;
-    // @requires pos >= 0 && pos < nums.length;
+    // @requires nums != null;
+    // @requires 0 <= pos && pos < nums.length;
     // @ensures \result >= pos && \result < nums.length;
-    // @ensures (\forall int k; k >= pos && k < nums.length; nums[\result] <= nums[k]);
+    // @ensures (\forall int k; pos <= k && k < nums.length; nums[\result] <= nums[k]);
     public static int minIndex(int[] nums, int pos) {
 
         int index = pos;
 
         // @loop_invariant pos < i && i <= nums.length;
-        // @loop_invariant pos <= index && index <= nums.length;
-        // @loop_invariant (\forall int k; k >= pos && k < i; nums[index] <= nums[k]);
+        // @loop_invariant pos <= index && index < nums.length;
+        // @loop_invariant (\forall int k; pos <= k && k < i; nums[index] <= nums[k]);
+        // @decreasing nums.length-i;
         for (int i = index+1; i < nums.length; i++) {
             if (nums[i] < nums[index]) {
                 index = i;

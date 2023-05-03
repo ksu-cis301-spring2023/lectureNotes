@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/10_globalProgram.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/1_propProof.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/2_truthTableProof.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/3_circuitTree.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/4_predProof.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/5_sets.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/6_negation.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/7_loopProgram.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/8_induction.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/9_sequenceProgram.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/contrapositive.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/recursion.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/thursMay4_notes.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/Termination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/tuesMay2_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +32,7 @@
         <option value="package-info" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -179,13 +191,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Notes shell before Tuesday, February 7">
-      <created>1675687723525</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1675687723525</updated>
     </task>
     <task id="LOCAL-00035" summary="Notes shell with edits before Tuesday, February 7">
       <created>1675718181246</created>
@@ -523,11 +528,17 @@
       <option name="project" value="LOCAL" />
       <updated>1682979305973</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="After class Tues May 2">
+      <created>1683042430457</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1683042430457</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Notes after class Thurs March 23" />
     <MESSAGE value="Before class Tues March 28" />
     <MESSAGE value="Before class Tues March 28, added proof error" />
     <MESSAGE value="After class Tues March 28" />
@@ -552,6 +563,7 @@
     <MESSAGE value="After class Thurs April 27" />
     <MESSAGE value="Notes shell before Tues May 2" />
     <MESSAGE value="Notes shell before Tues May 2, added OpenJML test file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Notes shell before Tues May 2, added OpenJML test file" />
+    <MESSAGE value="After class Tues May 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="After class Tues May 2" />
   </component>
 </project>

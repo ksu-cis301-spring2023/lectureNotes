@@ -1,0 +1,3 @@
+Complete the following predicate logic proof so it would be verified in Logika:
+
+∀ x (P(x) V Q(x)), ¬∃ x Q(x) |- ∀ y P(y)
