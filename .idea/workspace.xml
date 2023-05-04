@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106b392c-03ab-49a0-a5ea-38c1974c35ad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/10_globalProgram.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/1_propProof.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/2_truthTableProof.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/3_circuitTree.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/4_predProof.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/5_sets.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/6_negation.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/7_loopProgram.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/8_induction.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/9_sequenceProgram.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/contrapositive.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/recursion.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/thursMay4_notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/circuit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/parse.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_2May_tues/OpenJMLTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/10_globalProgram.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/10_globalProgram.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/1_propProof.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/1_propProof.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/2_truthTableProof.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/2_truthTableProof.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/3_circuitTree.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/3_circuitTree.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/4_predProof.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/4_predProof.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/5_sets.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/5_sets.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/6_negation.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/6_negation.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/7_loopProgram.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/7_loopProgram.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/8_induction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/8_induction.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/9_sequenceProgram.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/9_sequenceProgram.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/contrapositive.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/contrapositive.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/recursion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/recursion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/thursMay4_notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/finalMaterial/week15_4May_thurs/thursMay4_notes.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672937542601</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Notes shell with edits before Tuesday, February 7">
-      <created>1675718181246</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1675718181246</updated>
     </task>
     <task id="LOCAL-00036" summary="Notes after class Tuesday, February 7">
       <created>1675788293054</created>
@@ -535,11 +529,17 @@
       <option name="project" value="LOCAL" />
       <updated>1683042430457</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Before class Thurs May 4">
+      <created>1683141124776</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1683141124776</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Before class Tues March 28" />
     <MESSAGE value="Before class Tues March 28, added proof error" />
     <MESSAGE value="After class Tues March 28" />
     <MESSAGE value="Before class Thurs March 30" />
@@ -564,6 +564,7 @@
     <MESSAGE value="Notes shell before Tues May 2" />
     <MESSAGE value="Notes shell before Tues May 2, added OpenJML test file" />
     <MESSAGE value="After class Tues May 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="After class Tues May 2" />
+    <MESSAGE value="Before class Thurs May 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before class Thurs May 4" />
   </component>
 </project>

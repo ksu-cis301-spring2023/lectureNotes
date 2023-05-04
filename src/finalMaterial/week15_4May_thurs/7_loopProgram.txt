@@ -2,9 +2,11 @@ import org.sireum.logika._
 
 
 
-//At each "PREMISES" heading, list ALL claims we could make using the justification "premise"
+//At each "PREMISES" heading, list ALL claims we could make
+//using the justification "premise"
 
-//At each "SHOW" heading, list the claim that we MUST prove for the program to be validated in Logika's manual mode
+//At each "SHOW" heading, list the claim that we MUST prove
+//for the program to be validated in Logika's manual mode
     //(you don't have to prove it - just list what we want to prove)
 
 def diff(big: Z, small: Z): Z = {
@@ -14,19 +16,20 @@ def diff(big: Z, small: Z): Z = {
     }"""
 
     //PREMISES:
-
+    big >= small
 
 
     var count: Z = 0
     var cur: Z = big
 
     //PREMISES:
-
+    count == 0
+    cur == big
+    big >= small
 
 
     //SHOW:
-
-
+    count == (big-cur)
 
     while (cur != small) {
         l"""{
@@ -36,24 +39,26 @@ def diff(big: Z, small: Z): Z = {
         }"""
 
         //PREMISES:
-
-
+        //count_old == 0 NOOOOOOOO!!!!!
+        cur != small (loop condition)
+        count == (big-cur) (invariant)
+        big >= small
 
         cur = cur - 1
         count = count + 1
 
         //SHOW:
-
+        count == (big-cur) (invariant)
 
     }
 
     //PREMISES:
-
-
+    !(cur != small) (not loop condition)
+    big >= small
+    count == (big-cur) (invariant)
 
     //SHOW:
-
-
+    count == big-small
 
     return count
 }
@@ -63,19 +68,19 @@ def diff(big: Z, small: Z): Z = {
 var one: Z = 10
 
 //PREMISES:
-
+one == 10
 
 //SHOW:
-
+one+4 >= one
 
 var answer: Z = diff(one+4, one)
 
-
-
 //PREMISES:
+one == 10
+answer == (one+4) - one
 
 
 //SHOW:
-
+answer == 4
 
 assert(answer == 4)

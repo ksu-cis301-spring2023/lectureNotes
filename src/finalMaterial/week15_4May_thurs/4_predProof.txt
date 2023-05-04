@@ -1,3 +1,23 @@
-Complete the following predicate logic proof so it would be verified in Logika:
+Complete the following predicate logic proof so it would
+be verified in Logika:
 
 ∀ x (P(x) V Q(x)), ¬∃ x Q(x) |- ∀ y P(y)
+{
+    1. ∀ x (P(x) V Q(x))                premise
+    2. ¬∃ x Q(x)                        premise
+    3. {
+        4. a
+        5. P(a) V Q(a)                  Ae 1 a
+        6. {
+            7. P(a)                     assume
+        }
+        8. {
+            9. Q(a)                     assume
+            10. ∃ x Q(x)                Ei 9 a
+            11. _|_                     !e 10 2
+            12. P(a)                    _|_e 11
+        }
+        13. P(a)                        Ve 5 6 8
+    }
+    14. A y P(y)                        Ai 3
+}

@@ -3,8 +3,28 @@ Use truth tables to prove that the following argument is valid.
 Premises: p → q, q → ¬r
 Conclusion: p → ¬r
 
+want to show that whenever all the premises are true, then the
+conclusion is also true
 
 Explain from your results why we know the argument is valid.
 
+p q r | p->q    |   q → ¬r      |  p → ¬r
+------------------------------------------
+T T T |  T            F F            F
+T T F |  T            T T            T
+T F T |  F            T F            F
+T F F |  F            T T            T
+F T T |  T            F F            T
+F T F |  T            T T            T
+F F T |  T            T F            T
+F F F |  T            T T            T
+
+The set of truth assignments that make each premise true are: [T T F] [F T F] [F F T] [F F F]
+All of those truth assignments also make the conclusion true, so the argument is valid.
+
+
 
 (Reminder: what would we need to do to show an argument is INVALID?)
+
+An argument would be invalid if we find ONE truth assignment where all premises are true but
+conclusion is false.

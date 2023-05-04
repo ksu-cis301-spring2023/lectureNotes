@@ -2,9 +2,11 @@ import org.sireum.logika._
 
 
 
-//At each "PREMISES" heading, list ALL claims we could make using the justification "premise"
+//At each "PREMISES" heading, list ALL claims we could make using the
+//justification "premise"
 
-//At each "SHOW" heading, list the claim that we MUST prove for the program to be validated in Logika's manual mode
+//At each "SHOW" heading, list the claim that we MUST prove for the
+    //program to be validated in Logika's manual mode
     //(you don't have to prove it - just list what we want to prove)
 
 
@@ -15,29 +17,48 @@ def diff(big: Z, small: Z): Z = {
     }"""
 
     //PREMISES:
+    big >= small
+
 
     var count: Z = 0
 
     if (big == small) {
         //PREMISES
+        count == 0      (still true)
+        big == small    (if condition)
+        big >= small    (precondition)
+
 
         //SHOW
+        count == big-small  (needed for the postcondition)
     } else {
         //PREMISES
+        big >= small
+        count == 0
+        !(big == small)     (not the if-condition)
 
         //SHOW
+        big-1 >= small  (show the precondition)
+
         count = diff(big-1, small)
 
         //PREMISES
+        count == (big-1)-small  (true from the postcondition)
+        !(big == small)         (if condition is still false)
+        big >= small            (precondition is still true)
 
         count = count + 1
 
         //SHOW
+        count == big - small    (needed for the postcondition)
     }
 
-    //PREMISES
+    //PREMISES / SHOW
+    count == big - small        (true in the IF and the ELSE)
+    big >= small                (precondition still true)
 
     //SHOW
+    count == big - small        (don't need to do anything -- needed for the postcondition, but already true as a premise)
 
     return count
 }

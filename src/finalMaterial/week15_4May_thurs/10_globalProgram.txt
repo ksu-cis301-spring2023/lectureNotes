@@ -1,31 +1,26 @@
-//STEP 1: Write the function contract for the castVotes method
-    //to both make sure castVotes can't violate the global invariants
-    //and to describe the impact of calling castVotes.
+//STEP 1: Write the function contract for castVotes to make sure that
+//castVotes will not violate the global invariants, and to describe the
+//impact of calling the function
 
-    //STEP 2: Add code to enforce the precondition
+//(you will only need to write function contracts for a global invariant example)
 
-    //STEP 3: Add code (with asserts) to verify the postcondition AND that the global invariants still hold
-
+(The exam will only ask for specifications, not asserts/tests)
 
 public class VotingMachine {
     private int _totalVotes;
     private int _cand1Votes;
     private int _cand2Votes;
 
-
     //global invariants
     //@public invariant getTotalVotes() == getCand1Votes() + getCand2Votes();
     //@public invariant getCand1Votes() >= 0;
     //@public invariant getCand2Votes() >= 0;
 
-    public VotingMachine() {
-        _totalVotes = 0;
-        _cand1Votes = 0;
-        _cand2Votes = 0;
-    }
-
-
-
+    // @requires cand == 1 || cand == 2;
+    // @requires votes >= 0;
+    // @ensures getTotalVotes() == \old(getTotalVotes()) + votes;
+    // @ensures cand == 1 -> getCand1Votes() == \old(getCand1Votes()) + votes;
+    // @ensures cand == 2 -> getCand2Votes() == \old(getCand2Votes()) + votes;
     public void castVotes(int cand, int votes) {
         if (cand == 1) {
             _cand1Votes += votes;
@@ -36,6 +31,12 @@ public class VotingMachine {
 
         _totalVotes += votes;
     }
+
+    public VotingMachine() {
+            _totalVotes = 0;
+            _cand1Votes = 0;
+            _cand2Votes = 0;
+        }
 
     public int getTotalVotes() {
         return _totalVotes;

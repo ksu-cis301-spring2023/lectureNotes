@@ -1,3 +1,20 @@
 Use proof by contrapositive to prove the following claim:
 
 If x^2 + 1 is even for some integer x, then x is odd.
+
+
+Proof (contrapositive). Let x be an integer that is not odd. Then x must be even, so
+there exists an integer k such that x = 2k. We have that:
+
+x^2 + 1 = (2k)^2 + 1
+        = 4k^2 + 1
+        = 2(2k^2) + 1
+
+Thus x^2 + 1 = 2b + 1, where b is the integer 2k^2. We have that x^2 + 1 is odd by definition,
+so it follows that x^2 + 1 is not even.
+
+
+
+(Note: to prove something like p->q by contrapositive, we assume !q and try to reach !p.
+
+Our "p" was x^2 + 1 being even, and our "q" was x being odd.
